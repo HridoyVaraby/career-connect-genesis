@@ -10,7 +10,6 @@ import Partners from "@/components/Partners";
 import WhyCCID from "@/components/WhyCCID";
 import Testimonials from "@/components/Testimonials";
 import Gallery from "@/components/Gallery";
-import ContactForm from "@/components/ContactForm";
 
 const Index = () => {
   return (
@@ -48,8 +47,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      <ContactForm />
     </div>
   );
 };
