@@ -13,25 +13,25 @@ const ProgramCards = () => {
       color: "bg-blue-50 border-blue-200"
     },
     {
-      title: "Virtual Internships",
+      title: "Virtual Internship",
       description: "Gain international work experience through our virtual internship opportunities",
       icon: "💻",
       link: "/global-programs/virtual-internship",
       color: "bg-green-50 border-green-200"
     },
     {
-      title: "International Internships",
+      title: "International Internship",
       description: "Work abroad with leading companies through our international internship programs",
       icon: "🌍",
       link: "/global-programs/international-internship",
       color: "bg-purple-50 border-purple-200"
     },
     {
-      title: "Student Exchange",
-      description: "Experience different cultures while continuing your education abroad",
-      icon: "✈️",
-      link: "/global-programs/student-exchange",
-      color: "bg-orange-50 border-orange-200"
+      title: "Hotel Immersion",
+      description: "Specialized hospitality training programs with leading hotels worldwide",
+      icon: "🏨",
+      link: "/global-programs/hotel-immersion",
+      color: "bg-yellow-50 border-yellow-200"
     },
     {
       title: "Professional Immersion",
@@ -41,11 +41,18 @@ const ProgramCards = () => {
       color: "bg-red-50 border-red-200"
     },
     {
-      title: "Hotel Immersion",
-      description: "Specialized hospitality training programs with leading hotels worldwide",
-      icon: "🏨",
-      link: "/global-programs/hotel-immersion",
-      color: "bg-yellow-50 border-yellow-200"
+      title: "Pathway Program",
+      description: "Structured pathways to international education and career opportunities",
+      icon: "🛤️",
+      link: "/global-programs/pathway-program",
+      color: "bg-indigo-50 border-indigo-200"
+    },
+    {
+      title: "Student Exchange",
+      description: "Experience different cultures while continuing your education abroad",
+      icon: "✈️",
+      link: "/global-programs/student-exchange",
+      color: "bg-orange-50 border-orange-200"
     }
   ];
 
@@ -54,10 +61,10 @@ const ProgramCards = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Global Programs
+            Explore Our Global Career Programs
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose from our diverse range of international programs designed to boost your career
+            Choose from a wide range of international opportunities designed to elevate your career.
           </p>
         </div>
         
@@ -84,14 +91,6 @@ const ProgramCards = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-        
-        <div className="text-center mt-12">
-          <Link to="/global-programs">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
-              View All Programs
-            </Button>
-          </Link>
         </div>
       </div>
     </section>

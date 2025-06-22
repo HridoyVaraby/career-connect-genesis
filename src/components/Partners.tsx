@@ -1,14 +1,14 @@
 
 const Partners = () => {
   const partners = [
-    { name: "Oxford University", logo: "🎓" },
-    { name: "MIT", logo: "🔬" },
-    { name: "Google", logo: "🔍" },
-    { name: "Microsoft", logo: "💻" },
-    { name: "Amazon", logo: "📦" },
-    { name: "Tesla", logo: "⚡" },
     { name: "Apple", logo: "🍎" },
-    { name: "Facebook", logo: "📘" }
+    { name: "Amazon", logo: "📦" },
+    { name: "Google", logo: "🔍" },
+    { name: "UNWTO", logo: "🌍" },
+    { name: "ILO", logo: "⚖️" },
+    { name: "Marriott", logo: "🏨" },
+    { name: "Microsoft", logo: "💻" },
+    { name: "Tesla", logo: "⚡" }
   ];
 
   return (
@@ -16,10 +16,10 @@ const Partners = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Global Partners
+            🤝 Recognized by Global Institutions
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We work with leading universities and companies worldwide
+            We're proud members and collaborators of prestigious international bodies and corporations.
           </p>
         </div>
         
