@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import ProgramCards from "@/components/ProgramCards";
 import NationalProgramsSection from "@/components/NationalProgramsSection";
 import DestinationsSection from "@/components/DestinationsSection";
+import AboutSection from "@/components/AboutSection";
 import UniversityPartners from "@/components/UniversityPartners";
 import Partners from "@/components/Partners";
 import WhyCCID from "@/components/WhyCCID";
@@ -18,6 +19,7 @@ const Index = () => {
       <ProgramCards />
       <NationalProgramsSection />
       <DestinationsSection />
+      <AboutSection />
       <UniversityPartners />
       <Partners />
       <WhyCCID />
