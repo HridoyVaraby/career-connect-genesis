@@ -28,34 +28,7 @@ const SEOQuoteSection = () => {
           
           {/* Attribution */}
           <div className="text-white/90 text-lg mb-8">
-            <span className="font-semibold">CCID Bangladesh</span> - Connecting Dreams to Reality
-          </div>
-          
-          {/* Supporting Text */}
-          <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-10">
-            At CCID Bangladesh, we believe that every student deserves access to world-class education 
-            and career opportunities. Our mission is to break down barriers and build bridges to global success, 
-            empowering the next generation of Bangladeshi leaders to make their mark on the world stage.
-          </p>
-          
-          {/* Stats Row */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">🌍</div>
-              <div className="text-white/90 text-sm">Global Reach</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">🎓</div>
-              <div className="text-white/90 text-sm">Academic Excellence</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">💼</div>
-              <div className="text-white/90 text-sm">Career Success</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">🤝</div>
-              <div className="text-white/90 text-sm">Lifetime Support</div>
-            </div>
+            <span className="font-semibold">Shozib Choudhury</span> - Managing Director, CCID Bangladesh
           </div>
         </div>
       </div>

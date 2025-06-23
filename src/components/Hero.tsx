@@ -22,7 +22,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-16">
       {/* Modern Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10"></div>
       
@@ -45,26 +45,28 @@ const Hero = () => {
         ))}
       </div>
       
-      {/* Floating Elements */}
+      {/* Floating Elements - Enhanced */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full blur-xl animate-pulse"></div>
+      <div className="absolute top-40 right-20 w-16 h-16 bg-white/10 rounded-full blur-xl animate-pulse delay-500"></div>
       <div className="absolute bottom-20 right-10 w-32 h-32 bg-secondary/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+      <div className="absolute bottom-40 left-20 w-24 h-24 bg-primary/10 rounded-full blur-xl animate-pulse delay-700"></div>
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 py-10">
         <div className="max-w-5xl mx-auto text-center">
           <div className="animate-fade-in">
             {/* Modern Badge */}
-            <div className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-2 mb-8">
+            <div className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-2 mb-10 shadow-lg">
               <span className="text-white/90 text-sm font-medium">🌟 Trusted by 500+ Students Worldwide</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white mb-8 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
               <span className="bg-gradient-to-r from-white via-primary to-secondary bg-clip-text text-transparent">
                 🌍 Your Gateway to
               </span>
               <span className="block text-white drop-shadow-2xl">Global Opportunities</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
+            <p className="text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
               Connecting Bangladeshi students and professionals with world-class international 
               internships, training, and academic programs that transform careers.
             </p>
@@ -73,7 +75,7 @@ const Hero = () => {
               <Link to="/global-programs">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white px-10 py-4 text-lg font-semibold rounded-full shadow-2xl hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white px-10 py-6 text-lg font-semibold rounded-full shadow-2xl hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105"
                 >
                   🚀 Explore Global Programs
                 </Button>
@@ -82,7 +84,7 @@ const Hero = () => {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-gray-900 px-10 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
+                  className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-gray-900 px-10 py-6 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
                 >
                   💬 Get In Touch
                 </Button>
@@ -90,28 +92,28 @@ const Hero = () => {
             </div>
             
             {/* Enhanced Animated Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-8">
               <div className="text-center group">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
-                  <div className="text-4xl md:text-5xl font-bold text-white mb-2">🎓 500+</div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group-hover:scale-105 shadow-lg">
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">🎓 500+</div>
                   <div className="text-white/80 font-medium">Students Placed</div>
                 </div>
               </div>
               <div className="text-center group">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
-                  <div className="text-4xl md:text-5xl font-bold text-white mb-2">🌐 25+</div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group-hover:scale-105 shadow-lg">
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">🌐 25+</div>
                   <div className="text-white/80 font-medium">Countries</div>
                 </div>
               </div>
               <div className="text-center group">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
-                  <div className="text-4xl md:text-5xl font-bold text-white mb-2">🏫 100+</div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group-hover:scale-105 shadow-lg">
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">🏫 100+</div>
                   <div className="text-white/80 font-medium">Partner Institutions</div>
                 </div>
               </div>
               <div className="text-center group">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
-                  <div className="text-4xl md:text-5xl font-bold text-white mb-2">✅ 95%</div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group-hover:scale-105 shadow-lg">
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">✅ 95%</div>
                   <div className="text-white/80 font-medium">Success Rate</div>
                 </div>
               </div>
@@ -120,8 +122,8 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Modern Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+      {/* Modern Slide Indicators - Repositioned */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
         {heroImages.map((_, index) => (
           <button
             key={index}
