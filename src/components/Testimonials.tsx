@@ -135,14 +135,17 @@ const Testimonials = () => {
         
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="inline-block bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 border border-primary/20">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Write Your Success Story?</h3>
-            <p className="text-gray-600 mb-6">Join our community of global achievers</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-primary to-secondary text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+          <div className="inline-block bg-white/90 backdrop-blur-sm rounded-2xl p-10 border border-primary/20 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 max-w-3xl mx-auto">
+            <div className="inline-block bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full text-sm font-semibold mb-6 shadow-lg">
+              🚀 Join Our Community
+            </div>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Ready to Write Your Success Story?</h3>
+            <p className="text-gray-600 mb-8 max-w-xl mx-auto">Join our community of global achievers and transform your career with world-class international opportunities</p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <button className="bg-gradient-to-r from-primary to-secondary text-white px-10 py-4 rounded-full font-semibold shadow-xl hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105">
                 Share Your Story
               </button>
-              <button className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-full font-semibold transition-all duration-300">
+              <button className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
                 View More Stories
               </button>
             </div>
