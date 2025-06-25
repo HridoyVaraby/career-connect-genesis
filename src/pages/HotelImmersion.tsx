@@ -1,7 +1,6 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Clock, GraduationCap, MapPin, Users, Globe, Award, BookOpen, Briefcase, Target, FileText, Calendar, Building, Service, Utensils, TrendingUp } from "lucide-react";
+import { CheckCircle, Clock, GraduationCap, MapPin, Users, Globe, Award, BookOpen, Briefcase, Target, FileText, Calendar, Building, Utensils, TrendingUp } from "lucide-react";
 import Testimonials from "@/components/Testimonials";
 
 const HotelImmersion = () => {
@@ -42,7 +41,7 @@ const HotelImmersion = () => {
 
   const departments = [
     {
-      icon: Service,
+      icon: Users,
       title: "Front Office",
       description: "Check-in/check-out, guest interaction, concierge duties",
       color: "text-primary"

@@ -1,7 +1,6 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Clock, GraduationCap, MapPin, Users, Globe, Award, BookOpen, Briefcase, Target, FileText, Calendar, Building, Service, Utensils, TrendingUp, Lightbulb, Network } from "lucide-react";
+import { CheckCircle, Clock, GraduationCap, MapPin, Users, Globe, Award, BookOpen, Briefcase, Target, FileText, Calendar, Building, Utensils, TrendingUp, Lightbulb, Network } from "lucide-react";
 import Testimonials from "@/components/Testimonials";
 
 const ProfessionalImmersion = () => {
@@ -15,7 +14,7 @@ const ProfessionalImmersion = () => {
 
   const departments = [
     {
-      icon: Service,
+      icon: Users,
       title: "Front Office",
       description: "Guest engagement, check-ins, service standards",
       color: "text-primary"
@@ -55,7 +54,7 @@ const ProfessionalImmersion = () => {
     "Free accommodation and meals",
     "Certificate of Attendance",
     "Complimentary use of hotel gym, pool, and training facilities",
-    "Free internet access during the program"
+    "Free internet access during the program",
   ];
 
   const takeaways = [
