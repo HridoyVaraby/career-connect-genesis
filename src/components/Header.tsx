@@ -33,6 +33,29 @@ const Header = () => {
     { name: "Employers", path: "/national-programs/employers" },
   ];
 
+  const destinationItems = [
+    { name: "USA", path: "/destinations/usa" },
+    { name: "France", path: "/destinations/france" },
+    { name: "Italy", path: "/destinations/italy" },
+    { name: "Spain", path: "/destinations/spain" },
+    { name: "Portugal", path: "/destinations/portugal" },
+    { name: "United Kingdom", path: "/destinations/united-kingdom" },
+    { name: "Netherlands", path: "/destinations/netherlands" },
+    { name: "New Zealand", path: "/destinations/new-zealand" },
+    { name: "Czech Republic", path: "/destinations/czech-republic" },
+    { name: "Croatia", path: "/destinations/croatia" },
+    { name: "Montenegro", path: "/destinations/montenegro" },
+    { name: "Malta", path: "/destinations/malta" },
+    { name: "Greece", path: "/destinations/greece" },
+    { name: "Thailand", path: "/destinations/thailand" },
+    { name: "Vietnam", path: "/destinations/vietnam" },
+    { name: "Indonesia", path: "/destinations/indonesia" },
+    { name: "Malaysia", path: "/destinations/malaysia" },
+    { name: "Hong Kong", path: "/destinations/hong-kong" },
+    { name: "UAE", path: "/destinations/uae" },
+    { name: "Bahrain", path: "/destinations/bahrain" },
+  ];
+
   const handleDropdownToggle = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
@@ -102,14 +125,43 @@ const Header = () => {
               </div>
             </div>
 
-            <Link
-              to="/destinations"
-              className={`text-gray-700 hover:text-primary transition-colors ${
-                location.pathname === "/destinations" ? "text-primary font-medium" : ""
-              }`}
-            >
-              Destinations
-            </Link>
+            {/* Destinations Dropdown */}
+            <div className="relative group">
+              <button
+                className={`flex items-center space-x-1 text-gray-700 hover:text-primary transition-colors ${
+                  location.pathname.startsWith("/destinations") ? "text-primary font-medium" : ""
+                }`}
+                onMouseEnter={() => setActiveDropdown("destinations")}
+              >
+                <span>Destinations</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              <div
+                className={`absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border transition-all duration-200 max-h-96 overflow-y-auto ${
+                  activeDropdown === "destinations" ? "opacity-100 visible" : "opacity-0 invisible"
+                }`}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <div className="py-2">
+                  <Link
+                    to="/destinations"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-medium"
+                  >
+                    All Destinations
+                  </Link>
+                  <div className="border-t my-2"></div>
+                  {destinationItems.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
 
             {/* National Programs Dropdown */}
             <div className="relative group">
