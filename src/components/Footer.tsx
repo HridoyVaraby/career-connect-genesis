@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="col-span-1">
             <div className="flex items-center mb-4">
               <img 
-                src="/logo_white.webp" 
+                src="/logo.webp" 
                 alt="CCID Bangladesh" 
                 className="h-10 w-auto"
               />
