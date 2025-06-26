@@ -24,6 +24,28 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Layout from "./components/Layout";
 
+// Destination pages
+import USA from "./pages/destinations/USA";
+import France from "./pages/destinations/France";
+import Italy from "./pages/destinations/Italy";
+import Spain from "./pages/destinations/Spain";
+import Portugal from "./pages/destinations/Portugal";
+import UnitedKingdom from "./pages/destinations/UnitedKingdom";
+import Netherlands from "./pages/destinations/Netherlands";
+import NewZealand from "./pages/destinations/NewZealand";
+import CzechRepublic from "./pages/destinations/CzechRepublic";
+import Croatia from "./pages/destinations/Croatia";
+import Montenegro from "./pages/destinations/Montenegro";
+import Malta from "./pages/destinations/Malta";
+import Greece from "./pages/destinations/Greece";
+import Thailand from "./pages/destinations/Thailand";
+import Vietnam from "./pages/destinations/Vietnam";
+import Indonesia from "./pages/destinations/Indonesia";
+import Malaysia from "./pages/destinations/Malaysia";
+import HongKong from "./pages/destinations/HongKong";
+import UAE from "./pages/destinations/UAE";
+import Bahrain from "./pages/destinations/Bahrain";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -45,6 +67,29 @@ const App = () => (
             <Route path="/global-programs/professional-immersion" element={<ProfessionalImmersion />} />
             <Route path="/global-programs/hotel-immersion" element={<HotelImmersion />} />
             <Route path="/destinations" element={<Destinations />} />
+            
+            {/* Destination specific pages */}
+            <Route path="/destinations/usa" element={<USA />} />
+            <Route path="/destinations/france" element={<France />} />
+            <Route path="/destinations/italy" element={<Italy />} />
+            <Route path="/destinations/spain" element={<Spain />} />
+            <Route path="/destinations/portugal" element={<Portugal />} />
+            <Route path="/destinations/united-kingdom" element={<UnitedKingdom />} />
+            <Route path="/destinations/netherlands" element={<Netherlands />} />
+            <Route path="/destinations/new-zealand" element={<NewZealand />} />
+            <Route path="/destinations/czech-republic" element={<CzechRepublic />} />
+            <Route path="/destinations/croatia" element={<Croatia />} />
+            <Route path="/destinations/montenegro" element={<Montenegro />} />
+            <Route path="/destinations/malta" element={<Malta />} />
+            <Route path="/destinations/greece" element={<Greece />} />
+            <Route path="/destinations/thailand" element={<Thailand />} />
+            <Route path="/destinations/vietnam" element={<Vietnam />} />
+            <Route path="/destinations/indonesia" element={<Indonesia />} />
+            <Route path="/destinations/malaysia" element={<Malaysia />} />
+            <Route path="/destinations/hong-kong" element={<HongKong />} />
+            <Route path="/destinations/uae" element={<UAE />} />
+            <Route path="/destinations/bahrain" element={<Bahrain />} />
+            
             <Route path="/national-programs" element={<NationalPrograms />} />
             <Route path="/national-programs/students" element={<Students />} />
             <Route path="/national-programs/employers" element={<Employers />} />
