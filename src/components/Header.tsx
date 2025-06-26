@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
@@ -45,13 +46,12 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center">
             <img 
               src="/logo.webp" 
               alt="CCID Bangladesh" 
               className="h-10 w-auto"
             />
-            <span className="text-xl font-bold text-gray-900">CCID Bangladesh</span>
           </Link>
 
           {/* Desktop Navigation */}

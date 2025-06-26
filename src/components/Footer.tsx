@@ -9,11 +9,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">C</span>
-              </div>
-              <span className="text-xl font-bold">CCID Bangladesh</span>
+            <div className="flex items-center mb-4">
+              <img 
+                src="/logo_white.webp" 
+                alt="CCID Bangladesh" 
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-gray-400 mb-4">
               Connecting Bangladeshi students with global career and internship opportunities.
