@@ -34,27 +34,37 @@ const Header = () => {
   ];
 
   const destinationItems = [
-    { name: "USA", path: "/destinations/usa" },
-    { name: "France", path: "/destinations/france" },
-    { name: "Italy", path: "/destinations/italy" },
-    { name: "Spain", path: "/destinations/spain" },
-    { name: "Portugal", path: "/destinations/portugal" },
-    { name: "United Kingdom", path: "/destinations/united-kingdom" },
-    { name: "Netherlands", path: "/destinations/netherlands" },
-    { name: "New Zealand", path: "/destinations/new-zealand" },
-    { name: "Czech Republic", path: "/destinations/czech-republic" },
-    { name: "Croatia", path: "/destinations/croatia" },
-    { name: "Montenegro", path: "/destinations/montenegro" },
-    { name: "Malta", path: "/destinations/malta" },
-    { name: "Greece", path: "/destinations/greece" },
-    { name: "Thailand", path: "/destinations/thailand" },
-    { name: "Vietnam", path: "/destinations/vietnam" },
-    { name: "Indonesia", path: "/destinations/indonesia" },
-    { name: "Malaysia", path: "/destinations/malaysia" },
-    { name: "Hong Kong", path: "/destinations/hong-kong" },
-    { name: "UAE", path: "/destinations/uae" },
-    { name: "Bahrain", path: "/destinations/bahrain" },
+    { name: "USA", path: "/destinations/usa", flag: "🇺🇸" },
+    { name: "France", path: "/destinations/france", flag: "🇫🇷" },
+    { name: "Italy", path: "/destinations/italy", flag: "🇮🇹" },
+    { name: "Spain", path: "/destinations/spain", flag: "🇪🇸" },
+    { name: "Portugal", path: "/destinations/portugal", flag: "🇵🇹" },
+    { name: "United Kingdom", path: "/destinations/united-kingdom", flag: "🇬🇧" },
+    { name: "Netherlands", path: "/destinations/netherlands", flag: "🇳🇱" },
+    { name: "New Zealand", path: "/destinations/new-zealand", flag: "🇳🇿" },
+    { name: "Czech Republic", path: "/destinations/czech-republic", flag: "🇨🇿" },
+    { name: "Croatia", path: "/destinations/croatia", flag: "🇭🇷" },
+    { name: "Montenegro", path: "/destinations/montenegro", flag: "🇲🇪" },
+    { name: "Malta", path: "/destinations/malta", flag: "🇲🇹" },
+    { name: "Greece", path: "/destinations/greece", flag: "🇬🇷" },
+    { name: "Thailand", path: "/destinations/thailand", flag: "🇹🇭" },
+    { name: "Vietnam", path: "/destinations/vietnam", flag: "🇻🇳" },
+    { name: "Indonesia", path: "/destinations/indonesia", flag: "🇮🇩" },
+    { name: "Malaysia", path: "/destinations/malaysia", flag: "🇲🇾" },
+    { name: "Hong Kong", path: "/destinations/hong-kong", flag: "🇭🇰" },
+    { name: "UAE", path: "/destinations/uae", flag: "🇦🇪" },
+    { name: "Bahrain", path: "/destinations/bahrain", flag: "🇧🇭" },
   ];
+
+  // Split destinations into 4 columns for mega menu
+  const getDestinationColumns = () => {
+    const itemsPerColumn = Math.ceil(destinationItems.length / 4);
+    const columns = [];
+    for (let i = 0; i < 4; i++) {
+      columns.push(destinationItems.slice(i * itemsPerColumn, (i + 1) * itemsPerColumn));
+    }
+    return columns;
+  };
 
   const handleDropdownToggle = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
@@ -125,7 +135,7 @@ const Header = () => {
               </div>
             </div>
 
-            {/* Destinations Dropdown */}
+            {/* Destinations Mega Menu */}
             <div className="relative group">
               <button
                 className={`flex items-center space-x-1 text-gray-700 hover:text-primary transition-colors ${
@@ -137,28 +147,44 @@ const Header = () => {
                 <ChevronDown className="w-4 h-4" />
               </button>
               <div
-                className={`absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border transition-all duration-200 max-h-96 overflow-y-auto ${
+                className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white rounded-lg shadow-xl border transition-all duration-200 z-50 ${
                   activeDropdown === "destinations" ? "opacity-100 visible" : "opacity-0 invisible"
                 }`}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <div className="py-2">
-                  <Link
-                    to="/destinations"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-medium"
-                  >
-                    All Destinations
-                  </Link>
-                  <div className="border-t my-2"></div>
-                  {destinationItems.map((item) => (
+                <div className="p-6 w-[800px]">
+                  {/* Header */}
+                  <div className="mb-4 pb-4 border-b">
                     <Link
-                      key={item.path}
-                      to={item.path}
-                      className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                      to="/destinations"
+                      className="text-lg font-semibold text-gray-900 hover:text-primary transition-colors"
                     >
-                      {item.name}
+                      All Destinations
                     </Link>
-                  ))}
+                    <p className="text-sm text-gray-600 mt-1">Choose your next adventure</p>
+                  </div>
+                  
+                  {/* 4-Column Grid */}
+                  <div className="grid grid-cols-4 gap-6">
+                    {getDestinationColumns().map((column, columnIndex) => (
+                      <div key={columnIndex} className="space-y-2">
+                        {column.map((item) => (
+                          <Link
+                            key={item.path}
+                            to={item.path}
+                            className="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-50 hover:text-primary transition-colors group"
+                          >
+                            <span className="text-xl group-hover:scale-110 transition-transform duration-200">
+                              {item.flag}
+                            </span>
+                            <span className="text-sm font-medium text-gray-700 group-hover:text-primary">
+                              {item.name}
+                            </span>
+                          </Link>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
