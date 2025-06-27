@@ -110,7 +110,7 @@ const Header = () => {
                 <ChevronDown className="w-4 h-4" />
               </button>
               <div
-                className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border transition-all duration-200 ${
+                className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border z-50 transition-all duration-200 ${
                   activeDropdown === "global" ? "opacity-100 visible" : "opacity-0 invisible"
                 }`}
                 onMouseLeave={() => setActiveDropdown(null)}
@@ -174,7 +174,7 @@ const Header = () => {
                             to={item.path}
                             className="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-50 hover:text-primary transition-colors group"
                           >
-                            <span className="text-xl group-hover:scale-110 transition-transform duration-200">
+                            <span className="text-xl flex-shrink-0 w-6 h-6 flex items-center justify-center">
                               {item.flag}
                             </span>
                             <span className="text-sm font-medium text-gray-700 group-hover:text-primary">
@@ -201,7 +201,7 @@ const Header = () => {
                 <ChevronDown className="w-4 h-4" />
               </button>
               <div
-                className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border transition-all duration-200 ${
+                className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border z-50 transition-all duration-200 ${
                   activeDropdown === "national" ? "opacity-100 visible" : "opacity-0 invisible"
                 }`}
                 onMouseLeave={() => setActiveDropdown(null)}
@@ -278,7 +278,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t">
+          <div className="lg:hidden py-4 border-t bg-white">
             <div className="space-y-2">
               <Link
                 to="/"

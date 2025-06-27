@@ -7,7 +7,7 @@ const WhyCCID = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            🌟 Why Choose CCID?
+            Why Choose CCID?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Your success is our purpose—here's how we make it happen.
@@ -15,7 +15,7 @@ const WhyCCID = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <Card className="text-center hover:shadow-lg transition-shadow">
+          <Card className="text-center hover:shadow-lg transition-shadow bg-white border border-gray-200">
             <CardHeader>
               <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
                 <span className="text-white text-3xl">🌍</span>
@@ -29,7 +29,7 @@ const WhyCCID = () => {
             </CardContent>
           </Card>
           
-          <Card className="text-center hover:shadow-lg transition-shadow">
+          <Card className="text-center hover:shadow-lg transition-shadow bg-white border border-gray-200">
             <CardHeader>
               <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mx-auto mb-4">
                 <span className="text-white text-3xl">📚</span>
@@ -43,7 +43,7 @@ const WhyCCID = () => {
             </CardContent>
           </Card>
           
-          <Card className="text-center hover:shadow-lg transition-shadow">
+          <Card className="text-center hover:shadow-lg transition-shadow bg-white border border-gray-200">
             <CardHeader>
               <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
                 <span className="text-white text-3xl">🎯</span>

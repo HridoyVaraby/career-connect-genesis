@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
 
 const Testimonials = () => {
   const testimonials = [
@@ -61,93 +61,81 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-secondary/5 rounded-full blur-3xl"></div>
-      </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="inline-block bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">
-            📢 Success Stories
+          <div className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">
+            Success Stories
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            What Our <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Achievers Say</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            What Our Achievers Say
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Real stories from students who transformed their careers through CCID programs and are now leading successful careers worldwide.
           </p>
         </div>
         
-        <Carousel className="max-w-7xl mx-auto">
-          <CarouselContent className="-ml-4">
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem key={testimonial.name} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <Card className="h-full bg-white hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-0 shadow-lg overflow-hidden group">
-                  <CardContent className="p-8 h-full flex flex-col">
-                    {/* Header with Avatar and Info */}
-                    <div className="flex items-start mb-6">
-                      <div className="relative">
-                        <img 
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          className="w-16 h-16 rounded-full object-cover border-4 border-primary/20 group-hover:border-primary/40 transition-colors duration-300"
-                        />
-                        <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                          <span className="text-white text-xs">✓</span>
-                        </div>
-                      </div>
-                      <div className="ml-4 flex-1">
-                        <h3 className="font-bold text-xl text-gray-900 mb-1">{testimonial.name}</h3>
-                        <p className="text-primary font-semibold text-sm mb-1">{testimonial.program}</p>
-                        <p className="text-gray-600 text-sm mb-2">{testimonial.company}</p>
-                        <div className="flex items-center">
-                          <div className="flex space-x-1 mr-2">
-                            {[...Array(testimonial.rating)].map((_, i) => (
-                              <span key={i} className="text-yellow-400 text-sm">⭐</span>
-                            ))}
-                          </div>
-                          <span className="text-gray-500 text-xs">{testimonial.location}</span>
-                        </div>
-                      </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {testimonials.map((testimonial, index) => (
+            <Card key={testimonial.name} className="h-full bg-white hover:shadow-lg transition-all duration-300 border border-gray-200">
+              <CardContent className="p-8 h-full flex flex-col">
+                {/* Header with Avatar and Info */}
+                <div className="flex items-start mb-6">
+                  <div className="relative">
+                    <img 
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-16 h-16 rounded-full object-cover border-4 border-gray-100"
+                    />
+                    <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+                      <span className="text-white text-xs">✓</span>
                     </div>
-                    
-                    {/* Quote */}
-                    <div className="flex-1">
-                      <div className="text-6xl text-primary/20 font-serif leading-none">"</div>
-                      <blockquote className="text-gray-700 italic text-lg leading-relaxed -mt-4 mb-4">
-                        {testimonial.quote}
-                      </blockquote>
+                  </div>
+                  <div className="ml-4 flex-1">
+                    <h3 className="font-bold text-xl text-gray-900 mb-1">{testimonial.name}</h3>
+                    <p className="text-primary font-semibold text-sm mb-1">{testimonial.program}</p>
+                    <p className="text-gray-600 text-sm mb-2">{testimonial.company}</p>
+                    <div className="flex items-center">
+                      <div className="flex space-x-1 mr-2">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <span key={i} className="text-yellow-400 text-sm">⭐</span>
+                        ))}
+                      </div>
+                      <span className="text-gray-500 text-xs">{testimonial.location}</span>
                     </div>
-                    
-                    {/* Bottom Decoration */}
-                    <div className="w-12 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="bg-white border-2 border-primary/20 hover:border-primary text-primary hover:bg-primary hover:text-white" />
-          <CarouselNext className="bg-white border-2 border-primary/20 hover:border-primary text-primary hover:bg-primary hover:text-white" />
-        </Carousel>
+                  </div>
+                </div>
+                
+                {/* Quote */}
+                <div className="flex-1">
+                  <div className="text-6xl text-gray-200 font-serif leading-none">"</div>
+                  <blockquote className="text-gray-700 italic text-lg leading-relaxed -mt-4 mb-4">
+                    {testimonial.quote}
+                  </blockquote>
+                </div>
+                
+                {/* Bottom Line */}
+                <div className="w-12 h-1 bg-primary rounded-full"></div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
         
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="inline-block bg-white/90 backdrop-blur-sm rounded-2xl p-10 border border-primary/20 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1 max-w-3xl mx-auto">
-            <div className="inline-block bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full text-sm font-semibold mb-6 shadow-lg">
-              🚀 Join Our Community
+        <div className="text-center">
+          <div className="bg-white rounded-lg p-10 border border-gray-200 shadow-sm max-w-3xl mx-auto">
+            <div className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
+              Join Our Community
             </div>
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Ready to Write Your Success Story?</h3>
             <p className="text-gray-600 mb-8 max-w-xl mx-auto">Join our community of global achievers and transform your career with world-class international opportunities</p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="bg-gradient-to-r from-primary to-secondary text-white px-10 py-4 rounded-full font-semibold shadow-xl hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105">
+              <Button className="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-lg font-semibold">
                 Share Your Story
-              </button>
-              <button className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+              </Button>
+              <Button variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 rounded-lg font-semibold">
                 View More Stories
-              </button>
+              </Button>
             </div>
           </div>
         </div>
