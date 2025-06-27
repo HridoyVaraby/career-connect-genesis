@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -23,6 +22,7 @@ import Events from "./pages/Events";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Layout from "./components/Layout";
+import ApplyNow from "./pages/ApplyNow";
 
 // Destination pages
 import USA from "./pages/destinations/USA";
@@ -58,6 +58,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
+            <Route path="/apply" element={<ApplyNow />} />
             <Route path="/global-programs" element={<GlobalPrograms />} />
             <Route path="/global-programs/study-abroad" element={<StudyAbroad />} />
             <Route path="/global-programs/virtual-internship" element={<VirtualInternship />} />

@@ -256,9 +256,11 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button className="bg-secondary hover:bg-secondary/90 text-white">
-              Apply Now
-            </Button>
+            <Link to="/apply">
+              <Button className="bg-secondary hover:bg-secondary/90 text-white">
+                Apply Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -327,9 +329,11 @@ const Header = () => {
               >
                 Contact
               </Link>
-              <Button className="w-full mt-4 bg-secondary hover:bg-secondary/90 text-white">
-                Apply Now
-              </Button>
+              <Link to="/apply" onClick={() => setIsMobileMenuOpen(false)}>
+                <Button className="w-full mt-4 bg-secondary hover:bg-secondary/90 text-white">
+                  Apply Now
+                </Button>
+              </Link>
             </div>
           </div>
         )}
