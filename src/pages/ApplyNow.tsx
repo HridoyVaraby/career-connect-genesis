@@ -10,7 +10,7 @@ const ApplyNow = () => {
       title: "International Internship Program",
       description: "Gain hands-on experience in world-class hotels, resorts, and companies abroad across hospitality, business, culinary, and more.",
       icon: <Globe className="w-8 h-8" />,
-      link: "/global-programs/international-internship",
+      link: "/apply/international-internship",
       gradient: "from-blue-500 to-blue-600",
       bgColor: "bg-blue-50",
       hoverColor: "hover:bg-blue-100"
@@ -19,7 +19,7 @@ const ApplyNow = () => {
       title: "Pathway Program",
       description: "An academic bridging opportunity with global institutions offering study + work programs. Ideal for students seeking long-term global education paths.",
       icon: <GraduationCap className="w-8 h-8" />,
-      link: "/global-programs/pathway-program",
+      link: "/apply/pathway-program",
       gradient: "from-purple-500 to-purple-600",
       bgColor: "bg-purple-50",
       hoverColor: "hover:bg-purple-100"
@@ -28,7 +28,7 @@ const ApplyNow = () => {
       title: "Study Abroad Program",
       description: "Full-time academic opportunities at internationally recognized universities, with options to work part-time and gain global certification.",
       icon: <Briefcase className="w-8 h-8" />,
-      link: "/global-programs/study-abroad",
+      link: "/apply/study-abroad",
       gradient: "from-green-500 to-green-600",
       bgColor: "bg-green-50",
       hoverColor: "hover:bg-green-100"
@@ -37,7 +37,7 @@ const ApplyNow = () => {
       title: "Student Exchange Program",
       description: "Short-term international exchanges focused on practical learning, culture, and culinary/hospitality training.",
       icon: <Users className="w-8 h-8" />,
-      link: "/global-programs/student-exchange",
+      link: "/apply/student-exchange",
       gradient: "from-orange-500 to-red-500",
       bgColor: "bg-orange-50",
       hoverColor: "hover:bg-orange-100"
@@ -46,7 +46,7 @@ const ApplyNow = () => {
       title: "Virtual Internship Program",
       description: "Remote internships with global companies across 70+ countries. No relocation required—start building your digital career today.",
       icon: <Laptop className="w-8 h-8" />,
-      link: "/global-programs/virtual-internship",
+      link: "/apply/virtual-internship",
       gradient: "from-indigo-500 to-indigo-600",
       bgColor: "bg-indigo-50",
       hoverColor: "hover:bg-indigo-100"
@@ -55,7 +55,7 @@ const ApplyNow = () => {
       title: "Hotel Immersion Program",
       description: "1-day practical exposure inside hotel departments for real-world hospitality understanding.",
       icon: <Building className="w-8 h-8" />,
-      link: "/global-programs/hotel-immersion",
+      link: "/apply/hotel-immersion",
       gradient: "from-yellow-500 to-orange-500",
       bgColor: "bg-yellow-50",
       hoverColor: "hover:bg-yellow-100"
@@ -64,7 +64,7 @@ const ApplyNow = () => {
       title: "Professional Immersion Program",
       description: "Foundational hospitality training for students from non-hospitality backgrounds—includes seminars and site visits.",
       icon: <Plane className="w-8 h-8" />,
-      link: "/global-programs/professional-immersion",
+      link: "/apply/professional-immersion",
       gradient: "from-pink-500 to-red-500",
       bgColor: "bg-pink-50",
       hoverColor: "hover:bg-pink-100"
@@ -83,16 +83,26 @@ const ApplyNow = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-r from-primary to-secondary text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Apply for a Global Program
-          </h1>
-          <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed opacity-90">
-            Select a Program That Matches Your Dreams and Begin Your Global Career Journey
-          </p>
+    <div className="pt-16">
+      {/* Hero Section - Updated to match other pages */}
+      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-10 right-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-semibold mb-8 animate-fade-in">
+              🌍 Global Opportunities Await
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in" style={{ animationDelay: "200ms" }}>
+              Apply for a Global Program
+            </h1>
+            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed opacity-90 animate-fade-in" style={{ animationDelay: "400ms" }}>
+              Select a Program That Matches Your Dreams and Begin Your Global Career Journey
+            </p>
+          </div>
         </div>
       </section>
 

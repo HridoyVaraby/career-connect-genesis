@@ -46,6 +46,15 @@ import HongKong from "./pages/destinations/HongKong";
 import UAE from "./pages/destinations/UAE";
 import Bahrain from "./pages/destinations/Bahrain";
 
+// Application pages
+import InternationalInternshipApply from "./pages/apply/InternationalInternshipApply";
+import PathwayProgramApply from "./pages/apply/PathwayProgramApply";
+import StudyAbroadApply from "./pages/apply/StudyAbroadApply";
+import StudentExchangeApply from "./pages/apply/StudentExchangeApply";
+import VirtualInternshipApply from "./pages/apply/VirtualInternshipApply";
+import HotelImmersionApply from "./pages/apply/HotelImmersionApply";
+import ProfessionalImmersionApply from "./pages/apply/ProfessionalImmersionApply";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -59,6 +68,16 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/apply" element={<ApplyNow />} />
+            
+            {/* Application routes */}
+            <Route path="/apply/international-internship" element={<InternationalInternshipApply />} />
+            <Route path="/apply/pathway-program" element={<PathwayProgramApply />} />
+            <Route path="/apply/study-abroad" element={<StudyAbroadApply />} />
+            <Route path="/apply/student-exchange" element={<StudentExchangeApply />} />
+            <Route path="/apply/virtual-internship" element={<VirtualInternshipApply />} />
+            <Route path="/apply/hotel-immersion" element={<HotelImmersionApply />} />
+            <Route path="/apply/professional-immersion" element={<ProfessionalImmersionApply />} />
+            
             <Route path="/global-programs" element={<GlobalPrograms />} />
             <Route path="/global-programs/study-abroad" element={<StudyAbroad />} />
             <Route path="/global-programs/virtual-internship" element={<VirtualInternship />} />
