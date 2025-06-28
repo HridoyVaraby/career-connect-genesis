@@ -241,21 +241,12 @@ const Header = () => {
             </Link>
 
             <Link
-              to="/events"
-              className={`text-gray-700 hover:text-primary transition-colors ${
-                location.pathname === "/events" ? "text-primary font-medium" : ""
-              }`}
-            >
-              Events
-            </Link>
-
-            <Link
               to="/blog"
               className={`text-gray-700 hover:text-primary transition-colors ${
                 location.pathname.startsWith("/blog") ? "text-primary font-medium" : ""
               }`}
             >
-              Blog
+              Events
             </Link>
 
             <Link
@@ -330,18 +321,11 @@ const Header = () => {
                 Services
               </Link>
               <Link
-                to="/events"
-                className="block py-2 text-gray-700 hover:text-primary transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Events
-              </Link>
-              <Link
                 to="/blog"
                 className="block py-2 text-gray-700 hover:text-primary transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Blog
+                Events
               </Link>
               <Link
                 to="/contact"
