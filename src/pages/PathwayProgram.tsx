@@ -1,4 +1,5 @@
 
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Clock, GraduationCap, MapPin, Users, Globe, Award, BookOpen, Briefcase, Target, FileText, Calendar } from "lucide-react";
@@ -237,7 +238,7 @@ const PathwayProgram = () => {
               >
                 <CardHeader className="text-center">
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gray-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <formatDetails[4].icon className={`w-8 h-8 ${formatDetails[4].color}`} />
+                    {React.createElement(formatDetails[4].icon, { className: `w-8 h-8 ${formatDetails[4].color}` })}
                   </div>
                   <CardTitle className="text-xl font-bold text-gray-900">{formatDetails[4].title}</CardTitle>
                 </CardHeader>
