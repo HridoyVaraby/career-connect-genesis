@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -284,20 +285,15 @@ const Employers = () => {
               Partner with CCID to access Bangladesh's brightest emerging professionals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '400ms' }}>
-              <Button 
-                size="lg" 
-                variant="secondary"
-                className="bg-white text-secondary hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
-              >
-                Contact Our Placement Team
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="border-white text-black hover:bg-white hover:text-secondary px-8 py-3 text-lg font-semibold"
-              >
-                Register as Employer
-              </Button>
+              <Link to="/contact">
+                <Button 
+                  size="lg" 
+                  variant="secondary"
+                  className="bg-white text-secondary hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
+                >
+                  Contact Our Placement Team
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
