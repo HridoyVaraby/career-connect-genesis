@@ -23,22 +23,9 @@ import {
   Award,
   ArrowRight
 } from "lucide-react";
-import { useState } from "react";
+import React from "react";
 
 const Students = () => {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    institution: '',
-    level: '',
-    major: '',
-    graduationYear: '',
-    interests: '',
-    experience: '',
-    motivation: ''
-  });
-
   const benefits = [
     { icon: Building, text: "Build real-world experience through local internships" },
     { icon: Users, text: "Get career guidance from industry professionals" },
@@ -98,16 +85,6 @@ const Students = () => {
     "photo-1506744038136-46273834b3fb",
     "photo-1518495973542-4542c06a5843"
   ];
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-  };
-
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-  };
 
   return (
     <div className="pt-16">
@@ -224,41 +201,6 @@ const Students = () => {
         </div>
       </section>
 
-      {/* Application Process Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 animate-fade-in">
-                Application Process
-              </h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {applicationSteps.map((step, index) => (
-                <div key={index} className="text-center animate-fade-in" style={{ animationDelay: `${index * 150}ms` }}>
-                  <div className="relative mb-6">
-                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                      <step.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-secondary rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-sm">{index + 1}</span>
-                    </div>
-                    {index < applicationSteps.length - 1 && (
-                      <div className="hidden lg:block absolute top-8 left-full w-full">
-                        <ArrowRight className="w-6 h-6 text-gray-400 mx-auto" />
-                      </div>
-                    )}
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
-                  <p className="text-gray-600 text-sm">{step.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Registration Form Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -273,119 +215,33 @@ const Students = () => {
             </div>
 
             <Card className="p-8 animate-fade-in" style={{ animationDelay: '400ms' }}>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <Label htmlFor="fullName">Full Name *</Label>
-                    <Input
-                      id="fullName"
-                      value={formData.fullName}
-                      onChange={(e) => handleInputChange('fullName', e.target.value)}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="email">Email Address *</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => handleInputChange('email', e.target.value)}
-                      required
-                    />
-                  </div>
+              <div className="relative">
+                {/* Loading indicator */}
+                <div id="formLoadingIndicator" className="absolute inset-0 flex items-center justify-center bg-white z-10">
+                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
                 </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <Label htmlFor="phone">Phone Number</Label>
-                    <Input
-                      id="phone"
-                      value={formData.phone}
-                      onChange={(e) => handleInputChange('phone', e.target.value)}
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="institution">Institution *</Label>
-                    <Input
-                      id="institution"
-                      value={formData.institution}
-                      onChange={(e) => handleInputChange('institution', e.target.value)}
-                      required
-                    />
-                  </div>
+                
+                {/* WordPress Form Iframe */}
+                <div className="w-full overflow-hidden">
+                  <iframe 
+                    src="https://wp.ccidbd.com/student-form/" 
+                    title="Student Registration Form"
+                    className="w-full border-0" 
+                    style={{ minHeight: '3000px' }} 
+                    frameBorder="0"
+                    scrolling="no"
+                    onLoad={() => {
+                      const loadingIndicator = document.getElementById('formLoadingIndicator');
+                      if (loadingIndicator) loadingIndicator.style.display = 'none';
+                    }}
+                  ></iframe>
                 </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <Label htmlFor="level">Education Level *</Label>
-                    <Select onValueChange={(value) => handleInputChange('level', value)}>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select your level" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="high-school">High School</SelectItem>
-                        <SelectItem value="undergraduate">Undergraduate</SelectItem>
-                        <SelectItem value="graduate">Graduate</SelectItem>
-                        <SelectItem value="postgraduate">Postgraduate</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <div>
-                    <Label htmlFor="major">Major/Field of Study</Label>
-                    <Input
-                      id="major"
-                      value={formData.major}
-                      onChange={(e) => handleInputChange('major', e.target.value)}
-                    />
-                  </div>
+                
+                {/* Fallback message */}
+                <div className="text-center mt-4 text-gray-600">
+                  <p>If the form doesn't load, <a href="https://wp.ccidbd.com/student-form/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">click here to open it in a new tab</a></p>
                 </div>
-
-                <div>
-                  <Label htmlFor="graduationYear">Expected Graduation Year</Label>
-                  <Input
-                    id="graduationYear"
-                    value={formData.graduationYear}
-                    onChange={(e) => handleInputChange('graduationYear', e.target.value)}
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="interests">Areas of Interest *</Label>
-                  <Textarea
-                    id="interests"
-                    placeholder="Tell us about your career interests and goals..."
-                    value={formData.interests}
-                    onChange={(e) => handleInputChange('interests', e.target.value)}
-                    required
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="experience">Previous Experience</Label>
-                  <Textarea
-                    id="experience"
-                    placeholder="Any previous internships, volunteer work, or relevant experience..."
-                    value={formData.experience}
-                    onChange={(e) => handleInputChange('experience', e.target.value)}
-                  />
-                </div>
-
-                <div>
-                  <Label htmlFor="motivation">Why do you want to join this program? *</Label>
-                  <Textarea
-                    id="motivation"
-                    placeholder="Share your motivation and what you hope to achieve..."
-                    value={formData.motivation}
-                    onChange={(e) => handleInputChange('motivation', e.target.value)}
-                    required
-                  />
-                </div>
-
-                <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90">
-                  Submit Application
-                </Button>
-              </form>
+              </div>
             </Card>
           </div>
         </div>
@@ -454,7 +310,7 @@ const Students = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-primary px-8 py-3 text-lg font-semibold"
+                className="border-white text-[#F89827] hover:bg-white hover:text-primary px-8 py-3 text-lg font-semibold"
               >
                 Talk to a Program Advisor
               </Button>
