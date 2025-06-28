@@ -27,7 +27,7 @@ const Index = () => {
       <AboutSection2 />
       <WhyCCID />
       <Testimonials />
-      <SEOQuoteSection />
+      {/*<SEOQuoteSection />*/}
       <Gallery />
       
       {/* Enhanced Final CTA Section */}
@@ -74,26 +74,6 @@ const Index = () => {
                   💬 Contact Us
                 </Button>
               </Link>
-            </div>
-            
-            {/* Trust Indicators */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white mb-1">500+</div>
-                <div className="text-white/80 text-sm">Success Stories</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white mb-1">25+</div>
-                <div className="text-white/80 text-sm">Countries</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white mb-1">100+</div>
-                <div className="text-white/80 text-sm">Partners</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white mb-1">95%</div>
-                <div className="text-white/80 text-sm">Success Rate</div>
-              </div>
             </div>
           </div>
         </div>

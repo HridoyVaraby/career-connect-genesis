@@ -294,7 +294,7 @@ const Employers = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-secondary px-8 py-3 text-lg font-semibold"
+                className="border-white text-black hover:bg-white hover:text-secondary px-8 py-3 text-lg font-semibold"
               >
                 Register as Employer
               </Button>
