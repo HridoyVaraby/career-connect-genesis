@@ -103,12 +103,18 @@ const Blog = () => {
     <div className="pt-24 pb-16">
       <div className="container mx-auto px-4">
         {/* Hero Section */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">CCID Blog</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Stay updated with the latest news, insights, and opportunities in global education and career development.
-          </p>
-        </div>
+        <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+         <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Events & Updates
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Stay updated with our latest events, workshops, and program announcements.
+            </p>
+          </div>
+         </div>
+        </section>
 
         {/* Categories */}
         <BlogCategories 
