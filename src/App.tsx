@@ -23,6 +23,11 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Layout from "./components/Layout";
 import ApplyNow from "./pages/ApplyNow";
+import SummerSchool from "./pages/SummerSchool";
+import LanguageCourse from "./pages/LanguageCourse";
+import HighSchool from "./pages/HighSchool";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 // Destination pages
 import USA from "./pages/destinations/USA";
@@ -116,6 +121,8 @@ const App = () => (
             <Route path="/services" element={<Services />} />
             <Route path="/events" element={<Events />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
