@@ -127,26 +127,46 @@ const StudyAbroad = () => {
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/5 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-semibold mb-6">
-              🎓 Transform Your Future
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-2xl">
+              <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-semibold mb-6">
+                🎓 Transform Your Future
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                Study <span className="text-primary">Abroad</span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8">
+                Begin Your International Education Journey with Confidence
+              </p>
+              <p className="text-lg text-gray-600 mb-10 leading-relaxed">
+                At CCID Bangladesh, we believe that studying abroad is more than earning a degree—it's about transforming your future. Our Study Abroad Program connects Bangladeshi students with globally ranked universities and pathway providers across North America, Europe, Asia, and Oceania.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-3">
+                  Apply Now
+                </Button>
+                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-3">
+                  Book a Free Consultation
+                </Button>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Study <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Abroad</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Begin Your International Education Journey with Confidence
-            </p>
-            <p className="text-lg text-gray-600 mb-10 max-w-4xl mx-auto leading-relaxed">
-              At CCID Bangladesh, we believe that studying abroad is more than earning a degree—it's about transforming your future. Our Study Abroad Program connects Bangladeshi students with globally ranked universities and pathway providers across North America, Europe, Asia, and Oceania.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-3">
-                Apply Now
-              </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-3">
-                Book a Free Consultation
-              </Button>
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=600&auto=format&fit=crop"
+                alt="Students studying abroad"
+                className="rounded-2xl shadow-2xl w-full h-96 object-cover"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
+                <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Globe className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-gray-900">50+ Countries</p>
+                    <p className="text-sm text-gray-600">Study Destinations</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -182,6 +202,52 @@ const StudyAbroad = () => {
         </div>
       </section>
 
+      {/* Study Abroad Benefits with Image */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=600&auto=format&fit=crop"
+                alt="International university campus"
+                className="rounded-2xl shadow-xl w-full h-96 object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Experience World-Class <span className="text-primary">Education</span>
+              </h2>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Study at internationally recognized universities with cutting-edge facilities, renowned faculty, and diverse student communities from around the world.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Global Recognition</h4>
+                    <p className="text-gray-600">Degrees recognized worldwide by employers and institutions</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Cultural Diversity</h4>
+                    <p className="text-gray-600">Learn alongside students from different cultures and backgrounds</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Career Opportunities</h4>
+                    <p className="text-gray-600">Access to global job markets and international networks</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Destinations */}
       <DestinationsSection />
       
@@ -208,23 +274,56 @@ const StudyAbroad = () => {
             </p>
           </div>
           
-          <div className="max-w-4xl mx-auto space-y-8">
-            {whatWeOffer.map((service, index) => (
-              <div key={service.number} className="flex flex-col md:flex-row items-start md:items-center gap-6 p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary text-white rounded-full flex items-center justify-center font-bold text-lg">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop"
+                alt="Student guidance and counseling"
+                className="rounded-2xl shadow-xl w-full h-80 object-cover"
+              />
+            </div>
+            <div className="space-y-6">
+              {whatWeOffer.slice(0, 3).map((service, index) => (
+                <div key={service.number} className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
                     {service.number}
                   </div>
-                </div>
-                <div className="flex-grow">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="text-primary">{service.icon}</div>
-                    <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="text-primary">{service.icon}</div>
+                      <h3 className="text-lg font-bold text-gray-900">{service.title}</h3>
+                    </div>
+                    <p className="text-gray-600">{service.description}</p>
                   </div>
-                  <p className="text-gray-600">{service.description}</p>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6 order-2 lg:order-1">
+              {whatWeOffer.slice(3).map((service, index) => (
+                <div key={service.number} className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                  <div className="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                    {service.number}
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="text-secondary">{service.icon}</div>
+                      <h3 className="text-lg font-bold text-gray-900">{service.title}</h3>
+                    </div>
+                    <p className="text-gray-600">{service.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="order-1 lg:order-2">
+              <img 
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=600&auto=format&fit=crop"
+                alt="Visa and documentation support"
+                className="rounded-2xl shadow-xl w-full h-80 object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -306,7 +405,7 @@ const StudyAbroad = () => {
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full">
-                  <thead className="bg-gradient-to-r from-primary to-secondary text-white">
+                  <thead className="bg-primary text-white">
                     <tr>
                       <th className="px-6 py-4 text-left font-semibold">Criteria</th>
                       <th className="px-6 py-4 text-left font-semibold">Study Abroad Program</th>
@@ -332,16 +431,25 @@ const StudyAbroad = () => {
       {/* Funding & Scholarships */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-yellow-100 p-4 rounded-full mb-6">
-              <Star className="w-12 h-12 text-yellow-600" />
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-block bg-yellow-100 p-4 rounded-full mb-6">
+                <Star className="w-12 h-12 text-yellow-600" />
+              </div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Funding & <span className="text-secondary">Scholarships</span>
+              </h2>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                Many of our partner institutions offer partial scholarships, early-bird discounts, or work-study options. We also guide students in preparing for external scholarships and provide templates and tips to improve chances of approval.
+              </p>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Funding & <span className="text-secondary">Scholarships</span>
-            </h2>
-            <p className="text-xl text-gray-600 leading-relaxed">
-              Many of our partner institutions offer partial scholarships, early-bird discounts, or work-study options. We also guide students in preparing for external scholarships and provide templates and tips to improve chances of approval.
-            </p>
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=600&auto=format&fit=crop"
+                alt="Scholarship and funding opportunities"
+                className="rounded-2xl shadow-xl w-full h-80 object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -358,17 +466,17 @@ const StudyAbroad = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
               🚀 Start Your Journey
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Ready to <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Study Abroad?</span>
+              Ready to <span className="text-primary">Study Abroad?</span>
             </h2>
             <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
               Let's find the right country, the right university, and the best outcome—for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-10 py-4 text-lg shadow-xl hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-10 py-4 text-lg shadow-xl transition-all duration-300 transform hover:scale-105">
                 Apply Now
               </Button>
               <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 text-lg shadow-lg transition-all duration-300 transform hover:scale-105">

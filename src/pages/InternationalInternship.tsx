@@ -132,26 +132,46 @@ const InternationalInternship = () => {
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/5 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-semibold mb-6">
-              🌍 Global Career Opportunities
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-2xl">
+              <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-semibold mb-6">
+                🌍 Global Career Opportunities
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                International Internship <span className="text-primary">Program</span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8">
+                Bridge the Gap Between Education and Global Industry
+              </p>
+              <p className="text-lg text-gray-600 mb-10 leading-relaxed">
+                Connect with paid, real-world experiences in the global hospitality and service sector. Transform your career through internationally certified training and multicultural professional development.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-3">
+                  Apply Now
+                </Button>
+                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-3">
+                  Download Brochure
+                </Button>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              International Internship <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Program</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Bridge the Gap Between Education and Global Industry
-            </p>
-            <p className="text-lg text-gray-600 mb-10 max-w-4xl mx-auto leading-relaxed">
-              Connect with paid, real-world experiences in the global hospitality and service sector. Transform your career through internationally certified training and multicultural professional development.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-3">
-                Apply Now
-              </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-3">
-                Download Brochure
-              </Button>
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=600&auto=format&fit=crop"
+                alt="International internship opportunities"
+                className="rounded-2xl shadow-2xl w-full h-96 object-cover"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
+                <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Briefcase className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-gray-900">20+ Countries</p>
+                    <p className="text-sm text-gray-600">Internship Destinations</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -187,8 +207,54 @@ const InternationalInternship = () => {
         </div>
       </section>
 
-      {/* Internship Positions */}
+      {/* International Experience Section */}
       <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=600&auto=format&fit=crop"
+                alt="Professional international work environment"
+                className="rounded-2xl shadow-xl w-full h-96 object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Gain Real <span className="text-primary">International Experience</span>
+              </h2>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Work alongside international professionals in world-class organizations. Develop skills that global employers value while building an international network.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Paid Internships</h4>
+                    <p className="text-gray-600">Earn while you learn in your international placement</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Cultural Integration</h4>
+                    <p className="text-gray-600">Immerse yourself in different cultures and work environments</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Career Advancement</h4>
+                    <p className="text-gray-600">Build skills and connections for future opportunities</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Internship Positions */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -199,18 +265,50 @@ const InternationalInternship = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {internshipRoles.map((role, index) => (
-              <div
-                key={role.name}
-                className={`${role.color} border-2 rounded-xl p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 cursor-pointer`}
-              >
-                <div className="flex items-center space-x-3">
-                  {role.icon}
-                  <span className="font-semibold text-lg">{role.name}</span>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600&auto=format&fit=crop"
+                alt="Hotel and hospitality internship"
+                className="rounded-2xl shadow-xl w-full h-80 object-cover"
+              />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {internshipRoles.slice(0, 6).map((role, index) => (
+                <div
+                  key={role.name}
+                  className={`${role.color} border-2 rounded-xl p-4 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 cursor-pointer`}
+                >
+                  <div className="flex items-center space-x-3">
+                    {role.icon}
+                    <span className="font-semibold">{role.name}</span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 order-2 lg:order-1">
+              {internshipRoles.slice(6).map((role, index) => (
+                <div
+                  key={role.name}
+                  className={`${role.color} border-2 rounded-xl p-4 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 cursor-pointer`}
+                >
+                  <div className="flex items-center space-x-3">
+                    {role.icon}
+                    <span className="font-semibold">{role.name}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="order-1 lg:order-2">
+              <img 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop"
+                alt="Business and IT internship opportunities"
+                className="rounded-2xl shadow-xl w-full h-80 object-cover"
+              />
+            </div>
           </div>
           
           <div className="text-center mt-12">
@@ -341,22 +439,49 @@ const InternationalInternship = () => {
             </p>
           </div>
           
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-7 gap-8">
-              {applicationSteps.map((step, index) => (
-                <div key={step.step} className="text-center relative">
-                  <div className="mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary text-white rounded-full flex items-center justify-center mx-auto font-bold text-lg shadow-lg">
-                      {step.step}
-                    </div>
-                    {index < applicationSteps.length - 1 && (
-                      <div className="hidden lg:block absolute top-8 left-16 w-full h-0.5 bg-gray-200"></div>
-                    )}
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=600&auto=format&fit=crop"
+                alt="Application and interview process"
+                className="rounded-2xl shadow-xl w-full h-80 object-cover"
+              />
+            </div>
+            <div className="space-y-6">
+              {applicationSteps.slice(0, 4).map((step, index) => (
+                <div key={step.step} className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                    {step.step}
                   </div>
-                  <h3 className="font-bold text-lg text-gray-900 mb-2">{step.title}</h3>
-                  <p className="text-gray-600 text-sm">{step.description}</p>
+                  <div>
+                    <h3 className="font-bold text-lg text-gray-900 mb-2">{step.title}</h3>
+                    <p className="text-gray-600">{step.description}</p>
+                  </div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6 order-2 lg:order-1">
+              {applicationSteps.slice(4).map((step, index) => (
+                <div key={step.step} className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                    {step.step}
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-gray-900 mb-2">{step.title}</h3>
+                    <p className="text-gray-600">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="order-1 lg:order-2">
+              <img 
+                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=600&auto=format&fit=crop"
+                alt="International travel and departure"
+                className="rounded-2xl shadow-xl w-full h-80 object-cover"
+              />
             </div>
           </div>
         </div>

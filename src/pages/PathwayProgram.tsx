@@ -95,23 +95,46 @@ const PathwayProgram = () => {
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
-              🧭 Academic Pathway
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="max-w-2xl">
+              <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-medium mb-6">
+                🧭 Academic Pathway
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                Pathway Program
+              </h1>
+              <p className="text-xl text-gray-600 mb-8">
+                Bridge Your Way to Global Education & Employment
+              </p>
+              <p className="text-lg text-gray-600 mb-10 leading-relaxed">
+                The Pathway Program by CCID Bangladesh is a structured academic and professional preparation route that helps students transition smoothly into international bachelor's or diploma programs.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white px-8">
+                  Schedule Free Consultation
+                </Button>
+                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8">
+                  Apply Now
+                </Button>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in" style={{ animationDelay: "200ms" }}>
-              Pathway Program
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 animate-fade-in" style={{ animationDelay: "400ms" }}>
-              Bridge Your Way to Global Education & Employment
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "600ms" }}>
-              <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white px-8">
-                Schedule Free Consultation
-              </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8">
-                Apply Now
-              </Button>
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=600&auto=format&fit=crop"
+                alt="Academic pathway and education journey"
+                className="rounded-2xl shadow-2xl w-full h-96 object-cover"
+              />
+              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
+                <div className="flex items-center space-x-3">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <GraduationCap className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-gray-900">Study + Work</p>
+                    <p className="text-sm text-gray-600">Blended Program</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -120,13 +143,22 @@ const PathwayProgram = () => {
       {/* Introduction */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-lg text-gray-700 leading-relaxed animate-fade-in">
-              The Pathway Program by CCID Bangladesh is a structured academic and professional preparation route that helps students transition smoothly into international bachelor's or diploma programs. Designed for those who want both education and work experience abroad, the pathway offers a blended curriculum combining academic study with paid internship training.
-            </p>
-            <p className="text-lg text-gray-600 mt-4 animate-fade-in" style={{ animationDelay: "200ms" }}>
-              If you dream of upgrading your qualifications, improving employability, and accessing world-class institutions—this is your first step.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                The Pathway Program by CCID Bangladesh is a structured academic and professional preparation route that helps students transition smoothly into international bachelor's or diploma programs. Designed for those who want both education and work experience abroad, the pathway offers a blended curriculum combining academic study with paid internship training.
+              </p>
+              <p className="text-lg text-gray-600">
+                If you dream of upgrading your qualifications, improving employability, and accessing world-class institutions—this is your first step.
+              </p>
+            </div>
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop"
+                alt="International students and academic success"
+                className="rounded-2xl shadow-xl w-full h-80 object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -163,26 +195,32 @@ const PathwayProgram = () => {
       {/* Program Format */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-block bg-secondary/10 text-secondary px-6 py-2 rounded-full text-sm font-medium mb-4">
-                📘 Program Structure
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Program Format</h2>
+          <div className="text-center mb-16">
+            <div className="inline-block bg-secondary/10 text-secondary px-6 py-2 rounded-full text-sm font-medium mb-4">
+              📘 Program Structure
             </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {formatDetails.map((detail, index) => (
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Program Format</h2>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=600&auto=format&fit=crop"
+                alt="Academic studies and learning environment"
+                className="rounded-2xl shadow-xl w-full h-80 object-cover"
+              />
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {formatDetails.slice(0, 4).map((detail, index) => (
                 <Card 
                   key={detail.title}
-                  className="hover:shadow-lg transition-all duration-300 animate-fade-in group cursor-pointer"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  className="hover:shadow-lg transition-all duration-300 group cursor-pointer"
                 >
                   <CardHeader className="text-center">
                     <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gray-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                       <detail.icon className={`w-8 h-8 ${detail.color}`} />
                     </div>
-                    <CardTitle className="text-xl font-bold text-gray-900">{detail.title}</CardTitle>
+                    <CardTitle className="text-lg font-bold text-gray-900">{detail.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="text-center">
                     <p className="text-gray-600">{detail.description}</p>
@@ -191,38 +229,96 @@ const PathwayProgram = () => {
               ))}
             </div>
           </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <Card 
+                className="hover:shadow-lg transition-all duration-300 group cursor-pointer"
+              >
+                <CardHeader className="text-center">
+                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gray-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <formatDetails[4].icon className={`w-8 h-8 ${formatDetails[4].color}`} />
+                  </div>
+                  <CardTitle className="text-xl font-bold text-gray-900">{formatDetails[4].title}</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-gray-600">{formatDetails[4].description}</p>
+                </CardContent>
+              </Card>
+            </div>
+            <div className="order-1 lg:order-2">
+              <img 
+                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=600&auto=format&fit=crop"
+                alt="Professional internship and work experience"
+                className="rounded-2xl shadow-xl w-full h-80 object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Study Fields */}
       <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-medium mb-4">
-                🎓 Academic Focus
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Available Study Fields</h2>
-              <p className="text-xl text-gray-600">Academic Pathway Focus Areas</p>
+          <div className="text-center mb-12">
+            <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-medium mb-4">
+              🎓 Academic Focus
             </div>
-            
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {studyFields.map((field, index) => (
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Available Study Fields</h2>
+            <p className="text-xl text-gray-600">Academic Pathway Focus Areas</p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=600&auto=format&fit=crop"
+                alt="Diverse academic fields and specializations"
+                className="rounded-2xl shadow-xl w-full h-80 object-cover"
+              />
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {studyFields.slice(0, 6).map((field, index) => (
                 <div 
                   key={field.name}
-                  className="bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 animate-fade-in group cursor-pointer border border-gray-100 hover:border-primary/20"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  className="bg-white p-4 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 group cursor-pointer border border-gray-100 hover:border-primary/20"
                 >
-                  <div className="flex items-center space-x-4">
-                    <div className="text-3xl group-hover:scale-110 transition-transform duration-300">
+                  <div className="flex items-center space-x-3">
+                    <div className="text-2xl group-hover:scale-110 transition-transform duration-300">
                       {field.icon}
                     </div>
-                    <h3 className="font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300">
+                    <h3 className="font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300 text-sm">
                       {field.name}
                     </h3>
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid sm:grid-cols-2 gap-4 order-2 lg:order-1">
+              {studyFields.slice(6).map((field, index) => (
+                <div 
+                  key={field.name}
+                  className="bg-white p-4 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 group cursor-pointer border border-gray-100 hover:border-primary/20"
+                >
+                  <div className="flex items-center space-x-3">
+                    <div className="text-2xl group-hover:scale-110 transition-transform duration-300">
+                      {field.icon}
+                    </div>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300 text-sm">
+                      {field.name}
+                    </h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="order-1 lg:order-2">
+              <img 
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop"
+                alt="Career guidance and professional development"
+                className="rounded-2xl shadow-xl w-full h-80 object-cover"
+              />
             </div>
           </div>
         </div>
@@ -299,23 +395,29 @@ const PathwayProgram = () => {
       {/* What You Gain */}
       <section className="py-16 bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-block bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
-                🧠 Program Benefits
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">What You Gain</h2>
+          <div className="text-center mb-12">
+            <div className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
+              🧠 Program Benefits
             </div>
-            
-            <div className="grid md:grid-cols-2 gap-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">What You Gain</h2>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=600&auto=format&fit=crop"
+                alt="Global career success and opportunities"
+                className="rounded-2xl shadow-xl w-full h-80 object-cover"
+              />
+            </div>
+            <div className="grid md:grid-cols-1 gap-4">
               {benefits.map((benefit, index) => (
                 <div 
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in"
-                  style={{ animationDelay: `${index * 100}ms` }}
+                  className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
                 >
                   <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                       <Award className="w-4 h-4 text-white" />
                     </div>
                     <p className="text-gray-700 leading-relaxed">{benefit}</p>

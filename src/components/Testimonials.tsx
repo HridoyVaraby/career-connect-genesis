@@ -1,6 +1,5 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
 const Testimonials = () => {
   const testimonials = [
@@ -75,7 +74,7 @@ const Testimonials = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <Card key={testimonial.name} className="h-full bg-white hover:shadow-lg transition-all duration-300 border border-gray-200">
               <CardContent className="p-8 h-full flex flex-col">
@@ -119,25 +118,6 @@ const Testimonials = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-        
-        {/* Bottom CTA */}
-        <div className="text-center">
-          <div className="bg-white rounded-lg p-10 border border-gray-200 shadow-sm max-w-3xl mx-auto">
-            <div className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
-              Join Our Community
-            </div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Ready to Write Your Success Story?</h3>
-            <p className="text-gray-600 mb-8 max-w-xl mx-auto">Join our community of global achievers and transform your career with world-class international opportunities</p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button className="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-lg font-semibold">
-                Share Your Story
-              </Button>
-              <Button variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 rounded-lg font-semibold">
-                View More Stories
-              </Button>
-            </div>
-          </div>
         </div>
       </div>
     </section>
