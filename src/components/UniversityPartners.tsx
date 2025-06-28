@@ -1,4 +1,6 @@
 
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
 const UniversityPartners = () => {
   const universities = [
     { name: "Oxford University", logo: "/placeholder.svg" },
@@ -23,25 +25,34 @@ const UniversityPartners = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-          {universities.map((university, index) => (
-            <div 
-              key={university.name}
-              className="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="w-16 h-16 mb-2 flex items-center justify-center">
-                <img 
-                  src={university.logo} 
-                  alt={`${university.name} logo`} 
-                  className="max-w-full max-h-full object-contain" 
-                  loading="lazy"
-                />
-              </div>
-              <span className="text-xs text-gray-600 text-center leading-tight">{university.name}</span>
-            </div>
-          ))}
-        </div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-6xl mx-auto"
+        >
+          <CarouselContent>
+            {universities.map((university, index) => (
+              <CarouselItem key={university.name} className="md:basis-1/3 lg:basis-1/4">
+                <div className="flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-md transition-shadow animate-fade-in h-40"
+                     style={{ animationDelay: `${index * 100}ms` }}>
+                  <div className="w-16 h-16 mb-4 flex items-center justify-center">
+                    <img 
+                      src={university.logo} 
+                      alt={`${university.name} logo`} 
+                      className="max-w-full max-h-full object-contain" 
+                      loading="lazy"
+                    />
+                  </div>
+                  <span className="text-xs text-gray-600 text-center leading-tight font-medium">{university.name}</span>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </section>
   );

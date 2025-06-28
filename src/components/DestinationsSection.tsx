@@ -96,7 +96,7 @@ const DestinationsSection = () => {
                     <div className="relative p-6 h-full flex flex-col justify-between">
                       <div>
                         <div className="flex justify-between items-start mb-4">
-                          <div className="w-10 h-6 overflow-hidden rounded shadow-sm">
+                          <div className="w-16 h-12 overflow-hidden rounded shadow-sm">
                             <img 
                               src={getFlagImageUrl(destination.countryCode)} 
                               alt={`${destination.name} flag`} 

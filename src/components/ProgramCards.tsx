@@ -8,43 +8,43 @@ const ProgramCards = () => {
     {
       title: "Study Abroad",
       description: "Access top universities worldwide with our comprehensive study abroad programs",
-      icon: "🎓",
+      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=400&auto=format&fit=crop",
       link: "/global-programs/study-abroad"
     },
     {
       title: "Virtual Internship",
       description: "Gain international work experience through our virtual internship opportunities",
-      icon: "💻",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=400&auto=format&fit=crop",
       link: "/global-programs/virtual-internship"
     },
     {
       title: "International Internship",
       description: "Work abroad with leading companies through our international internship programs",
-      icon: "🌍",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=400&auto=format&fit=crop",
       link: "/global-programs/international-internship"
     },
     {
       title: "Hotel Immersion",
       description: "Specialized hospitality training programs with leading hotels worldwide",
-      icon: "🏨",
+      image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=400&auto=format&fit=crop",
       link: "/global-programs/hotel-immersion"
     },
     {
       title: "Professional Immersion",
       description: "Immerse yourself in international business environments and practices",
-      icon: "💼",
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=400&auto=format&fit=crop",
       link: "/global-programs/professional-immersion"
     },
     {
       title: "Pathway Program",
       description: "Structured pathways to international education and career opportunities",
-      icon: "🛤️",
+      image: "https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=400&auto=format&fit=crop",
       link: "/global-programs/pathway-program"
     },
     {
       title: "Student Exchange",
       description: "Experience different cultures while continuing your education abroad",
-      icon: "✈️",
+      image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=400&auto=format&fit=crop",
       link: "/global-programs/student-exchange"
     }
   ];
@@ -72,8 +72,13 @@ const ProgramCards = () => {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gray-50 rounded-lg shadow-sm flex items-center justify-center text-3xl">
-                  {program.icon}
+                <div className="w-full h-32 mx-auto mb-6 overflow-hidden rounded-lg shadow-sm">
+                  <img 
+                    src={program.image} 
+                    alt={program.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
                 </div>
                 <CardTitle className="text-xl font-bold text-gray-900">
                   {program.title}

@@ -34,26 +34,26 @@ const Header = () => {
   ];
 
   const destinationItems = [
-    { name: "USA", path: "/destinations/usa", flag: "🇺🇸" },
-    { name: "France", path: "/destinations/france", flag: "🇫🇷" },
-    { name: "Italy", path: "/destinations/italy", flag: "🇮🇹" },
-    { name: "Spain", path: "/destinations/spain", flag: "🇪🇸" },
-    { name: "Portugal", path: "/destinations/portugal", flag: "🇵🇹" },
-    { name: "United Kingdom", path: "/destinations/united-kingdom", flag: "🇬🇧" },
-    { name: "Netherlands", path: "/destinations/netherlands", flag: "🇳🇱" },
-    { name: "New Zealand", path: "/destinations/new-zealand", flag: "🇳🇿" },
-    { name: "Czech Republic", path: "/destinations/czech-republic", flag: "🇨🇿" },
-    { name: "Croatia", path: "/destinations/croatia", flag: "🇭🇷" },
-    { name: "Montenegro", path: "/destinations/montenegro", flag: "🇲🇪" },
-    { name: "Malta", path: "/destinations/malta", flag: "🇲🇹" },
-    { name: "Greece", path: "/destinations/greece", flag: "🇬🇷" },
-    { name: "Thailand", path: "/destinations/thailand", flag: "🇹🇭" },
-    { name: "Vietnam", path: "/destinations/vietnam", flag: "🇻🇳" },
-    { name: "Indonesia", path: "/destinations/indonesia", flag: "🇮🇩" },
-    { name: "Malaysia", path: "/destinations/malaysia", flag: "🇲🇾" },
-    { name: "Hong Kong", path: "/destinations/hong-kong", flag: "🇭🇰" },
-    { name: "UAE", path: "/destinations/uae", flag: "🇦🇪" },
-    { name: "Bahrain", path: "/destinations/bahrain", flag: "🇧🇭" },
+    { name: "USA", path: "/destinations/usa", countryCode: "us" },
+    { name: "France", path: "/destinations/france", countryCode: "fr" },
+    { name: "Italy", path: "/destinations/italy", countryCode: "it" },
+    { name: "Spain", path: "/destinations/spain", countryCode: "es" },
+    { name: "Portugal", path: "/destinations/portugal", countryCode: "pt" },
+    { name: "United Kingdom", path: "/destinations/united-kingdom", countryCode: "gb" },
+    { name: "Netherlands", path: "/destinations/netherlands", countryCode: "nl" },
+    { name: "New Zealand", path: "/destinations/new-zealand", countryCode: "nz" },
+    { name: "Czech Republic", path: "/destinations/czech-republic", countryCode: "cz" },
+    { name: "Croatia", path: "/destinations/croatia", countryCode: "hr" },
+    { name: "Montenegro", path: "/destinations/montenegro", countryCode: "me" },
+    { name: "Malta", path: "/destinations/malta", countryCode: "mt" },
+    { name: "Greece", path: "/destinations/greece", countryCode: "gr" },
+    { name: "Thailand", path: "/destinations/thailand", countryCode: "th" },
+    { name: "Vietnam", path: "/destinations/vietnam", countryCode: "vn" },
+    { name: "Indonesia", path: "/destinations/indonesia", countryCode: "id" },
+    { name: "Malaysia", path: "/destinations/malaysia", countryCode: "my" },
+    { name: "Hong Kong", path: "/destinations/hong-kong", countryCode: "hk" },
+    { name: "UAE", path: "/destinations/uae", countryCode: "ae" },
+    { name: "Bahrain", path: "/destinations/bahrain", countryCode: "bh" },
   ];
 
   // Split destinations into 4 columns for mega menu
@@ -174,9 +174,14 @@ const Header = () => {
                             to={item.path}
                             className="flex items-center space-x-3 p-2 rounded-md hover:bg-gray-50 hover:text-primary transition-colors group"
                           >
-                            <span className="text-xl flex-shrink-0 w-6 h-6 flex items-center justify-center">
-                              {item.flag}
-                            </span>
+                            <div className="w-6 h-4 flex-shrink-0 overflow-hidden rounded shadow-sm">
+                              <img 
+                                src={`https://flagcdn.com/w40/${item.countryCode}.png`}
+                                alt={`${item.name} flag`}
+                                className="w-full h-full object-cover"
+                                loading="lazy"
+                              />
+                            </div>
                             <span className="text-sm font-medium text-gray-700 group-hover:text-primary">
                               {item.name}
                             </span>
