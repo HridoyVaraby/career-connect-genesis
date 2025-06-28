@@ -23,9 +23,26 @@ import {
   Award,
   ArrowRight
 } from "lucide-react";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Students = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    // Function to check if viewport is mobile size
+    const checkIsMobile = () => {
+      setIsMobile(window.matchMedia('(max-width: 768px)').matches);
+    };
+    
+    // Initial check
+    checkIsMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIsMobile);
+    
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
   const benefits = [
     { icon: Building, text: "Build real-world experience through local internships" },
     { icon: Users, text: "Get career guidance from industry professionals" },
@@ -227,7 +244,9 @@ const Students = () => {
                     src="https://wp.ccidbd.com/student-form/" 
                     title="Student Registration Form"
                     className="w-full border-0" 
-                    style={{ minHeight: '3000px' }} 
+                    style={{ 
+                      minHeight: isMobile ? '3300px' : '3000px'
+                    }} 
                     frameBorder="0"
                     scrolling="no"
                     onLoad={() => {

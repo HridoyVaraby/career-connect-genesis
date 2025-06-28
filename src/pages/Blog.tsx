@@ -153,17 +153,23 @@ const Blog = () => {
 
                 return (
                   <Card key={post.id} className="overflow-hidden flex flex-col h-full transition-all duration-300 hover:shadow-lg">
-                    <div className="aspect-video w-full overflow-hidden">
-                      <img
-                        src={featuredImage}
-                        alt={imageAlt}
-                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                      />
-                    </div>
+                    
+                    <Link to={`/blog/${post.slug}`}>
+                      <div className="aspect-video w-full overflow-hidden">
+                        <img
+                          src={featuredImage}
+                          alt={imageAlt}
+                          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                        />
+                      </div>
+                    </Link>
+
                     <CardHeader>
                       <div className="text-sm text-gray-500 mb-2">{formattedDate}</div>
                       <CardTitle className="line-clamp-2">
-                        <div dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+                        <Link to={`/blog/${post.slug}`} className="hover:underline">
+                          <div dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
+                        </Link>
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="flex-grow">

@@ -110,25 +110,6 @@ const BlogPost = () => {
   return (
     <div className="pt-24 pb-16">
       <div className="container mx-auto px-4">
-        {/* Breadcrumb */}
-        <Breadcrumb className="mb-8">
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink as={Link} to="/">Home</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink as={Link} to="/blog">Blog</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbLink className="max-w-[200px] truncate">
-                <span dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
-
         {/* Article Header */}
         <div className="mb-8 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
@@ -178,7 +159,7 @@ const BlogPost = () => {
             <Link to="/blog">
               <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Blog
+                Back to Events
               </Button>
             </Link>
           </div>

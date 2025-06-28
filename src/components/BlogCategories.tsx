@@ -59,7 +59,7 @@ const BlogCategories = ({ selectedCategory, onCategoryChange }: BlogCategoriesPr
   }
 
   return (
-    <div className="mb-8">
+    <div className="mb-8 py-8 flex flex-col items-center justify-center text-center">
       <h2 className="text-xl font-semibold mb-4">Categories</h2>
       <div className="flex flex-wrap gap-2">
         <Button
