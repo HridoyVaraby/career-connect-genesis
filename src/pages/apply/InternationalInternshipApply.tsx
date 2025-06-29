@@ -26,10 +26,10 @@ const InternationalInternshipApply = () => {
   return (
     <div className="pt-16 min-h-screen bg-gray-50">
       {/* Header */}
-      <section className="py-12 bg-gradient-to-r from-blue-500 to-blue-600 text-white">
+      <section className="py-12 bg-gradient-to-r from-blue-400 to-blue-600 text-white">
         <div className="container mx-auto px-4">
           <div className="flex items-center mb-6">
-            <Link to="/apply">
+            <Link to="/global-programs/international-internship">
               <Button variant="ghost" className="text-white hover:bg-white/20 mr-4">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Programs

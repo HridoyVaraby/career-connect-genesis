@@ -8,7 +8,7 @@ const ApplyNow = () => {
     {
       title: "International Internship Program",
       description: "Gain hands-on experience in world-class hotels, resorts, and companies abroad across hospitality, business, culinary, and more.",
-      icon: "🌐",
+      icon: "🎓",
       link: "/apply/international-internship"
     },
     {
