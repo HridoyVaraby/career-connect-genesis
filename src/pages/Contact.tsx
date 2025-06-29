@@ -1,45 +1,27 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Mail, Clock, Globe, Calendar } from "lucide-react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: ""
-  });
-  const { toast } = useToast();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thanks! We'll get back to you shortly.",
-    });
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSelectChange = (value: string) => {
-    setFormData({
-      ...formData,
-      subject: value
-    });
-  };
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    // Function to check if viewport is mobile size
+    const checkIsMobile = () => {
+      setIsMobile(window.matchMedia('(max-width: 768px)').matches);
+    };
+    
+    // Initial check
+    checkIsMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIsMobile);
+    
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
 
   return (
     <div className="pt-16">
@@ -156,100 +138,35 @@ const Contact = () => {
             
             <Card className="shadow-xl border-0 animate-fade-in" style={{ animationDelay: '200ms' }}>
               <CardContent className="p-8">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Full Name <span className="text-red-500">*</span>
-                      </label>
-                      <Input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="w-full"
-                        placeholder="Enter your full name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Email Address <span className="text-red-500">*</span>
-                      </label>
-                      <Input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="w-full"
-                        placeholder="Enter your email address"
-                      />
-                    </div>
+                <div className="relative">
+                  {/* Loading indicator */}
+                  <div id="formLoadingIndicator" className="absolute inset-0 flex items-center justify-center bg-white z-10">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
                   </div>
                   
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Phone Number
-                      </label>
-                      <Input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full"
-                        placeholder="Enter your phone number"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Subject <span className="text-red-500">*</span>
-                      </label>
-                      <Select value={formData.subject} onValueChange={handleSelectChange} required>
-                        <SelectTrigger className="w-full">
-                          <SelectValue placeholder="Select a subject" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="general">General Inquiry</SelectItem>
-                          <SelectItem value="program">Program Info</SelectItem>
-                          <SelectItem value="student">Student Registration</SelectItem>
-                          <SelectItem value="employer">Employer Request</SelectItem>
-                          <SelectItem value="partnership">Partnership</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
+                  {/* WordPress Form Iframe */}
+                  <div className="w-full overflow-hidden">
+                    <iframe 
+                      src="https://wp.ccidbd.com/contact-form/" 
+                      title="Contact Form"
+                      className="w-full border-0" 
+                      style={{ 
+                        minHeight: isMobile ? '600px' : '600px'
+                      }} 
+                      frameBorder="0"
+                      scrolling="no"
+                      onLoad={() => {
+                        const loadingIndicator = document.getElementById('formLoadingIndicator');
+                        if (loadingIndicator) loadingIndicator.style.display = 'none';
+                      }}
+                    ></iframe>
                   </div>
                   
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Message <span className="text-red-500">*</span>
-                    </label>
-                    <Textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={6}
-                      required
-                      className="w-full"
-                      placeholder="Tell us about your inquiry..."
-                    />
+                  {/* Fallback message */}
+                  <div className="text-center mt-4 text-gray-600">
+                    <p>If the form doesn't load, <a href="https://wp.ccidbd.com/contact-form/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">click here to open it in a new tab</a></p>
                   </div>
-                  
-                  <div className="text-center">
-                    <Button 
-                      type="submit" 
-                      size="lg" 
-                      className="bg-secondary hover:bg-secondary/90 text-white px-8 py-3 text-lg"
-                    >
-                      Send Message
-                    </Button>
-                  </div>
-                  
-                  <p className="text-sm text-gray-500 text-center mt-4">
-                    We respect your privacy. Your information will never be shared with third parties.
-                  </p>
-                </form>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -275,14 +192,6 @@ const Contact = () => {
               >
                 <Globe className="w-5 h-5 mr-2" />
                 Explore Global Programs
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-primary px-8 py-3 text-lg font-semibold"
-              >
-                <Calendar className="w-5 h-5 mr-2" />
-                Book a Free Consultation
               </Button>
             </div>
           </div>
