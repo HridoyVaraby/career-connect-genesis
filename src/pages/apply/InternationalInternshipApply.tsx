@@ -1,10 +1,28 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { ArrowLeft, Globe, Clock, MapPin, GraduationCap } from "lucide-react";
-import ApplicationForm from "@/components/ApplicationForm";
+import React, { useState, useEffect } from "react";
 
 const InternationalInternshipApply = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    // Function to check if viewport is mobile size
+    const checkIsMobile = () => {
+      setIsMobile(window.matchMedia('(max-width: 768px)').matches);
+    };
+    
+    // Initial check
+    checkIsMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIsMobile);
+    
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
   return (
     <div className="pt-16 min-h-screen bg-gray-50">
       {/* Header */}
@@ -59,12 +77,50 @@ const InternationalInternshipApply = () => {
       </section>
 
       {/* Application Form */}
-      <section className="py-12">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
-          <ApplicationForm 
-            programTitle="International Internship Program"
-            programDescription="Gain hands-on experience in world-class hotels, resorts, and companies abroad across hospitality, business, culinary, and more."
-          />
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 animate-fade-in">
+                International Internship Application Form
+              </h2>
+              <p className="text-xl text-gray-600 animate-fade-in" style={{ animationDelay: '200ms' }}>
+                Please wait for the application to load.
+              </p>
+            </div>
+
+            <Card className="p-8 animate-fade-in" style={{ animationDelay: '400ms' }}>
+              <div className="relative">
+                {/* Loading indicator */}
+                <div id="formLoadingIndicator" className="absolute inset-0 flex items-center justify-center bg-white z-10">
+                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+                </div>
+                
+                {/* WordPress Form Iframe */}
+                <div className="w-full overflow-hidden">
+                  <iframe 
+                    src="https://wp.ccidbd.com/international-internship-form/" 
+                    title="International Internship Application Form"
+                    className="w-full border-0" 
+                    style={{ 
+                      minHeight: isMobile ? '6200px' : '6000px'
+                    }} 
+                    frameBorder="0"
+                    scrolling="no"
+                    onLoad={() => {
+                      const loadingIndicator = document.getElementById('formLoadingIndicator');
+                      if (loadingIndicator) loadingIndicator.style.display = 'none';
+                    }}
+                  ></iframe>
+                </div>
+                
+                {/* Fallback message */}
+                <div className="text-center mt-4 text-gray-600">
+                  <p>If the form doesn't load, <a href="https://wp.ccidbd.com/international-internship-form/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">click here to open it in a new tab</a></p>
+                </div>
+              </div>
+            </Card>
+          </div>
         </div>
       </section>
     </div>
