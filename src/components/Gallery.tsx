@@ -6,7 +6,7 @@ const Gallery = () => {
     { src: "/image 1.webp", alt: "University campus" },
     { src: "/image 2.webp", alt: "Students collaborating" },
     { src: "/image 3.webp", alt: "Global networking" },
-    { src: "/image 4.webp", alt: "Success celebration" }
+    { src: "/image 13.webp", alt: "Success celebration" }
   ];
 
   return (

@@ -63,7 +63,7 @@ const DestinationsSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-            International Opportunities
+            Where Talent Meets Global Opportunity
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Explore Our Global Destinations

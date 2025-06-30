@@ -15,16 +15,16 @@ const AboutSection2 = () => {
           <div className="lg:w-1/2 order-2 lg:order-1">
             <div className="max-w-2xl">
               <div className="inline-block bg-secondary/10 text-secondary px-6 py-2 rounded-full text-sm font-semibold mb-6">
-                🎯 Our Mission
+                Our Mission
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                 Building Bridges to 
-                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent block">
+                <span className="bg-primary bg-clip-text text-transparent block">
                   Global Success
                 </span>
               </h2>
               <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                At CCID Bangladesh, we don't just open doors—we build bridges. Our mission is to 
+                At CCID, we don't just open doors—we build bridges. Our mission is to 
                 create seamless pathways between Bangladeshi talent and global opportunities, 
                 ensuring every student and professional can reach their full potential.
               </p>
@@ -65,12 +65,12 @@ const AboutSection2 = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/global-programs">
                   <Button size="lg" className="bg-gradient-to-r from-primary to-primary/80 hover:shadow-lg text-white px-8 py-3 rounded-full">
-                    🌟 Discover Our Impact
+                    Discover Our Impact
                   </Button>
                 </Link>
                 <Link to="/contact">
                   <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-3 rounded-full">
-                    📞 Book Consultation
+                    Book Consultation
                   </Button>
                 </Link>
               </div>
@@ -93,7 +93,7 @@ const AboutSection2 = () => {
               </div>
               
               <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-2xl border border-gray-100">
-                <div className="text-3xl font-bold text-secondary">$45k</div>
+                <div className="text-3xl font-bold text-secondary">$10k</div>
                 <div className="text-sm text-gray-600">Average Starting Salary</div>
               </div>
               

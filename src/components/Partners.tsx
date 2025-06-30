@@ -5,7 +5,7 @@ const Partners = () => {
   const partners = [
     { name: "Welkin Vision", logo: "https://i0.wp.com/ccidbd.com/wp-content/uploads/2022/11/Shozib.png" },
     { name: "Skill Development Institute", logo: "https://i0.wp.com/ccidbd.com/wp-content/uploads/2022/11/Picture41.png" },
-    { name: "DDCom", logo: "https://i0.wp.com/ccidbd.com/wp-content/uploads/2022/11/Picture37.png" },
+    { name: "TeachSmart", logo: "/teachsmart.png" },
     { name: "Hotel Propical Daisy", logo: "https://i0.wp.com/ccidbd.com/wp-content/uploads/2022/11/logo-150x150-2.png" },
     { name: "Advanced Global Skills", logo: "https://static.wixstatic.com/media/618403_e17a07fa4abc4f62bf6455950956ae08~mv2.png/v1/fill/w_251,h_120,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo%20small.png" },
   ];

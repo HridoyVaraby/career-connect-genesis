@@ -11,12 +11,12 @@ const AboutSection = () => {
           <div className="lg:w-1/2">
             <div className="relative">
               <img 
-                src="/67.webp"
+                src="https://i0.wp.com/wp.ccidbd.com/wp-content/uploads/2023/01/Student-side.jpeg"
                 alt="Students collaborating on laptops"
                 className="rounded-2xl shadow-2xl w-full h-[400px] object-cover"
               />
               <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl shadow-lg">
-                <div className="text-2xl font-bold">10+</div>
+                <div className="text-2xl font-bold">5+</div>
                 <div className="text-sm">Years of Excellence</div>
               </div>
             </div>
@@ -26,12 +26,12 @@ const AboutSection = () => {
           <div className="lg:w-1/2">
             <div className="max-w-lg">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Empowering Bangladesh's Future Leaders
+                Empowering Future Leaders - Design. Deliver. Delight.
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Since our inception, CCID Bangladesh has been at the forefront of connecting 
-                ambitious students and professionals with life-changing international opportunities. 
-                We believe that talent knows no borders, and every Bangladeshi deserves access to 
+                ambitious students and professionals with life-changing national & international opportunities. 
+                We believe that talent knows no borders, and every student & professional deserves access to 
                 world-class education and career development.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -42,7 +42,7 @@ const AboutSection = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/global-programs">
                   <Button size="lg" className="bg-primary hover:bg-primary/90">
-                    Our Story
+                    Global Programs
                   </Button>
                 </Link>
                 <Link to="/contact">

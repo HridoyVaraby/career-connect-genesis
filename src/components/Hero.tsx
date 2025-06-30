@@ -8,10 +8,10 @@ const Hero = () => {
   
   const heroImages = [
     "/image 5.webp",
-    "/image 6.webp",
+    "/image 17.webp",
     "/1420.webp",
     "/image 1.webp",
-    "/image 4.webp"
+    "/image 15.webp"
   ];
 
   useEffect(() => {
@@ -54,7 +54,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Connecting Bangladeshi students and professionals with world-class international 
+              Connecting students and professionals with world-class international 
               internships, training, and academic programs that transform careers.
             </p>
             
@@ -71,7 +71,7 @@ const Hero = () => {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-2 border-white/50 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-gray-900 px-10 py-6 text-lg font-semibold rounded-lg transition-all duration-300"
+                  className="border-2 border-white/50 bg-white backdrop-blur-sm text-black hover:bg-white/10 hover:text-white px-10 py-6 text-lg font-semibold rounded-lg transition-all duration-300"
                 >
                   Get In Touch
                 </Button>

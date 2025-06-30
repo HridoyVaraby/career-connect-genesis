@@ -8,7 +8,7 @@ const ProgramCards = () => {
     {
       title: "Study Abroad",
       description: "Access top universities worldwide with our comprehensive study abroad programs",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=400&auto=format&fit=crop",
+      image: "/image 5.webp",
       link: "/global-programs/study-abroad"
     },
     {
@@ -38,7 +38,7 @@ const ProgramCards = () => {
     {
       title: "Pathway Program",
       description: "Structured pathways to international education and career opportunities",
-      image: "/image 12.webp",
+      image: "/image 3.webp",
       link: "/global-programs/pathway-program"
     },
     {
@@ -54,7 +54,7 @@ const ProgramCards = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-semibold mb-4">
-            Global Career Programs
+            Grow Globally, Succeed Professionally
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Explore Our Global Programs

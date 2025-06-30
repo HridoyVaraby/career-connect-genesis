@@ -12,7 +12,7 @@ const NationalProgramsSection = () => {
             National Initiatives for Local Impact
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Empowering Bangladeshi students and employers through structured programs.
+            Empowering students through expert-driven, industry-aligned programs designed to drive focused outcomes.
           </p>
         </div>
         
