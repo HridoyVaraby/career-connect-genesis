@@ -7,11 +7,11 @@ const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const heroImages = [
-    "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2070&auto=format&fit=crop"
+    "/image 5.webp",
+    "/image 6.webp",
+    "/1420.webp",
+    "/image 1.webp",
+    "/image 4.webp"
   ];
 
   useEffect(() => {

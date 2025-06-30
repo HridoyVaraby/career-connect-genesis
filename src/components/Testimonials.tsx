@@ -13,11 +13,11 @@ const Testimonials = () => {
       location: "San Francisco, USA"
     },
     {
-      name: "Fatima Khan",
+      name: "Fahim Khan",
       program: "Study Abroad - Oxford University",
       company: "Oxford University",
       quote: "Thanks to CCID's comprehensive support, my dream of studying at Oxford became reality. The application guidance and visa support were flawless.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      image: "/image 8.webp",
       rating: 5,
       location: "Oxford, UK"
     },

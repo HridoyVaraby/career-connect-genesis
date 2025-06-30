@@ -1,12 +1,12 @@
 
 const Gallery = () => {
   const images = [
-    { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1", alt: "Students studying abroad" },
-    { src: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846", alt: "International internship" },
-    { src: "https://images.unsplash.com/photo-1529390079861-591de354faf5", alt: "University campus" },
-    { src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158", alt: "Students collaborating" },
-    { src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f", alt: "Global networking" },
-    { src: "https://images.unsplash.com/photo-1552664730-d307ca884978", alt: "Success celebration" }
+    { src: "/image 5.webp", alt: "Students studying abroad" },
+    { src: "/image 6.webp", alt: "International internship" },
+    { src: "/image 1.webp", alt: "University campus" },
+    { src: "/image 2.webp", alt: "Students collaborating" },
+    { src: "/image 3.webp", alt: "Global networking" },
+    { src: "/image 4.webp", alt: "Success celebration" }
   ];
 
   return (

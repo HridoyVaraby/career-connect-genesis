@@ -11,7 +11,7 @@ const AboutSection = () => {
           <div className="lg:w-1/2">
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                src="/67.webp"
                 alt="Students collaborating on laptops"
                 className="rounded-2xl shadow-2xl w-full h-[400px] object-cover"
               />

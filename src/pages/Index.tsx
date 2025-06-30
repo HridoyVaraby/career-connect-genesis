@@ -22,11 +22,11 @@ const Index = () => {
       <NationalProgramsSection />
       <DestinationsSection />
       <AboutSection />
-      <UniversityPartners />
+      {/*<UniversityPartners />*/}
       <Partners />
       <AboutSection2 />
       <WhyCCID />
-      <Testimonials />
+      {/*<Testimonials />*/}
       {/*<SEOQuoteSection />*/}
       <Gallery />
       
