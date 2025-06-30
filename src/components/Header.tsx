@@ -232,15 +232,6 @@ const Header = () => {
             </div>
 
             <Link
-              to="/services"
-              className={`text-gray-700 hover:text-primary transition-colors ${
-                location.pathname === "/services" ? "text-primary font-medium" : ""
-              }`}
-            >
-              Services
-            </Link>
-
-            <Link
               to="/blog"
               className={`text-gray-700 hover:text-primary transition-colors ${
                 location.pathname.startsWith("/blog") ? "text-primary font-medium" : ""
