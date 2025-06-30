@@ -14,37 +14,37 @@ const ProgramCards = () => {
     {
       title: "Virtual Internship",
       description: "Gain international work experience through our virtual internship opportunities",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=400&auto=format&fit=crop",
+      image: "/image 7.webp",
       link: "/global-programs/virtual-internship"
     },
     {
       title: "International Internship",
       description: "Work abroad with leading companies through our international internship programs",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=400&auto=format&fit=crop",
+      image: "/image 12.webp",
       link: "/global-programs/international-internship"
     },
     {
       title: "Hotel Immersion",
       description: "Specialized hospitality training programs with leading hotels worldwide",
-      image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=400&auto=format&fit=crop",
+      image: "/image 10.webp",
       link: "/global-programs/hotel-immersion"
     },
     {
       title: "Professional Immersion",
       description: "Immerse yourself in international business environments and practices",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=400&auto=format&fit=crop",
+      image: "/image 13.webp",
       link: "/global-programs/professional-immersion"
     },
     {
       title: "Pathway Program",
       description: "Structured pathways to international education and career opportunities",
-      image: "https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=400&auto=format&fit=crop",
+      image: "/image 12.webp",
       link: "/global-programs/pathway-program"
     },
     {
       title: "Student Exchange",
       description: "Experience different cultures while continuing your education abroad",
-      image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=400&auto=format&fit=crop",
+      image: "/image 9.webp",
       link: "/global-programs/student-exchange"
     }
   ];
