@@ -488,9 +488,9 @@ const GlobalPrograms = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link to="/programs">
+              <Link to="/apply">
                 <Button size="lg" className="bg-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-10 py-4 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                  Browse Programs
+                  Apply Now
                 </Button>
               </Link>
               <Link to="/contact">
