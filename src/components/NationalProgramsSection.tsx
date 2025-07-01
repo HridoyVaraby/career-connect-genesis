@@ -21,7 +21,7 @@ const NationalProgramsSection = () => {
             <CardHeader>
               <div className="w-full h-32 mx-auto mb-6 overflow-hidden rounded-lg shadow-sm">
                 <img 
-                  src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&h=300&fit=crop" 
+                  src="https://i0.wp.com/wp.ccidbd.com/wp-content/uploads/2022/11/Picture12.png" 
                   alt="Students in classroom"
                   className="w-full h-full object-cover"
                 />
@@ -44,7 +44,7 @@ const NationalProgramsSection = () => {
             <CardHeader>
               <div className="w-full h-32 mx-auto mb-6 overflow-hidden rounded-lg shadow-sm">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" 
+                  src="https://i0.wp.com/wp.ccidbd.com/wp-content/uploads/2023/01/Image-7.png" 
                   alt="Business professionals in meeting"
                   className="w-full h-full object-cover"
                 />
