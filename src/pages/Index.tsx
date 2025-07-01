@@ -41,7 +41,7 @@ const Index = () => {
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-semibold mb-8">
-              🚀 Start Your Journey Today
+              Start Your Journey Today
             </div>
             
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -59,16 +59,16 @@ const Index = () => {
                   size="lg" 
                   className="bg-white text-primary hover:bg-gray-100 px-10 py-4 text-lg font-bold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
                 >
-                  🌟 Explore Programs
+                  Explore Programs
                 </Button>
               </Link>
               <Link to="/contact">
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-2 border-white/40 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-primary px-10 py-4 text-lg font-bold rounded-full transition-all duration-300 transform hover:scale-105"
+                  className="border-2 border-white/40 bg-secondary backdrop-blur-sm text-white hover:bg-white hover:text-primary px-10 py-4 text-lg font-bold rounded-full transition-all duration-300 transform hover:scale-105"
                 >
-                  💬 Contact Us
+                  Contact Us
                 </Button>
               </Link>
             </div>
