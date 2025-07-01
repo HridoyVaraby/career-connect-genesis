@@ -14,6 +14,7 @@ import PathwayProgram from "./pages/PathwayProgram";
 import StudentExchange from "./pages/StudentExchange";
 import ProfessionalImmersion from "./pages/ProfessionalImmersion";
 import HotelImmersion from "./pages/HotelImmersion";
+import AgricultureInternship from "./pages/AgricultureInternship";
 import Destinations from "./pages/Destinations";
 import NationalPrograms from "./pages/NationalPrograms";
 import Students from "./pages/Students";
@@ -85,6 +86,7 @@ const App = () => (
             <Route path="/global-programs/study-abroad" element={<StudyAbroad />} />
             <Route path="/global-programs/virtual-internship" element={<VirtualInternship />} />
             <Route path="/global-programs/international-internship" element={<InternationalInternship />} />
+            <Route path="/global-programs/agriculture-internship" element={<AgricultureInternship />} />
             <Route path="/global-programs/pathway-program" element={<PathwayProgram />} />
             <Route path="/global-programs/student-exchange" element={<StudentExchange />} />
             <Route path="/global-programs/professional-immersion" element={<ProfessionalImmersion />} />

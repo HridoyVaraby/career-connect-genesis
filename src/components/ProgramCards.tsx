@@ -24,6 +24,12 @@ const ProgramCards = () => {
       link: "/global-programs/international-internship"
     },
     {
+      title: "Agriculture Internship Program",
+      description: "Hands-on global farming experience with modern agricultural practices and livestock management",
+      image: "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=400&h=300&fit=crop",
+      link: "/global-programs/agriculture-internship"
+    },
+    {
       title: "Hotel Immersion",
       description: "Specialized hospitality training programs with leading hotels worldwide",
       image: "/image 10.webp",
@@ -64,7 +70,7 @@ const ProgramCards = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-12">
           {programs.map((program, index) => (
             <Card 
               key={program.title} 

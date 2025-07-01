@@ -1,13 +1,14 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X, Plus, Minus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [activeMobileSubmenu, setActiveMobileSubmenu] = useState<string | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -22,6 +23,7 @@ const Header = () => {
     { name: "Study Abroad", path: "/global-programs/study-abroad" },
     { name: "Virtual Internship Programs", path: "/global-programs/virtual-internship" },
     { name: "International Internship", path: "/global-programs/international-internship" },
+    { name: "Agriculture Internship Program", path: "/global-programs/agriculture-internship" },
     { name: "Pathway Program", path: "/global-programs/pathway-program" },
     { name: "Student Exchange", path: "/global-programs/student-exchange" },
     { name: "Professional Immersion", path: "/global-programs/professional-immersion" },
@@ -68,6 +70,10 @@ const Header = () => {
 
   const handleDropdownToggle = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
+
+  const handleMobileSubmenuToggle = (submenu: string) => {
+    setActiveMobileSubmenu(activeMobileSubmenu === submenu ? null : submenu);
   };
 
   return (
@@ -283,34 +289,123 @@ const Header = () => {
               >
                 Home
               </Link>
-              <Link
-                to="/global-programs"
-                className="block py-2 text-gray-700 hover:text-primary transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Global Programs
-              </Link>
-              <Link
-                to="/destinations"
-                className="block py-2 text-gray-700 hover:text-primary transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Destinations
-              </Link>
-              <Link
-                to="/national-programs"
-                className="block py-2 text-gray-700 hover:text-primary transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                National Programs
-              </Link>
-              <Link
-                to="/services"
-                className="block py-2 text-gray-700 hover:text-primary transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Services
-              </Link>
+              
+              {/* Global Programs Mobile Submenu */}
+              <div>
+                <button
+                  className="flex items-center justify-between w-full py-2 text-gray-700 hover:text-primary transition-colors"
+                  onClick={() => handleMobileSubmenuToggle("global")}
+                >
+                  <span>Global Programs</span>
+                  {activeMobileSubmenu === "global" ? (
+                    <Minus className="w-4 h-4" />
+                  ) : (
+                    <Plus className="w-4 h-4" />
+                  )}
+                </button>
+                {activeMobileSubmenu === "global" && (
+                  <div className="ml-4 space-y-2 mt-2">
+                    <Link
+                      to="/global-programs"
+                      className="block py-1 text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Overview
+                    </Link>
+                    {globalProgramsItems.map((item) => (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        className="block py-1 text-gray-600 hover:text-primary transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Destinations Mobile Submenu */}
+              <div>
+                <button
+                  className="flex items-center justify-between w-full py-2 text-gray-700 hover:text-primary transition-colors"
+                  onClick={() => handleMobileSubmenuToggle("destinations")}
+                >
+                  <span>Destinations</span>
+                  {activeMobileSubmenu === "destinations" ? (
+                    <Minus className="w-4 h-4" />
+                  ) : (
+                    <Plus className="w-4 h-4" />
+                  )}
+                </button>
+                {activeMobileSubmenu === "destinations" && (
+                  <div className="ml-4 space-y-2 mt-2 max-h-48 overflow-y-auto">
+                    <Link
+                      to="/destinations"
+                      className="block py-1 text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      All Destinations
+                    </Link>
+                    {destinationItems.map((item) => (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        className="flex items-center space-x-2 py-1 text-gray-600 hover:text-primary transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <div className="w-4 h-3 flex-shrink-0 overflow-hidden rounded shadow-sm">
+                          <img 
+                            src={`https://flagcdn.com/w40/${item.countryCode}.png`}
+                            alt={`${item.name} flag`}
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+                        <span className="text-sm">{item.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* National Programs Mobile Submenu */}
+              <div>
+                <button
+                  className="flex items-center justify-between w-full py-2 text-gray-700 hover:text-primary transition-colors"
+                  onClick={() => handleMobileSubmenuToggle("national")}
+                >
+                  <span>National Programs</span>
+                  {activeMobileSubmenu === "national" ? (
+                    <Minus className="w-4 h-4" />
+                  ) : (
+                    <Plus className="w-4 h-4" />
+                  )}
+                </button>
+                {activeMobileSubmenu === "national" && (
+                  <div className="ml-4 space-y-2 mt-2">
+                    <Link
+                      to="/national-programs"
+                      className="block py-1 text-gray-600 hover:text-primary transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Overview
+                    </Link>
+                    {nationalProgramsItems.map((item) => (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        className="block py-1 text-gray-600 hover:text-primary transition-colors"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               <Link
                 to="/blog"
                 className="block py-2 text-gray-700 hover:text-primary transition-colors"
