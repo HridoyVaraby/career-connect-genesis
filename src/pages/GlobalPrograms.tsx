@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { FileText, CheckCircle } from "lucide-react";
 import DestinationsSection from "@/components/DestinationsSection";
 import Testimonials from "@/components/Testimonials";
+import ProgramCards from "@/components/ProgramCards";
 
 const GlobalPrograms = () => {
   const programs = [
@@ -69,9 +70,10 @@ const GlobalPrograms = () => {
   const eligibilityCards = [
     { title: "University Students", description: "2nd year or above", icon: "🎓" },
     { title: "Recent Graduates", description: "Within 12 months", icon: "👨‍🎓" },
-    { title: "Target Majors", description: "Hospitality, business, IT, education", icon: "📚" },
-    { title: "Young Professionals", description: "Aged 20-30", icon: "💼" },
-    { title: "Bangladeshi Citizens", description: "With basic English & motivation", icon: "🇧🇩" }
+    { title: "Target Majors", description: "Hospitality, Agriculture, Medical", icon: "📚" },
+    { title: "Young Professionals", description: "Aged 18-35 Years Old", icon: "💼" },
+    { title: "Students Worldwide", description: "With basic English & motivation", icon: "🌍" }
+
   ];
 
   const includedFeatures = [
@@ -104,8 +106,9 @@ const GlobalPrograms = () => {
 
   const metrics = [
     { number: "500+", label: "Successful International Placements", icon: "🎓" },
-    { number: "25+", label: "Country Partners & Institutions", icon: "🌐" },
-    { number: "70%", label: "Internship-to-Job Conversion", icon: "💼" }
+    { number: "25+", label: "Country Partners & Institutions", icon: "🌎" },
+    { number: "70%", label: "Internship-to-Job Conversion", icon: "💼" },
+    { number: "5+", label: " Years of Experience in Career Consulting", icon: "📅" }
   ];
 
   const requiredDocuments = [
@@ -184,8 +187,8 @@ const GlobalPrograms = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-block bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full text-sm font-semibold mb-6 animate-fade-in">
-              🌍 25+ Countries • 500+ Success Stories
+            <div className="inline-block bg-secondary text-white px-6 py-2 rounded-full text-sm font-semibold mb-6 animate-fade-in">
+              25+ Countries • 500+ Success Stories
             </div>
             <h1 className="text-4xl md:text-7xl font-bold text-gray-900 mb-6 animate-fade-in">
               Global Programs
@@ -197,7 +200,7 @@ const GlobalPrograms = () => {
               At CCID Bangladesh, we believe that talent knows no borders. Our Global Programs connect Bangladeshi students with world-class international opportunities across 25+ countries—providing global exposure, workplace readiness, and pathways to international careers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-xl">
+              <Button size="lg" className="bg-primary hover:from-primary/90 hover:to-secondary/90 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-xl">
                 Browse Programs
               </Button>
               <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 py-4 text-lg font-semibold rounded-full">
@@ -209,7 +212,7 @@ const GlobalPrograms = () => {
       </section>
 
       {/* Program Categories Grid */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      {/*<section className="py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-semibold mb-4">
@@ -259,8 +262,9 @@ const GlobalPrograms = () => {
             ))}
           </div>
         </div>
-      </section>
-
+      </section> */}
+      {/* Program Cards */}
+      <ProgramCards />
       {/* Destinations Section */}
       <DestinationsSection />
 
@@ -269,10 +273,10 @@ const GlobalPrograms = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-block bg-secondary/10 text-secondary px-6 py-2 rounded-full text-sm font-semibold mb-4">
-              🎯 Eligibility
+              Eligibility
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Who Is This <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">For?</span>
+              Who Is This <span className="bg-primary bg-clip-text text-transparent">For?</span>
             </h2>
           </div>
           
@@ -299,10 +303,11 @@ const GlobalPrograms = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-block bg-green-100 text-green-700 px-6 py-2 rounded-full text-sm font-semibold mb-4">
-              ✅ Full Support
+              Full Support
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              What's <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Included?</span>
+              What's <span className="bg-primary bg-clip-text text-transparent">Included?</span>
+
             </h2>
           </div>
           
@@ -324,14 +329,15 @@ const GlobalPrograms = () => {
       </section>
 
       {/* Program Investment Table */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-block bg-yellow-100 text-yellow-700 px-6 py-2 rounded-full text-sm font-semibold mb-4">
-              💸 Investment Overview
+              Investment Overview
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Program <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Investment</span>
+              Program <span className="bg-primary bg-clip-text text-transparent">Investment</span>
+
             </h2>
             <p className="text-gray-600 mb-8">Cost varies by destination, duration, and program type. Flights and insurance are usually not included.</p>
           </div>
@@ -358,21 +364,21 @@ const GlobalPrograms = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Success Metrics */}
       <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-block bg-white/20 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">
-              🏆 Success Metrics
+              Success Metrics
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Proven Track Record
             </h2>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             {metrics.map((metric, index) => (
               <div 
                 key={metric.label}
@@ -389,17 +395,17 @@ const GlobalPrograms = () => {
       </section>
 
       {/* Testimonials */}
-      <Testimonials />
+      {/* <Testimonials /> */}
 
       {/* Application Requirements Section */}
       <section className="py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-block bg-blue-100 text-blue-700 px-6 py-2 rounded-full text-sm font-semibold mb-4">
-              📄 Application Requirements
+              Application Requirements
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Required <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Documents</span>
+              Required <span className="bg-primary bg-clip-text text-transparent">Documents</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
               Prepare these essential documents to ensure a smooth application process for your global program.
@@ -435,10 +441,10 @@ const GlobalPrograms = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-block bg-purple-100 text-purple-700 px-6 py-2 rounded-full text-sm font-semibold mb-4">
-              ❓ Frequently Asked Questions
+              Frequently Asked Questions
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Got <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Questions?</span>
+              Got <span className="bg-secondary bg-clip-text text-transparent">Questions?</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Find answers to the most common questions about our global programs and application process.
@@ -471,26 +477,27 @@ const GlobalPrograms = () => {
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
-              🚀 Ready to Start?
+            <div className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
+              Ready to Start?
             </div>
             <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Are You Ready to Take Your <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">First Step Abroad?</span>
+              Are You Ready to Take Your <span className="bg-primary bg-clip-text text-transparent">First Step Abroad?</span>
             </h2>
             <p className="text-xl text-gray-600 mb-12 leading-relaxed">
               Explore global programs tailored to your goals—and let us guide the way to your international success.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-10 py-4 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                Browse Internship Programs
-              </Button>
-              <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105">
-                Schedule Free Consultation
-              </Button>
-              <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white px-10 py-4 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                Apply Now
-              </Button>
+              <Link to="/programs">
+                <Button size="lg" className="bg-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-10 py-4 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                  Browse Programs
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105">
+                  Schedule Free Consultation
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

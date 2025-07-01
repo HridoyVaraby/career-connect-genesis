@@ -111,19 +111,6 @@ const ProgramCards = () => {
             </Card>
           ))}
         </div>
-        
-        {/* CTA */}
-        <div className="text-center">
-          <div className="bg-gray-50 p-8 rounded-lg shadow-sm border border-gray-200">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Career?</h3>
-            <p className="text-gray-600 mb-6">Join thousands of successful graduates worldwide</p>
-            <Link to="/global-programs">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-3 rounded-lg">
-                View All Programs
-              </Button>
-            </Link>
-          </div>
-        </div>
       </div>
     </section>
   );
