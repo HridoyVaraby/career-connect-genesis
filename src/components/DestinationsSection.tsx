@@ -38,6 +38,8 @@ const DestinationsSection = () => {
       name: "EUROPE",
       emoji: "🌍",
       destinations: [
+        { name: "Germany", countryCode: "de" },
+        { name: "Denmark", countryCode: "dk" },
         { name: "France", countryCode: "fr" },
         { name: "Italy", countryCode: "it" },
         { name: "Spain", countryCode: "es" },

@@ -30,6 +30,8 @@ import MedicalInternships from "./pages/MedicalInternships";
 
 // Destination pages
 import USA from "./pages/destinations/USA";
+import Germany from "./pages/destinations/Germany";
+import Denmark from "./pages/destinations/Denmark";
 import France from "./pages/destinations/France";
 import Italy from "./pages/destinations/Italy";
 import Spain from "./pages/destinations/Spain";
@@ -96,6 +98,8 @@ const App = () => (
             
             {/* Destination specific pages */}
             <Route path="/destinations/usa" element={<USA />} />
+            <Route path="/destinations/germany" element={<Germany />} />
+            <Route path="/destinations/denmark" element={<Denmark />} />
             <Route path="/destinations/france" element={<France />} />
             <Route path="/destinations/italy" element={<Italy />} />
             <Route path="/destinations/spain" element={<Spain />} />

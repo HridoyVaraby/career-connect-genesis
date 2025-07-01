@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X, Plus, Minus } from "lucide-react";
@@ -38,6 +37,8 @@ const Header = () => {
 
   const destinationItems = [
     { name: "USA", path: "/destinations/usa", countryCode: "us" },
+    { name: "Germany", path: "/destinations/germany", countryCode: "de" },
+    { name: "Denmark", path: "/destinations/denmark", countryCode: "dk" },
     { name: "France", path: "/destinations/france", countryCode: "fr" },
     { name: "Italy", path: "/destinations/italy", countryCode: "it" },
     { name: "Spain", path: "/destinations/spain", countryCode: "es" },
