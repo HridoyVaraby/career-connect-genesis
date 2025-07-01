@@ -49,9 +49,9 @@ const Destinations = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/10 via-white to-secondary/10 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-primary/10 via-white to-accent/10 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -59,10 +59,7 @@ const Destinations = () => {
               🌍 25+ Global Destinations
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in">
-              Explore Our Global
-              <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Destinations
-              </span>
+              Explore Our Global Destinations
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto animate-fade-in">
               Your career journey starts in the right country. From five-star hotels in the UAE to leading universities in Canada, we match your goals with the best global environments.
@@ -199,7 +196,7 @@ const Destinations = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 via-primary to-secondary relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-gray-900 via-primary to-accent relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
@@ -212,10 +209,7 @@ const Destinations = () => {
             </div>
             
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Don't Just Dream of Going Global—
-              <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                Plan It
-              </span>
+              Don't Just Dream of Going Global—Plan It
             </h2>
             
             <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -240,7 +234,7 @@ const Destinations = () => {
                   Explore Program Types
                 </Button>
               </Link>
-              <Link to="/contact">
+              <Link to="/apply">
                 <Button 
                   size="lg" 
                   variant="outline" 

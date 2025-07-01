@@ -19,8 +19,12 @@ const NationalProgramsSection = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <Card className="hover:shadow-lg transition-shadow text-center">
             <CardHeader>
-              <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-3xl">🎓</span>
+              <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&h=300&fit=crop" 
+                  alt="Students in classroom"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <CardTitle className="text-2xl">For Students</CardTitle>
             </CardHeader>
@@ -38,8 +42,12 @@ const NationalProgramsSection = () => {
           
           <Card className="hover:shadow-lg transition-shadow text-center">
             <CardHeader>
-              <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-3xl">🏢</span>
+              <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" 
+                  alt="Business professionals in meeting"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <CardTitle className="text-2xl">For Employers</CardTitle>
             </CardHeader>
@@ -48,7 +56,7 @@ const NationalProgramsSection = () => {
                 Talent acquisition, campus talks, and HR development solutions
               </CardDescription>
               <Link to="/national-programs/employers">
-                <Button className="bg-secondary hover:bg-secondary/90">
+                <Button className="bg-accent hover:bg-accent/90">
                   Explore Employer Solutions
                 </Button>
               </Link>

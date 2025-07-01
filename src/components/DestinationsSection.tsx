@@ -1,4 +1,6 @@
 
+import { Link } from "react-router-dom";
+
 const DestinationsSection = () => {
   // Helper function to get flag image URL from country code
   const getFlagImageUrl = (countryCode: string) => {
@@ -6,6 +8,20 @@ const DestinationsSection = () => {
     const code = countryCode.toLowerCase();
     // Using flagcdn.com for flag images
     return `https://flagcdn.com/w80/${code}.png`;
+  };
+
+  // Helper function to generate country page URL
+  const getCountryUrl = (name: string) => {
+    const countryName = name.replace(/\s+/g, '-').toLowerCase()
+      .replace('(j1-internship)', '')
+      .replace('(j1-traineeship)', '')
+      .replace('united-arab-emirates-', '')
+      .replace('czech-republic', 'czech-republic')
+      .replace('united-kingdom', 'united-kingdom')
+      .replace('new-zealand', 'new-zealand')
+      .replace('hong-kong', 'hong-kong')
+      .trim();
+    return `/destinations/${countryName}`;
   };
 
   // Destinations organized by region with country codes for flag images
@@ -57,7 +73,7 @@ const DestinationsSection = () => {
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-10 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 left-10 w-64 h-64 bg-secondary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -84,9 +100,10 @@ const DestinationsSection = () => {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {region.destinations.map((destination, index) => (
-                  <div 
+                  <Link 
                     key={`${region.name}-${destination.name}`}
-                    className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 animate-fade-in bg-white"
+                    to={getCountryUrl(destination.name)}
+                    className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 animate-fade-in bg-white block"
                     style={{ animationDelay: `${(regionIndex * 200) + (index * 100)}ms` }}
                   >
                     {/* Card background with subtle pattern */}
@@ -96,7 +113,7 @@ const DestinationsSection = () => {
                     <div className="relative p-6 h-full flex flex-col justify-between">
                       <div>
                         <div className="flex justify-between items-start mb-4">
-                          <div className="w-16 h-12 overflow-hidden rounded shadow-sm">
+                          <div className="w-20 h-15 overflow-hidden rounded shadow-sm">
                             <img 
                               src={getFlagImageUrl(destination.countryCode)} 
                               alt={`${destination.name} flag`} 
@@ -118,7 +135,7 @@ const DestinationsSection = () => {
                       {/* Hover effect line */}
                       <div className="h-1 w-0 bg-primary group-hover:w-full transition-all duration-300 rounded-full"></div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -127,9 +144,11 @@ const DestinationsSection = () => {
         
         {/* Call to action */}
         <div className="mt-16 text-center">
-          <button className="bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-            Explore All Destinations
-          </button>
+          <Link to="/destinations">
+            <button className="bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              Explore All Destinations
+            </button>
+          </Link>
         </div>
       </div>
     </section>

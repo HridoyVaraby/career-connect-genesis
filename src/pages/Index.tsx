@@ -31,7 +31,7 @@ const Index = () => {
       <Gallery />
       
       {/* Enhanced Final CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 via-primary to-secondary relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-gray-900 via-primary to-accent relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
@@ -45,10 +45,7 @@ const Index = () => {
             </div>
             
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ready to Start Your 
-              <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                Global Journey?
-              </span>
+              Ready to Start Your Global Journey?
             </h2>
             
             <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">

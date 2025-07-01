@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Events = () => {
   const events = [
@@ -29,7 +30,7 @@ const Events = () => {
 
   return (
     <div className="pt-16">
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+      <section className="py-20 bg-gradient-to-br from-primary/10 to-accent/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -59,9 +60,11 @@ const Events = () => {
                   <CardDescription className="mb-4">
                     {event.description}
                   </CardDescription>
-                  <Button variant="outline" className="w-full">
-                    Learn More
-                  </Button>
+                  <Link to="/contact">
+                    <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white">
+                      Learn More
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
