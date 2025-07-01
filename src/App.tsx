@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -23,9 +24,6 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Layout from "./components/Layout";
 import ApplyNow from "./pages/ApplyNow";
-import SummerSchool from "./pages/SummerSchool";
-import LanguageCourse from "./pages/LanguageCourse";
-import HighSchool from "./pages/HighSchool";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 
