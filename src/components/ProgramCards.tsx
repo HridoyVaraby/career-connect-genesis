@@ -30,6 +30,12 @@ const ProgramCards = () => {
       link: "/global-programs/agriculture-internship"
     },
     {
+      title: "Medical Internships Abroad",
+      description: "Global health experience with clinical insight and career impact in underserved communities worldwide",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop",
+      link: "/global-programs/medical-internships"
+    },
+    {
       title: "Hotel Immersion",
       description: "Specialized hospitality training programs with leading hotels worldwide",
       image: "/image 10.webp",

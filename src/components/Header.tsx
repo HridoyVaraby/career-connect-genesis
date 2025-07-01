@@ -24,6 +24,7 @@ const Header = () => {
     { name: "Virtual Internship Programs", path: "/global-programs/virtual-internship" },
     { name: "International Internship", path: "/global-programs/international-internship" },
     { name: "Agriculture Internship Program", path: "/global-programs/agriculture-internship" },
+    { name: "Medical Internships Abroad", path: "/global-programs/medical-internships" },
     { name: "Pathway Program", path: "/global-programs/pathway-program" },
     { name: "Student Exchange", path: "/global-programs/student-exchange" },
     { name: "Professional Immersion", path: "/global-programs/professional-immersion" },

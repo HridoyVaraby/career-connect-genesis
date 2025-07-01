@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -27,6 +26,7 @@ import Layout from "./components/Layout";
 import ApplyNow from "./pages/ApplyNow";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import MedicalInternships from "./pages/MedicalInternships";
 
 // Destination pages
 import USA from "./pages/destinations/USA";
@@ -87,6 +87,7 @@ const App = () => (
             <Route path="/global-programs/virtual-internship" element={<VirtualInternship />} />
             <Route path="/global-programs/international-internship" element={<InternationalInternship />} />
             <Route path="/global-programs/agriculture-internship" element={<AgricultureInternship />} />
+            <Route path="/global-programs/medical-internships" element={<MedicalInternships />} />
             <Route path="/global-programs/pathway-program" element={<PathwayProgram />} />
             <Route path="/global-programs/student-exchange" element={<StudentExchange />} />
             <Route path="/global-programs/professional-immersion" element={<ProfessionalImmersion />} />
