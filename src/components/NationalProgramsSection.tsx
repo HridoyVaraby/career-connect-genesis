@@ -19,7 +19,7 @@ const NationalProgramsSection = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <Card className="hover:shadow-lg transition-shadow text-center">
             <CardHeader>
-              <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden">
+              <div className="w-full h-32 mx-auto mb-6 overflow-hidden rounded-lg shadow-sm">
                 <img 
                   src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&h=300&fit=crop" 
                   alt="Students in classroom"
@@ -42,7 +42,7 @@ const NationalProgramsSection = () => {
           
           <Card className="hover:shadow-lg transition-shadow text-center">
             <CardHeader>
-              <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden">
+              <div className="w-full h-32 mx-auto mb-6 overflow-hidden rounded-lg shadow-sm">
                 <img 
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" 
                   alt="Business professionals in meeting"
@@ -56,7 +56,7 @@ const NationalProgramsSection = () => {
                 Talent acquisition, campus talks, and HR development solutions
               </CardDescription>
               <Link to="/national-programs/employers">
-                <Button className="bg-accent hover:bg-accent/90">
+                <Button className="bg-secondary hover:bg-secondary/90">
                   Explore Employer Solutions
                 </Button>
               </Link>
