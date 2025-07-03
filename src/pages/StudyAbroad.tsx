@@ -143,12 +143,16 @@ const StudyAbroad = () => {
                 At CCID Bangladesh, we believe that studying abroad is more than earning a degree—it's about transforming your future. Our Study Abroad Program connects Bangladeshi students with globally ranked universities and pathway providers across North America, Europe, Asia, and Oceania.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-3">
-                  Apply Now
-                </Button>
-                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-3">
-                  Book a Free Consultation
-                </Button>
+                <Link to="/apply/study-abroad">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-3">
+                    Apply Now
+                  </Button>
+                </Link>
+                <Link to="/contact">
+                  <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-3">
+                    Book a Free Consultation
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="relative">
