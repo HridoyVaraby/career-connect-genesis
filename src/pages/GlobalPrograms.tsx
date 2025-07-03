@@ -385,7 +385,6 @@ const GlobalPrograms = () => {
                 className="text-center bg-white/10 backdrop-blur-sm p-8 rounded-2xl hover:bg-white/20 transition-all duration-300 animate-fade-in"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
-                <div className="text-5xl mb-4">{metric.icon}</div>
                 <div className="text-5xl font-bold mb-4">{metric.number}</div>
                 <div className="text-xl">{metric.label}</div>
               </div>
@@ -395,7 +394,7 @@ const GlobalPrograms = () => {
       </section>
 
       {/* Testimonials */}
-      {/* <Testimonials /> */}
+      <Testimonials />
 
       {/* Application Requirements Section */}
       <section className="py-20 bg-gradient-to-b from-white to-gray-50">

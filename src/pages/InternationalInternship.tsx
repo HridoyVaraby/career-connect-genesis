@@ -4,36 +4,37 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { CheckCircle, Globe, Users, Award, MapPin, Briefcase, GraduationCap, Heart, Utensils, Monitor, Camera, BookOpen } from "lucide-react";
 import DestinationsSection from "@/components/DestinationsSection";
 import Testimonials from "@/components/Testimonials";
+import { Link } from "react-router-dom";
 
 const InternationalInternship = () => {
   const providedServices = [
     {
-      icon: <MapPin className="w-8 h-8 text-primary" />,
+      src: "/icons/destination.png",
       title: "International Placement",
       description: "Top-tier hotels, resorts, and organizations worldwide"
     },
     {
-      icon: <Users className="w-8 h-8 text-primary" />,
+      src: "/icons/training.png",
       title: "Global Training",
       description: "Industry-specific training from international experts"
     },
     {
-      icon: <Briefcase className="w-8 h-8 text-primary" />,
+      src: "/icons/cooperation.png",
       title: "Multi-Role Exposure",
       description: "Culinary, F&B, Guest Relations, Tourism, Business, Education, IT"
     },
     {
-      icon: <Award className="w-8 h-8 text-primary" />,
+      src: "/icons/graduation-hat.png",
       title: "Global Certifications",
       description: "Structured evaluation and internationally recognized credentials"
     },
     {
-      icon: <Globe className="w-8 h-8 text-primary" />,
+      src: "/icons/advancement.png",
       title: "Career Pathways",
       description: "Job placement opportunities and work permit pathways"
     },
     {
-      icon: <Heart className="w-8 h-8 text-primary" />,
+      src: "/icons/virtual-assistants.png",
       title: "Ongoing Support",
       description: "From application to completion and beyond"
     }
@@ -135,7 +136,7 @@ const InternationalInternship = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-2xl">
               <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-semibold mb-6">
-                🌍 Global Career Opportunities
+                Global Career Opportunities
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                 International Internship <span className="text-primary">Program</span>
@@ -147,17 +148,23 @@ const InternationalInternship = () => {
                 Connect with paid, real-world experiences in the global hospitality and service sector. Transform your career through internationally certified training and multicultural professional development.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-3">
-                  Apply Now
-                </Button>
-                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-3">
+                <Link to="/apply/international-internship">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-3">
+                    Apply Now
+                  </Button>
+                </Link>
+                <a
+                  href="/CCID-INTERNSHIP-PRESENTATION.pdf"
+                  download
+                  className="inline-block rounded-md bg-secondary text-white hover:bg-primary hover:text-white px-8 py-3"
+                >
                   Download Brochure
-                </Button>
+                </a>
               </div>
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=600&auto=format&fit=crop"
+                src="/image 10.webp"
                 alt="International internship opportunities"
                 className="rounded-2xl shadow-2xl w-full h-96 object-cover"
               />
@@ -167,7 +174,7 @@ const InternationalInternship = () => {
                     <Briefcase className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="font-bold text-gray-900">20+ Countries</p>
+                    <p className="font-bold text-gray-900">40+ Countries</p>
                     <p className="text-sm text-gray-600">Internship Destinations</p>
                   </div>
                 </div>
@@ -194,8 +201,8 @@ const InternationalInternship = () => {
               <Card key={service.title} className="hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 shadow-lg group">
                 <CardContent className="p-8 text-center">
                   <div className="mb-6 flex justify-center">
-                    <div className="p-4 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors duration-300">
-                      {service.icon}
+                    <div className="p-4 bg-secondary/10 rounded-full group-hover:bg-primary/20 transition-colors duration-300">
+                      <img src={service.src} alt={service.title} className="w-8 h-8" />
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
@@ -213,7 +220,7 @@ const InternationalInternship = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=600&auto=format&fit=crop"
+                src="/image 13.webp"
                 alt="Professional international work environment"
                 className="rounded-2xl shadow-xl w-full h-96 object-cover"
               />
@@ -268,7 +275,7 @@ const InternationalInternship = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600&auto=format&fit=crop"
+                src="/image16.webp"
                 alt="Hotel and hospitality internship"
                 className="rounded-2xl shadow-xl w-full h-80 object-cover"
               />
@@ -304,7 +311,7 @@ const InternationalInternship = () => {
             </div>
             <div className="order-1 lg:order-2">
               <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop"
+                src="/image15.webp"
                 alt="Business and IT internship opportunities"
                 className="rounded-2xl shadow-xl w-full h-80 object-cover"
               />
@@ -384,7 +391,7 @@ const InternationalInternship = () => {
       </section>
 
       {/* Investment Overview */}
-      <section className="py-20 bg-gray-50">
+      {/*<section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -425,7 +432,7 @@ const InternationalInternship = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* Application Process */}
       <section className="py-20 bg-white">
@@ -499,8 +506,8 @@ const InternationalInternship = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
-              🚀 Start Your Journey
+            <div className="inline-block bg-secondary text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
+              Start Your Journey
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Ready to Launch Your <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Global Career?</span>
@@ -509,15 +516,16 @@ const InternationalInternship = () => {
               Let us help you find the right country, the right training, and the right path to international success.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-10 py-4 text-lg shadow-xl hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105">
-                Apply Now
-              </Button>
-              <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 text-lg shadow-lg transition-all duration-300 transform hover:scale-105">
-                Download Program Brochure
-              </Button>
-              <Button size="lg" variant="outline" className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-10 py-4 text-lg shadow-lg transition-all duration-300 transform hover:scale-105">
-                Schedule Consultation
-              </Button>
+              <Link to="/apply/international-internship">
+                <Button size="lg" className="bg-primary hover:from-primary/90 hover:to-secondary/90 text-white px-10 py-4 text-lg shadow-xl hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105">
+                  Apply Now
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-10 py-4 text-lg shadow-lg transition-all duration-300 transform hover:scale-105">
+                  Schedule Consultation
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -145,11 +145,6 @@ const VirtualInternship = () => {
                   Apply for Virtual Internship
                 </Button>
               </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-2 border-[#F89827] text-[#F89827] hover:bg-[#F89827] hover:text-white px-10 py-6 text-lg rounded-full transition-all duration-300 transform hover:scale-105">
-                  Talk To A Consultant
-                </Button>
-              </Link>
               </div>
             </div>
             <div className="relative">
@@ -328,7 +323,7 @@ const VirtualInternship = () => {
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 animate-fade-in">
-              Ready to Build Your Global Career—Remotely?
+              Ready to Build Your Global Career Remotely?
             </h2>
             
             <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
