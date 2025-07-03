@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { CheckCircle, Globe, Users, Award, MapPin, Briefcase, GraduationCap, BookOpen, FileText, Shield, HeartHandshake, Star } from "lucide-react";
 import DestinationsSection from "@/components/DestinationsSection";
 import Testimonials from "@/components/Testimonials";
+import { Link } from "react-router-dom";
 
 const StudyAbroad = () => {
   const whyChooseUs = [
@@ -130,7 +131,7 @@ const StudyAbroad = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-2xl">
               <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-semibold mb-6">
-                🎓 Transform Your Future
+                Transform Your Future
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                 Study <span className="text-primary">Abroad</span>
@@ -467,7 +468,7 @@ const StudyAbroad = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
-              🚀 Start Your Journey
+              Start Your Journey
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Ready to <span className="text-primary">Study Abroad?</span>
@@ -476,12 +477,16 @@ const StudyAbroad = () => {
               Let's find the right country, the right university, and the best outcome—for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-10 py-4 text-lg shadow-xl transition-all duration-300 transform hover:scale-105">
-                Apply Now
-              </Button>
-              <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 text-lg shadow-lg transition-all duration-300 transform hover:scale-105">
-                Book a Free Consultation
-              </Button>
+              <Link to="/apply/study-abroad">
+                <Button size="lg" className="bg-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-10 py-4 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                  Apply Now
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-10 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105">
+                  Schedule Free Consultation
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

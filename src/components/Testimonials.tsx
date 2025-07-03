@@ -8,16 +8,16 @@ const Testimonials = () => {
       program: "USA International Internship",
       company: "Google",
       quote: "CCID Bangladesh transformed my career completely. The internship program at Google led to my full-time offer. The support and guidance throughout the process was exceptional.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      image: "/image81.webp",
       rating: 5,
       location: "San Francisco, USA"
     },
     {
-      name: "Fahim Khan",
+      name: "Farhana Khan",
       program: "Study Abroad - Oxford University",
       company: "Oxford University",
       quote: "Thanks to CCID's comprehensive support, my dream of studying at Oxford became reality. The application guidance and visa support were flawless.",
-      image: "/image 8.webp",
+      image: "/image82.webp",
       rating: 5,
       location: "Oxford, UK"
     },
@@ -26,7 +26,7 @@ const Testimonials = () => {
       program: "Professional Immersion - Canada",
       company: "Microsoft",
       quote: "The program opened doors I never thought possible. Working at Microsoft through CCID's program was a life-changing experience that accelerated my career.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      image: "/image83.webp",
       rating: 5,
       location: "Toronto, Canada"
     },
@@ -35,7 +35,7 @@ const Testimonials = () => {
       program: "Virtual Internship - Germany",
       company: "SAP",
       quote: "Even during the pandemic, CCID helped me gain international experience with SAP. The virtual program was incredibly well-structured and valuable.",
-      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      image: "/image84.webp",
       rating: 5,
       location: "Berlin, Germany"
     },
@@ -44,16 +44,16 @@ const Testimonials = () => {
       program: "Hotel Immersion - UAE",
       company: "Marriott International",
       quote: "The hospitality training in Dubai completely transformed my understanding of the industry. Now I'm leading a team at Marriott International.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      image: "/image85.webp",
       rating: 5,
       location: "Dubai, UAE"
     },
     {
-      name: "Nusrat Jahan",
+      name: "Nishat Zaman",
       program: "Pathway Program - Australia",
       company: "University of Melbourne",
       quote: "CCID's pathway program made my transition to studying in Australia seamless. The pre-departure orientation was incredibly helpful.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      image: "/image86.webp",
       rating: 5,
       location: "Melbourne, Australia"
     }
