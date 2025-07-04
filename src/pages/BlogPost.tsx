@@ -136,7 +136,7 @@ const BlogPost = () => {
 
         {/* Featured Image */}
         {featuredImage && (
-          <div className="mb-10 rounded-lg overflow-hidden max-h-[500px]">
+          <div className="mb-10 rounded-lg overflow-hidden max-h-[700px]">
             <img
               src={featuredImage}
               alt={imageAlt}
