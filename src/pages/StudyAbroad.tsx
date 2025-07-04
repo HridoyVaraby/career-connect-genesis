@@ -324,7 +324,7 @@ const StudyAbroad = () => {
             </div>
             <div className="order-1 lg:order-2">
               <img 
-                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=600&auto=format&fit=crop"
+                src="/visa.webp"
                 alt="Visa and documentation support"
                 className="rounded-2xl shadow-xl w-full h-80 object-cover"
               />
