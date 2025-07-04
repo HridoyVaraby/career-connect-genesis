@@ -84,7 +84,7 @@ const ProgramCards = () => {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardHeader className="text-center pb-4">
-                <div className="w-full h-64 mx-auto mb-6 overflow-hidden rounded-lg shadow-sm">
+                <div className="w-full h-60 mx-auto mb-6 overflow-hidden rounded-lg shadow-sm">
                   <img 
                     src={program.image} 
                     alt={program.title}

@@ -19,7 +19,7 @@ const NationalProgramsSection = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <Card className="hover:shadow-lg transition-shadow text-center">
             <CardHeader>
-              <div className="w-full h-32 mx-auto mb-6 overflow-hidden rounded-lg shadow-sm">
+              <div className="w-full h-60 mx-auto mb-6 overflow-hidden rounded-lg shadow-sm">
                 <img 
                   src="https://i0.wp.com/wp.ccidbd.com/wp-content/uploads/2022/11/Picture12.png" 
                   alt="Students in classroom"
@@ -42,7 +42,7 @@ const NationalProgramsSection = () => {
           
           <Card className="hover:shadow-lg transition-shadow text-center">
             <CardHeader>
-              <div className="w-full h-32 mx-auto mb-6 overflow-hidden rounded-lg shadow-sm">
+              <div className="w-full h-60 mx-auto mb-6 overflow-hidden rounded-lg shadow-sm">
                 <img 
                   src="https://i0.wp.com/wp.ccidbd.com/wp-content/uploads/2023/01/Image-7.png" 
                   alt="Business professionals in meeting"
