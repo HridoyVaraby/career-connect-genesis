@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Clock, GraduationCap, MapPin, Users, Globe, Award, BookOpen, Briefcase, Target, FileText, Calendar, Building, Utensils, TrendingUp, Lightbulb, Network } from "lucide-react";
 import Testimonials from "@/components/Testimonials";
+import { Link } from "react-router-dom";
 
 const ProfessionalImmersion = () => {
   const programPurpose = [
@@ -40,7 +41,7 @@ const ProfessionalImmersion = () => {
   ];
 
   const eligibility = [
-    "Students in Bachelor's, Tourism, Business, or related degrees",
+    "Open to Grade 12 students and students in Bachelor's, Tourism, Business, or related degrees",
     "Individuals with no prior hospitality experience",
     "Motivated learners interested in pursuing a future in hospitality or global service industries",
     "Fluent in basic English and open to team-based learning"
@@ -109,8 +110,8 @@ const ProfessionalImmersion = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-red-100 text-red-600 px-6 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
-              🧭 Professional Gateway
+            <div className="inline-block bg-secondary/10 text-secondary px-6 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
+              Professional Gateway
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in" style={{ animationDelay: "200ms" }}>
               Professional Immersion Program
@@ -134,6 +135,16 @@ const ProfessionalImmersion = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Program Overview</h2>
+            </div>
+            <div>
+              <img 
+                src="/hotel.webp"
+                alt="International university campus"
+                className="rounded-2xl shadow-xl w-full h-[500px] object-cover"
+              />
+            </div>
             <p className="text-lg text-gray-700 leading-relaxed animate-fade-in">
               The Professional Immersion Program by CCID Bangladesh offers a powerful first step into the hospitality industry for students who haven't studied hospitality formally. This enriching and intensive experience is crafted to build awareness, appreciation, and applied understanding of hotel culture, operations, and service philosophy.
             </p>
@@ -150,7 +161,7 @@ const ProfessionalImmersion = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-medium mb-4">
-                🎯 Our Mission
+                Our Mission
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Program Purpose</h2>
             </div>
@@ -179,7 +190,7 @@ const ProfessionalImmersion = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-block bg-secondary/10 text-secondary px-6 py-2 rounded-full text-sm font-medium mb-4">
-                🏨 Immersive Experience
+                Immersive Experience
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">What You'll Experience</h2>
               <p className="text-xl text-gray-600">Embedded within a functioning hotel environment</p>
@@ -220,7 +231,7 @@ const ProfessionalImmersion = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-block bg-green-100 text-green-600 px-6 py-2 rounded-full text-sm font-medium mb-4">
-                🎓 Perfect For
+                Perfect For
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Who Should Join</h2>
             </div>
@@ -249,7 +260,7 @@ const ProfessionalImmersion = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-medium mb-4">
-                📘 All-Inclusive Package
+                All-Inclusive Package
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">What's Included</h2>
             </div>
@@ -277,8 +288,8 @@ const ProfessionalImmersion = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <div className="inline-block bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
-                💬 Key Takeaways
+              <div className="inline-block bg-primary text-white px-6 py-2 rounded-full text-sm font-medium mb-4">
+                Key Takeaways
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">What You'll Take Away</h2>
             </div>
@@ -310,7 +321,7 @@ const ProfessionalImmersion = () => {
       <Testimonials />
 
       {/* Final CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 via-red-900 to-orange-900 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-gray-900 via-[#2FC1FF] to-[#F89827] relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
@@ -319,34 +330,26 @@ const ProfessionalImmersion = () => {
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-semibold mb-8">
-              🧭 Your Hospitality Journey Starts Here
+              Hospitality Awaits
             </div>
             
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              No Experience? 
-              <span className="block bg-gradient-to-r from-orange-300 to-red-300 bg-clip-text text-transparent">
-                No Problem.
-              </span>
+              No Experience? No Problem.
             </h2>
             
             <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-              This is your chance to explore the hospitality industry—with support, structure, and certification.
+              Join our Hotel Immersion Program and see what a career in hospitality really looks like.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button 
-                size="lg" 
-                className="bg-white text-red-600 hover:bg-gray-100 px-10 py-4 text-lg font-bold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
-              >
-                🏨 Register for Immersion Program
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-2 border-white/40 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-red-600 px-10 py-4 text-lg font-bold rounded-full transition-all duration-300 transform hover:scale-105"
-              >
-                📞 Book a Free Consultation
-              </Button>
+              <Link to="/contact">
+                <Button 
+                  size="lg" 
+                  className="bg-secondary text-white hover:bg-primary px-10 py-4 text-lg font-bold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
+                >
+                  Apply Now
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
