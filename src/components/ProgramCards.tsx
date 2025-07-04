@@ -32,7 +32,7 @@ const ProgramCards = () => {
     {
       title: "Medical Internships Abroad",
       description: "Global health experience with clinical insight and career impact in underserved communities worldwide",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop",
+      image: "/21199.webp",
       link: "/global-programs/medical-internships"
     },
     {
@@ -84,7 +84,7 @@ const ProgramCards = () => {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardHeader className="text-center pb-4">
-                <div className="w-full h-32 mx-auto mb-6 overflow-hidden rounded-lg shadow-sm">
+                <div className="w-full h-64 mx-auto mb-6 overflow-hidden rounded-lg shadow-sm">
                   <img 
                     src={program.image} 
                     alt={program.title}
