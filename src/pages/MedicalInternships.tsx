@@ -72,31 +72,39 @@ const MedicalInternships = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary to-accent text-white relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-green-50 via-white to-blue-50 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-10 right-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+          <img 
+            src="/src/assets/medical-internships-hero.jpg" 
+            alt="Medical Internships Abroad" 
+            className="w-full h-full object-cover opacity-10"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-green-50/80 via-white/80 to-blue-50/80"></div>
+        </div>
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-10 right-10 w-64 h-64 bg-green-200/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block bg-green-100 text-green-600 px-6 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
               🩺 Medical Internships Abroad
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in" style={{ animationDelay: "200ms" }}>
               Medical Internships Abroad
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-xl text-gray-600 mb-8 animate-fade-in" style={{ animationDelay: "400ms" }}>
               Global Health Experience. Clinical Insight. Career Impact.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "600ms" }}>
               <Link to="/apply/medical-internships">
-                <Button size="lg" className="bg-white text-primary hover:bg-gray-100 px-8 py-4 text-lg font-bold">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8">
                   Apply Now
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-bold">
+                <Button size="lg" variant="outline" className="border-secondary text-secondary hover:bg-secondary hover:text-white px-8">
                   Book Free Consultation
                 </Button>
               </Link>
@@ -346,25 +354,45 @@ const MedicalInternships = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-br from-primary to-accent text-white">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-24 bg-gradient-to-br from-gray-900 via-green-900 to-blue-900 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              📞 Ready to Step Into the World of Global Health?
+            <div className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-semibold mb-8">
+              🩺 Global Health Awaits
+            </div>
+            
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Ready to Step Into
+              <span className="block bg-gradient-to-r from-green-300 to-blue-300 bg-clip-text text-transparent">
+                Global Health?
+              </span>
             </h2>
-            <p className="text-xl text-white/90 mb-8">
-              Start your international medical journey today.
+            
+            <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Start your international medical journey today and make a difference in communities worldwide.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link to="/apply/medical-internships">
-                <Button size="lg" className="bg-white text-primary hover:bg-gray-100 px-10 py-4 text-lg font-bold">
-                  🔗 Apply Now
+                <Button 
+                  size="lg" 
+                  className="bg-white text-green-600 hover:bg-gray-100 px-10 py-4 text-lg font-bold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
+                >
+                  🩺 Apply Now
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary px-10 py-4 text-lg font-bold">
-                  📅 Book a Free Consultation
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-2 border-white/40 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-green-600 px-10 py-4 text-lg font-bold rounded-full transition-all duration-300 transform hover:scale-105"
+                >
+                  📞 Book Free Consultation
                 </Button>
               </Link>
             </div>

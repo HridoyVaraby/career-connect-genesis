@@ -85,6 +85,14 @@ const HotelImmersion = () => {
     <div className="pt-16">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-orange-50 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="/src/assets/hotel-immersion-hero.jpg" 
+            alt="Hotel Immersion Program" 
+            className="w-full h-full object-cover opacity-10"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50/80 via-white/80 to-orange-50/80"></div>
+        </div>
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
           <div className="absolute top-10 right-10 w-64 h-64 bg-blue-200/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 left-10 w-64 h-64 bg-orange-200/20 rounded-full blur-3xl"></div>

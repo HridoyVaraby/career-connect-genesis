@@ -61,6 +61,7 @@ import StudentExchangeApply from "./pages/apply/StudentExchangeApply";
 import VirtualInternshipApply from "./pages/apply/VirtualInternshipApply";
 import HotelImmersionApply from "./pages/apply/HotelImmersionApply";
 import ProfessionalImmersionApply from "./pages/apply/ProfessionalImmersionApply";
+import MedicalInternshipsApply from "./pages/apply/MedicalInternshipsApply";
 
 const queryClient = new QueryClient();
 
@@ -85,6 +86,7 @@ const App = () => (
             <Route path="/apply/virtual-internship" element={<VirtualInternshipApply />} />
             <Route path="/apply/hotel-immersion" element={<HotelImmersionApply />} />
             <Route path="/apply/professional-immersion" element={<ProfessionalImmersionApply />} />
+            <Route path="/apply/medical-internships" element={<MedicalInternshipsApply />} />
             
             <Route path="/global-programs" element={<GlobalPrograms />} />
             <Route path="/global-programs/study-abroad" element={<StudyAbroad />} />
