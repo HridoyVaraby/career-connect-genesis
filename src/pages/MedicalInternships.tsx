@@ -5,10 +5,27 @@ import { Link } from "react-router-dom";
 import { Globe, Heart, Users, Award, CheckCircle, X } from "lucide-react";
 
 const MedicalInternships = () => {
+  // Helper function to get flag image URL from country code
+  const getFlagImageUrl = (countryCode: string) => {
+    // Convert country code to lowercase for the API
+    const code = countryCode.toLowerCase();
+    // Using flagcdn.com for flag images
+    return `https://flagcdn.com/w80/${code}.png`;
+  };
+
   const destinations = [
-    "Greece", "Argentina", "Mexico", "Peru", "Jamaica", 
-    "Cambodia", "Mongolia", "Nepal", "Sri Lanka", 
-    "Ghana", "Kenya", "Tanzania"
+    { name: "Greece", countryCode: "gr" },
+    { name: "Argentina", countryCode: "ar" },
+    { name: "Mexico", countryCode: "mx" },
+    { name: "Peru", countryCode: "pe" },
+    { name: "Jamaica", countryCode: "jm" },
+    { name: "Cambodia", countryCode: "kh" },
+    { name: "Mongolia", countryCode: "mn" },
+    { name: "Nepal", countryCode: "np" },
+    { name: "Sri Lanka", countryCode: "lk" },
+    { name: "Ghana", countryCode: "gh" },
+    { name: "Kenya", countryCode: "ke" },
+    { name: "Tanzania", countryCode: "tz" }
   ];
 
   const activities = [
@@ -89,7 +106,7 @@ const MedicalInternships = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block bg-green-100 text-green-600 px-6 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
-              🩺 Medical Internships Abroad
+              Medical Internships Abroad
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in" style={{ animationDelay: "200ms" }}>
               Medical Internships Abroad
@@ -118,7 +135,7 @@ const MedicalInternships = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">🩺 Program Overview</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Program Overview</h2>
             </div>
             <div>
               <img 
@@ -144,7 +161,7 @@ const MedicalInternships = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">🌐 Internship Destinations</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Internship Destinations</h2>
               <p className="text-lg text-gray-600">
                 Participants can choose to intern in any of the following countries:
               </p>
@@ -152,10 +169,17 @@ const MedicalInternships = () => {
             
             <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
               {destinations.map((destination, index) => (
-                <Card key={destination} className="text-center hover:shadow-lg transition-shadow">
+                <Card key={destination.name} className="text-center hover:shadow-lg transition-shadow group">
                   <CardContent className="p-6">
-                    <Globe className="w-8 h-8 text-primary mx-auto mb-3" />
-                    <h3 className="font-semibold text-gray-900">{destination}</h3>
+                    <div className="w-20 h-15 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300 overflow-hidden rounded shadow-sm">
+                      <img 
+                        src={getFlagImageUrl(destination.countryCode)} 
+                        alt={`${destination.name} flag`} 
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                    <h3 className="font-semibold text-gray-900">{destination.name}</h3>
                   </CardContent>
                 </Card>
               ))}
@@ -173,7 +197,7 @@ const MedicalInternships = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">💉 What You'll Do</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">What You'll Do</h2>
             </div>
             
             <div className="grid md:grid-cols-2 gap-6">
@@ -193,7 +217,7 @@ const MedicalInternships = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">🎯 Who Should Apply?</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Who Should Apply?</h2>
               <p className="text-lg text-gray-600 mb-8">This program is ideal for:</p>
             </div>
             
@@ -267,7 +291,7 @@ const MedicalInternships = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">✅ Program Benefits</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Program Benefits</h2>
             </div>
             
             <div className="grid md:grid-cols-2 gap-6">
@@ -289,7 +313,7 @@ const MedicalInternships = () => {
             <div className="grid md:grid-cols-2 gap-12">
               {/* Inclusions */}
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">💸 Inclusions</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-8">Inclusions</h2>
                 <div className="space-y-4">
                   {inclusions.map((inclusion, index) => (
                     <div key={index} className="flex items-start space-x-3">
@@ -302,7 +326,7 @@ const MedicalInternships = () => {
 
               {/* Exclusions */}
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">❌ Exclusions</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-8">Exclusions</h2>
                 <div className="space-y-4">
                   {exclusions.map((exclusion, index) => (
                     <div key={index} className="flex items-start space-x-3">
@@ -321,7 +345,7 @@ const MedicalInternships = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-12">🎓 Why Choose This Program?</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-12"> Why Choose This Program?</h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card className="text-center">
@@ -360,7 +384,7 @@ const MedicalInternships = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 via-green-900 to-blue-900 relative overflow-hidden">
+      <section className="py-24 bg-primary/10 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
@@ -368,37 +392,28 @@ const MedicalInternships = () => {
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-semibold mb-8">
-              🩺 Global Health Awaits
+            <div className="inline-block bg-secondary text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
+              Global Health Awaits
             </div>
             
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6">
               Ready to Step Into
-              <span className="block bg-gradient-to-r from-green-300 to-blue-300 bg-clip-text text-transparent">
+              <span className="block bg-primary bg-clip-text text-transparent">
                 Global Health?
               </span>
             </h2>
             
-            <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl mb-12 max-w-3xl mx-auto leading-relaxed">
               Start your international medical journey today and make a difference in communities worldwide.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link to="/apply/medical-internships">
-                <Button 
-                  size="lg" 
-                  className="bg-white text-green-600 hover:bg-gray-100 px-10 py-4 text-lg font-bold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
-                >
-                  🩺 Apply Now
-                </Button>
-              </Link>
               <Link to="/contact">
                 <Button 
                   size="lg" 
-                  variant="outline" 
-                  className="border-2 border-white/40 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-green-600 px-10 py-4 text-lg font-bold rounded-full transition-all duration-300 transform hover:scale-105"
+                  className="bg-secondary text-white hover:bg-gray-100 px-10 py-4 text-lg font-bold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
                 >
-                  📞 Book Free Consultation
+                  Apply Now
                 </Button>
               </Link>
             </div>
