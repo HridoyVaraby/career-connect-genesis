@@ -67,9 +67,9 @@ const AgricultureInternship = () => {
     <div className="pt-16">
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-green-50 to-primary/5 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10">
+        <div className="absolute top-0 left-0 w-full h-full opacity-0">
           <img 
-            src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=1200&h=800&fit=crop" 
+            src="/assets/images/1844.webp" 
             alt="Agriculture background"
             className="w-full h-full object-cover"
           />
@@ -138,7 +138,7 @@ const AgricultureInternship = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <img 
-                  src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=600&h=400&fit=crop" 
+                  src="/livestock.webp" 
                   alt="Danish farm"
                   className="w-full h-64 object-cover rounded-lg shadow-lg mb-6"
                 />
@@ -292,51 +292,29 @@ const AgricultureInternship = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-24 bg-gradient-to-br from-green-600 via-primary to-green-800 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+      <section className="py-20 bg-gradient-to-br from-primary/10 to-secondary/10 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-10 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-64 h-64 bg-secondary/5 rounded-full blur-3xl"></div>
         </div>
         
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <div className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-semibold mb-8">
-              🌱 Ready to Begin Your Agriculture Journey Abroad?
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-block bg-secondary text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
+              Ready to Begin Your Agriculture Journey Abroad
             </div>
-            
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Start Your Global Agriculture Career
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Start Your Global <span className="bg-primary bg-clip-text text-transparent">Agriculture Career</span>
             </h2>
-            
-            <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
               The Denmark Agriculture Internship is your chance to work with expert farmers, boost your global experience, and grow your career from the ground up.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-              <Link to="/apply/agriculture-internship">
-                <Button 
-                  size="lg" 
-                  className="bg-white text-primary hover:bg-gray-100 px-10 py-4 text-lg font-bold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
-                >
-                  🔗 Apply Now
-                </Button>
-              </Link>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link to="/contact">
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-2 border-white/40 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-primary px-10 py-4 text-lg font-bold rounded-full transition-all duration-300 transform hover:scale-105"
-                >
-                  📞 Book Free Consultation
+                <Button size="lg" className="bg-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-10 py-4 text-lg shadow-xl hover:shadow-primary/25 transition-all duration-300 transform hover:scale-105">
+                  Apply Now
                 </Button>
               </Link>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-white/90">
-              <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5" />
-                <span>agsfilinquiry@gmail.com</span>
-              </div>
             </div>
           </div>
         </div>
