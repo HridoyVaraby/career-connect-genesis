@@ -157,7 +157,7 @@ const StudyAbroad = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=600&auto=format&fit=crop"
+                src="/image 5.webp"
                 alt="Students studying abroad"
                 className="rounded-2xl shadow-2xl w-full h-96 object-cover"
               />

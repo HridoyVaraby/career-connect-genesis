@@ -120,8 +120,14 @@ const MedicalInternships = () => {
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">🩺 Program Overview</h2>
             </div>
-            
-            <div className="prose prose-lg max-w-none text-gray-600">
+            <div>
+              <img 
+                src="/84770.webp"
+                alt="International university campus"
+                className="rounded-2xl shadow-xl w-full h-[500px] object-cover"
+              />
+            </div>
+            <div className="pt-10 prose prose-lg max-w-none text-gray-600">
               <p className="text-lg leading-relaxed mb-6">
                 The Medical Internships Abroad program is an immersive opportunity for students and aspiring healthcare professionals to gain practical, international clinical experience while making a meaningful impact in underserved communities around the world. Participants will shadow doctors and nurses, assist in clinics and hospitals, and participate in public health outreach projects—strengthening both their skills and global perspective.
               </p>
