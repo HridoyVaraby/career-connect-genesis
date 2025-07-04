@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Clock, GraduationCap, MapPin, Users, Globe, Award, BookOpen, Briefcase, Target, FileText, Calendar, Building, Utensils, TrendingUp } from "lucide-react";
 import Testimonials from "@/components/Testimonials";
+import { Link } from "react-router-dom";
 
 const HotelImmersion = () => {
   const programObjectives = [
@@ -16,7 +17,7 @@ const HotelImmersion = () => {
     {
       icon: Clock,
       title: "Duration",
-      description: "1 Full Day (On-site)",
+      description: "10 Day (On-site)",
       color: "text-primary"
     },
     {
@@ -76,7 +77,7 @@ const HotelImmersion = () => {
   ];
 
   const eligibility = [
-    "Open to students in Bachelor's in Hospitality, Tourism, or related programs",
+    "Open to Grade 12 students and students in Bachelor's in Hospitality, Tourism, or related programs",
     "Must have a basic understanding of hotel or tourism operations",
     "Strong interest in a hospitality-related career path"
   ];
@@ -101,7 +102,7 @@ const HotelImmersion = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block bg-blue-100 text-blue-600 px-6 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
-              🏨 Hospitality Immersion
+              Hospitality Immersion
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in" style={{ animationDelay: "200ms" }}>
               Hotel Immersion Program
@@ -110,12 +111,11 @@ const HotelImmersion = () => {
               Step Behind the Scenes of World-Class Hospitality
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "600ms" }}>
-              <Button size="lg" className="bg-[#2FC1FF] hover:bg-[#2FC1FF]/90 text-white px-8">
-                Apply for Immersion Program
-              </Button>
-              <Button size="lg" variant="outline" className="border-[#F89827] text-[#F89827] hover:bg-[#F89827] hover:text-white px-8">
-                Book Free Consultation
-              </Button>
+              <Link to="/contact">
+                <Button size="lg" className="bg-[#2FC1FF] hover:bg-[#2FC1FF]/90 text-white px-8">
+                  Apply for Immersion Program
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -125,8 +125,18 @@ const HotelImmersion = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-lg text-gray-700 leading-relaxed animate-fade-in">
-              The Hotel Immersion Program (HIP) by CCID Bangladesh is a short, intensive training experience designed for students eager to understand the real-world operations of the hospitality industry. In just one full day, participants gain hands-on exposure in actual hotel settings—shadowing staff, observing workflows, and identifying improvement opportunities.
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Program Overview</h2>
+            </div>
+            <div>
+              <img 
+                src="/1844.webp"
+                alt="International university campus"
+                className="rounded-2xl shadow-xl w-full h-[500px] object-cover"
+              />
+            </div>
+            <p className="pt-10 text-lg text-gray-700 leading-relaxed animate-fade-in">
+              The Hotel Immersion Program by CCID Bangladesh is a short, intensive training experience designed for students eager to understand the real-world operations of the hospitality industry. In just 8-10 day, participants gain hands-on exposure in actual hotel settings—shadowing staff, observing workflows, and identifying improvement opportunities.
             </p>
             <p className="text-lg text-gray-600 mt-4 animate-fade-in" style={{ animationDelay: "200ms" }}>
               Whether you're a hospitality student preparing for your career or someone exploring a new industry, this immersion offers valuable insights into daily hotel operations, team dynamics, and customer service excellence.
@@ -141,7 +151,7 @@ const HotelImmersion = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-block bg-[#2FC1FF]/10 text-[#2FC1FF] px-6 py-2 rounded-full text-sm font-medium mb-4">
-                🎯 Our Goals
+                Our Goals
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Program Objectives</h2>
             </div>
@@ -170,7 +180,7 @@ const HotelImmersion = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-block bg-[#F89827]/10 text-[#F89827] px-6 py-2 rounded-full text-sm font-medium mb-4">
-                🏢 Program Structure
+                Program Structure
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Immersion Structure</h2>
             </div>
@@ -204,7 +214,7 @@ const HotelImmersion = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-block bg-green-100 text-green-600 px-6 py-2 rounded-full text-sm font-medium mb-4">
-                🧪 Hands-On Experience
+                Hands-On Experience
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">What Students Will Experience</h2>
               <p className="text-xl text-gray-600">Core departments of hotel operations with professional guidance</p>
@@ -245,7 +255,7 @@ const HotelImmersion = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-block bg-[#F89827]/10 text-[#F89827] px-6 py-2 rounded-full text-sm font-medium mb-4">
-                📘 All-Inclusive Package
+                All-Inclusive Package
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">What's Included</h2>
             </div>
@@ -274,7 +284,7 @@ const HotelImmersion = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-block bg-[#2FC1FF]/10 text-[#2FC1FF] px-6 py-2 rounded-full text-sm font-medium mb-4">
-                👥 Eligibility
+                Eligibility
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Who Can Apply</h2>
             </div>
@@ -310,14 +320,11 @@ const HotelImmersion = () => {
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-semibold mb-8">
-              🏨 Hospitality Awaits
+              Hospitality Awaits
             </div>
             
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Experience the Hospitality Industry—
-              <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                Up Close
-              </span>
+              Experience the Hospitality Industry Up Close
             </h2>
             
             <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -325,19 +332,14 @@ const HotelImmersion = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button 
-                size="lg" 
-                className="bg-white text-[#2FC1FF] hover:bg-gray-100 px-10 py-4 text-lg font-bold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
-              >
-                🏨 Apply for Immersion Program
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-2 border-white/40 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-[#2FC1FF] px-10 py-4 text-lg font-bold rounded-full transition-all duration-300 transform hover:scale-105"
-              >
-                📞 Book Free Consultation
-              </Button>
+              <Link to="/contact">
+                <Button 
+                  size="lg" 
+                  className="bg-secondary text-white hover:bg-primary px-10 py-4 text-lg font-bold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300"
+                >
+                  Apply for Immersion Program
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
