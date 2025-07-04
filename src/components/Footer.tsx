@@ -82,9 +82,9 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-2 text-gray-400">
-              <p>Dhaka, Bangladesh</p>
-              <p>contact@ccidbangladesh.com</p>
-              <p>+880 1234 567890</p>
+              <p>BD Office: Mohakhali DOHS, Dhaka</p>
+              <p>ccid@ccidbd.com</p>
+              <p>+88 01723 234301</p>
             </div>
             <Link
               to="/contact"
