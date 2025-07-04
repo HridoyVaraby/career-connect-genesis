@@ -117,7 +117,7 @@ const BlogPost = () => {
           </h1>
           
           <div className="flex items-center justify-center space-x-4 text-gray-600">
-            {author && (
+            {/*{author && (
               <div className="flex items-center">
                 {authorAvatar && (
                   <img 
@@ -128,8 +128,8 @@ const BlogPost = () => {
                 )}
                 <span>{author}</span>
               </div>
-            )}
-            <span>•</span>
+            )} 
+            <span>•</span> */}
             <span>{formattedDate}</span>
           </div>
         </div>
