@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, Users, GraduationCap, MapPin, Globe, Award, Target, FileText, Briefcase, DollarSign, Building } from "lucide-react";
 import DestinationsSection from "@/components/DestinationsSection";
 import { Link } from "react-router-dom";
+import globalDestinationsHero from "@/assets/global-destinations-hero.jpg";
+import destinationsNetwork from "@/assets/destinations-network.jpg";
 
 const Destinations = () => {
   const variationFactors = [
@@ -50,6 +52,14 @@ const Destinations = () => {
     <div className="pt-16">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary/10 via-white to-accent/10 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src={globalDestinationsHero} 
+            alt="Global destinations workspace" 
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-white/80 to-accent/10"></div>
+        </div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
         
@@ -182,14 +192,25 @@ const Destinations = () => {
             </h2>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            <div className="grid gap-6">
-              {networkAdvantages.map((advantage, index) => (
-                <div key={index} className="flex items-center space-x-4 animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
-                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-                  <p className="text-lg text-gray-700">{advantage}</p>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+              <div className="relative">
+                <img 
+                  src={destinationsNetwork} 
+                  alt="Global network connections" 
+                  className="rounded-2xl shadow-xl w-full"
+                />
+              </div>
+              <div>
+                <div className="grid gap-6">
+                  {networkAdvantages.map((advantage, index) => (
+                    <div key={index} className="flex items-center space-x-4 animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+                      <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
+                      <p className="text-lg text-gray-700">{advantage}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>

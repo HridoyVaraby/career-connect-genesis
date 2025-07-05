@@ -3,6 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Users, GraduationCap, FileText, Video, Presentation, UserCheck, Building, Heart, Globe, Calendar } from "lucide-react";
+import nationalProgramsHero from "@/assets/national-programs-hero.jpg";
+import studentsCollaboration from "@/assets/students-collaboration.jpg";
 
 const NationalPrograms = () => {
   const studentServices = [
@@ -35,10 +37,14 @@ const NationalPrograms = () => {
     <div className="pt-16">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary/10 via-white to-accent/5 relative overflow-hidden">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232FC1FF' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          opacity: 0.5
-        }}></div>
+        <div className="absolute inset-0">
+          <img 
+            src={nationalProgramsHero} 
+            alt="Students in training session" 
+            className="w-full h-full object-cover opacity-25"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-white/85 to-accent/5"></div>
+        </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in">
@@ -58,17 +64,26 @@ const NationalPrograms = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
-                <GraduationCap className="w-5 h-5 text-primary" />
-                <span className="text-primary font-semibold">For Students</span>
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+              <div>
+                <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
+                  <GraduationCap className="w-5 h-5 text-primary" />
+                  <span className="text-primary font-semibold">For Students</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 animate-fade-in">
+                  Career Building Starts Here
+                </h2>
+                <p className="text-xl text-gray-600 animate-fade-in" style={{ animationDelay: '200ms' }}>
+                  Our student-focused initiatives include internship placements, seminars, training sessions, and soft skill development programs aimed at preparing you for the local and global job market.
+                </p>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 animate-fade-in">
-                Career Building Starts Here
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
-                Our student-focused initiatives include internship placements, seminars, training sessions, and soft skill development programs aimed at preparing you for the local and global job market.
-              </p>
+              <div className="relative">
+                <img 
+                  src={studentsCollaboration} 
+                  alt="Students collaborating on projects" 
+                  className="rounded-2xl shadow-xl w-full"
+                />
+              </div>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
