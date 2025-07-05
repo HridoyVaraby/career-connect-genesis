@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Users, GraduationCap, MapPin, Globe, Award, Target, FileText, Briefcase, DollarSign, Building } from "lucide-react";
+import { CheckCircle, Users, GraduationCap, MapPin, Languages, Globe, Award, Target, FileText, Briefcase, DollarSign, Building } from "lucide-react";
 import DestinationsSection from "@/components/DestinationsSection";
 import { Link } from "react-router-dom";
 import globalDestinationsHero from "@/assets/global-destinations-hero.jpg";
@@ -12,7 +12,7 @@ const Destinations = () => {
     { icon: FileText, title: "Visa Requirements", description: "Different documentation and processing times" },
     { icon: Briefcase, title: "Work Rights", description: "Part-time work permissions during study programs" },
     { icon: DollarSign, title: "Internship Stipends", description: "Compensation varies by country and industry" },
-    { icon: Globe, title: "Language of Instruction", description: "English, local language, or bilingual programs" },
+    { icon: Languages, title: "Language of Instruction", description: "English, local language, or bilingual programs" },
     { icon: Building, title: "Industry Focus", description: "Hospitality, IT, Business, Healthcare specializations" },
     { icon: Users, title: "Cultural Expectations", description: "Living standards and workplace cultures" }
   ];
@@ -66,7 +66,7 @@ const Destinations = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-semibold mb-6 animate-fade-in">
-              🌍 25+ Global Destinations
+              25+ Global Destinations
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in">
               Explore Our Global Destinations
@@ -110,7 +110,13 @@ const Destinations = () => {
           <div className="max-w-2xl mx-auto">
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="text-4xl mb-4">🌐</div>
+                <div className="flex justify-center">
+                  <img 
+                    src="/icons/video-call.png"
+                    alt="International university campus"
+                    className="mb-4"
+                  />
+                </div>
                 <CardTitle>Remote Virtual Internship</CardTitle>
               </CardHeader>
               <CardContent>
@@ -226,7 +232,7 @@ const Destinations = () => {
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-2 rounded-full text-sm font-semibold mb-8">
-              🌟 Your Global Journey Awaits
+              Your Global Journey Awaits
             </div>
             
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">

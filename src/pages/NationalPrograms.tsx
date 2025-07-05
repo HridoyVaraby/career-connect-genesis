@@ -217,7 +217,7 @@ const NationalPrograms = () => {
                 <Button 
                   size="lg" 
                   variant="secondary"
-                  className="bg-white text-primary hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
+                  className="bg-primary text-white hover:bg-secondary px-8 py-3 text-lg font-semibold"
                 >
                   Contact Us
                 </Button>
@@ -226,7 +226,7 @@ const NationalPrograms = () => {
                 <Button 
                   size="lg" 
                   variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-primary px-8 py-3 text-lg font-semibold"
+                  className="border-white text-primary hover:bg-white hover:text-primary px-8 py-3 text-lg font-semibold"
                 >
                   <Calendar className="w-5 h-5 mr-2" />
                   Schedule a Free Consultation
