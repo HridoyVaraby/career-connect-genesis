@@ -15,7 +15,7 @@ const ApplyNow = () => {
       title: "Pathway Program",
       description: "An academic bridging opportunity with global institutions offering study + work programs. Ideal for students seeking long-term global education paths.",
       icon: "🎓",
-      link: "/apply/pathway-program"
+      link: "/contact"
     },
     {
       title: "Study Abroad Program",
@@ -27,25 +27,25 @@ const ApplyNow = () => {
       title: "Student Exchange Program",
       description: "Short-term international exchanges focused on practical learning, culture, and culinary/hospitality training.",
       icon: "🌏",
-      link: "/apply/student-exchange"
+      link: "/contact"
     },
     {
       title: "Virtual Internship Program",
       description: "Remote internships with global companies across 70+ countries. No relocation required—start building your digital career today.",
       icon: "💻",
-      link: "/apply/virtual-internship"
+      link: "/contact"
     },
     {
       title: "Hotel Immersion Program",
       description: "1-day practical exposure inside hotel departments for real-world hospitality understanding.",
       icon: "🏨",
-      link: "/apply/hotel-immersion"
+      link: "/contact"
     },
     {
       title: "Professional Immersion Program",
       description: "Foundational hospitality training for students from non-hospitality backgrounds—includes seminars and site visits.",
       icon: "🧳",
-      link: "/apply/professional-immersion"
+      link: "/contact"
     }
   ];
 
@@ -102,7 +102,7 @@ const ApplyNow = () => {
             {programs.map((program, index) => (
               <Card 
                 key={program.title} 
-                className="hover:shadow-lg transition-all duration-300 bg-white border border-gray-200 animate-fade-in"
+                className="flex flex-col hover:shadow-lg transition-all duration-300 bg-white border border-gray-200 animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardHeader className="text-center pb-4">
@@ -113,17 +113,19 @@ const ApplyNow = () => {
                     {program.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="text-center">
+                <CardContent className="flex flex-col justify-between flex-grow text-center">
                   <CardDescription className="mb-6 text-gray-600 text-sm leading-relaxed">
                     {program.description}
                   </CardDescription>
-                  <Link to={program.link}>
-                    <Button 
-                      className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-2 rounded-lg transition-all duration-300"
-                    >
-                      Apply Now →
-                    </Button>
-                  </Link>
+                  <div className="mt-auto">
+                    <Link to={program.link}>
+                      <Button 
+                        className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-2 rounded-lg transition-all duration-300"
+                      >
+                        Apply Now →
+                      </Button>
+                    </Link>
+                  </div>
                 </CardContent>
               </Card>
             ))}
