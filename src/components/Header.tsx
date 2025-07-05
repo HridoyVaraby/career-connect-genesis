@@ -162,7 +162,7 @@ const Header = () => {
               >
                 <div className="p-6 w-[800px]">
                   {/* Header */}
-                  <div className="mb-4 pb-4 border-b">
+                  <div className="text-center mb-4 pb-4 border-b">
                     <Link
                       to="/destinations"
                       className="text-lg font-semibold text-gray-900 hover:text-primary transition-colors"
