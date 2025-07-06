@@ -17,7 +17,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-gray-400 mb-4">
-              Connecting Bangladeshi students with global career and internship opportunities.
+              CCID connects students with global study and internship opportunities, helping them unlock their full potential and build successful international careers.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-primary transition-colors">

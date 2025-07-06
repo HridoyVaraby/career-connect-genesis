@@ -31,7 +31,7 @@ const Testimonials = () => {
       location: "Toronto, Canada"
     },
     {
-      name: "Rashida Ahmed",
+      name: "Rashid Ahmed",
       program: "Virtual Internship - Germany",
       company: "SAP",
       quote: "Even during the pandemic, CCID helped me gain international experience with SAP. The virtual program was incredibly well-structured and valuable.",
