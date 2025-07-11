@@ -4,34 +4,34 @@ import { Card, CardContent } from "@/components/ui/card";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Farhan Rahman",
-      program: "USA International Internship",
-      company: "Google",
+      name: "Ariyan Hossain",
+      program: "International Internship",
+      company: "Marriott",
       quote: "CCID Bangladesh transformed my career completely. The internship program at Google led to my full-time offer. The support and guidance throughout the process was exceptional.",
       image: "/image81.webp",
       rating: 5,
-      location: "San Francisco, USA"
+      location: "Dubai, UAE"
     },
     {
-      name: "Farhana Khan",
-      program: "Study Abroad - Oxford University",
-      company: "Oxford University",
+      name: "Niyafaa Islam",
+      program: "Internship in Thailand",
+      company: "The Surin",
       quote: "Thanks to CCID's comprehensive support, my dream of studying at Oxford became reality. The application guidance and visa support were flawless.",
       image: "/image82.webp",
       rating: 5,
-      location: "Oxford, UK"
+      location: "Thailand"
     },
     {
       name: "Mohammad Hassan",
       program: "Professional Immersion - Canada",
-      company: "Microsoft",
+      company: "University of Ottawa",
       quote: "The program opened doors I never thought possible. Working at Microsoft through CCID's program was a life-changing experience that accelerated my career.",
       image: "/image83.webp",
       rating: 5,
-      location: "Toronto, Canada"
+      location: "Ottawa, Canada"
     },
     {
-      name: "Rashid Ahmed",
+      name: "Mamun Shahed",
       program: "Virtual Internship - Germany",
       company: "SAP",
       quote: "Even during the pandemic, CCID helped me gain international experience with SAP. The virtual program was incredibly well-structured and valuable.",
@@ -40,7 +40,7 @@ const Testimonials = () => {
       location: "Berlin, Germany"
     },
     {
-      name: "Ahmed Ali",
+      name: "Mehedi Ariyan",
       program: "Hotel Immersion - UAE",
       company: "Marriott International",
       quote: "The hospitality training in Dubai completely transformed my understanding of the industry. Now I'm leading a team at Marriott International.",
@@ -50,12 +50,12 @@ const Testimonials = () => {
     },
     {
       name: "Nishat Zaman",
-      program: "Pathway Program - Australia",
-      company: "University of Melbourne",
+      program: "Pathway Program - London",
+      company: "Middlesex",
       quote: "CCID's pathway program made my transition to studying in Australia seamless. The pre-departure orientation was incredibly helpful.",
       image: "/image86.webp",
       rating: 5,
-      location: "Melbourne, Australia"
+      location: "London, UK"
     }
   ];
 

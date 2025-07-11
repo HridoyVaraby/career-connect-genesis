@@ -17,9 +17,13 @@ const WhyCCID = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <Card className="text-center hover:shadow-lg transition-shadow bg-white border border-gray-200">
             <CardHeader>
-              <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-3xl">🌍</span>
-              </div>
+              <div className="flex justify-center">
+                  <img 
+                    src="/icons/global-connection.png"
+                    alt="International university campus"
+                    className="mb-4"
+                  />
+                </div>
               <CardTitle className="text-2xl">Global Network</CardTitle>
             </CardHeader>
             <CardContent>
@@ -31,9 +35,13 @@ const WhyCCID = () => {
           
           <Card className="text-center hover:shadow-lg transition-shadow bg-white border border-gray-200">
             <CardHeader>
-              <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-3xl">📚</span>
-              </div>
+              <div className="flex justify-center">
+                  <img 
+                    src="/icons/experts.png"
+                    alt="Expert guidance"
+                    className="mb-4"
+                  />
+                </div>
               <CardTitle className="text-2xl">Expert Guidance</CardTitle>
             </CardHeader>
             <CardContent>
@@ -45,9 +53,13 @@ const WhyCCID = () => {
           
           <Card className="text-center hover:shadow-lg transition-shadow bg-white border border-gray-200">
             <CardHeader>
-              <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-3xl">🎯</span>
-              </div>
+              <div className="flex justify-center">
+                  <img 
+                    src="/icons/student.png"
+                    alt="Expert guidance"
+                    className="mb-4"
+                  />
+                </div>
               <CardTitle className="text-2xl">Career Focus</CardTitle>
             </CardHeader>
             <CardContent>
