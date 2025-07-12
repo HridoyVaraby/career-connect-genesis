@@ -17,7 +17,7 @@ const Gallery = () => {
             Program Gallery
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See our students in action across various international programs
+            Global Engagement in Action: Our Students Representing Excellence Worldwide
           </p>
         </div>
         

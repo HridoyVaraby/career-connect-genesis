@@ -49,8 +49,7 @@ const Index = () => {
             </h2>
             
             <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Join thousands of Bangladeshi students who have transformed their careers through our programs. 
-              Your success story starts with a single step.
+              Join Thousands of Students Who Have Transformed Their Careers Through Our Programs — Your Success Story Starts Here.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">

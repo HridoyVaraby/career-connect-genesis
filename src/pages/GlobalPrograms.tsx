@@ -197,7 +197,8 @@ const GlobalPrograms = () => {
               Your Pathway to the World Starts Here.
             </p>
             <p className="text-xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed animate-fade-in">
-              At CCID Bangladesh, we believe that talent knows no borders. Our Global Programs connect Bangladeshi students with world-class international opportunities across 25+ countries—providing global exposure, workplace readiness, and pathways to international careers.
+              At CCID, We Believe Talent Knows No Borders
+Our Global Programs connect students with world-class opportunities across 25+ countries—offering global exposure, workplace readiness, and pathways to international careers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
               <Button size="lg" className="bg-primary hover:from-primary/90 hover:to-secondary/90 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-xl">
