@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
-import { Mail, Users } from "lucide-react";
+import { Mail, Users, Facebook, Twitter } from "lucide-react";
+
 
 const Footer = () => {
   return (
@@ -19,12 +20,19 @@ const Footer = () => {
             <p className="text-gray-400 mb-4">
               CCID connects students with global study and internship opportunities, helping them unlock their full potential and build successful international careers.
             </p>
+            <h3 className="text-lg font-semibold mb-4">Follow Us On</h3>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-primary transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-primary transition-colors">
                 <Users className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+                <Twitter className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -82,16 +90,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-2 text-gray-400">
-              <p>BD Office: Mohakhali DOHS, Dhaka</p>
-              <p>ccid@ccidbd.com</p>
-              <p>+88 01723 234301</p>
+              <p><span className="font-semibold">BD Office: </span>Mohakhali DOHS, Dhaka</p>
+              <p><span className="font-semibold">Phone: </span>+88 01723 234301</p>
+              <p><span className="font-semibold">UK Office: </span>Unit-331, Stratford Workshops. Burford Rd, London E15 2SP</p>
+              <p><span className="font-semibold">Phone: </span>+447551960006</p>
+              <p><span className="font-semibold">Email: </span>ccid@ccidbd.com</p>
             </div>
-            <Link
-              to="/contact"
-              className="inline-block mt-4 bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg transition-colors"
-            >
-              Get in Touch
-            </Link>
           </div>
         </div>
 
