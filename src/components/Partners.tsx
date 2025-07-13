@@ -34,7 +34,7 @@ const Partners = () => {
             Autoplay({
               delay: 3000,
               stopOnInteraction: true,
-            }),
+            }) as any,
           ]}
           className="w-full max-w-6xl mx-auto"
         >
