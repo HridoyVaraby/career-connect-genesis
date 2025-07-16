@@ -8,43 +8,43 @@ const ApplyNow = () => {
     {
       title: "International Internship Program",
       description: "Gain hands-on experience in world-class hotels, resorts, and companies abroad across hospitality, business, culinary, and more.",
-      icon: "🎓",
+      image: "/image 12.webp",
       link: "/apply/international-internship"
     },
     {
       title: "Pathway Program",
       description: "An academic bridging opportunity with global institutions offering study + work programs. Ideal for students seeking long-term global education paths.",
-      icon: "🎓",
+      image: "/image 3.webp",
       link: "/contact"
     },
     {
       title: "Study Abroad Program",
       description: "Full-time academic opportunities at internationally recognized universities, with options to work part-time and gain global certification.",
-      icon: "🌍",
+      image: "/image 5.webp",
       link: "/apply/study-abroad"
     },
     {
       title: "Student Exchange Program",
       description: "Short-term international exchanges focused on practical learning, culture, and culinary/hospitality training.",
-      icon: "🌏",
+      image: "/image 9.webp",
       link: "/contact"
     },
     {
       title: "Virtual Internship Program",
       description: "Remote internships with global companies across 70+ countries. No relocation required—start building your digital career today.",
-      icon: "💻",
+      image: "/image 7.webp",
       link: "/contact"
     },
     {
       title: "Hotel Immersion Program",
       description: "1-day practical exposure inside hotel departments for real-world hospitality understanding.",
-      icon: "🏨",
+      image: "/image 10.webp",
       link: "/contact"
     },
     {
       title: "Professional Immersion Program",
       description: "Foundational hospitality training for students from non-hospitality backgrounds—includes seminars and site visits.",
-      icon: "🧳",
+      image: "/image 13.webp",
       link: "/contact"
     }
   ];
@@ -97,17 +97,22 @@ const ApplyNow = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Choose Your Program</h2>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {programs.map((program, index) => (
-              <Card 
-                key={program.title} 
+              <Card
+                key={program.title}
                 className="flex flex-col hover:shadow-lg transition-all duration-300 bg-white border border-gray-200 animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardHeader className="text-center pb-4">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gray-50 rounded-lg shadow-sm flex items-center justify-center text-3xl">
-                    {program.icon}
+                  <div className="w-full h-48 mx-auto mb-4 overflow-hidden rounded-lg shadow-sm">
+                    <img
+                      src={program.image}
+                      alt={program.title}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
                   </div>
                   <CardTitle className="text-lg font-bold text-gray-900">
                     {program.title}
@@ -119,7 +124,7 @@ const ApplyNow = () => {
                   </CardDescription>
                   <div className="mt-auto">
                     <Link to={program.link}>
-                      <Button 
+                      <Button
                         className="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-2 rounded-lg transition-all duration-300"
                       >
                         Apply Now →
@@ -140,8 +145,8 @@ const ApplyNow = () => {
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">What You'll Need to Apply</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {requirements.map((requirement, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200"
                 >
                   <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
