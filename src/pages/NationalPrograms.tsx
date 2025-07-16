@@ -136,8 +136,8 @@ const NationalPrograms = () => {
                   className="flex items-start gap-4 p-6 bg-white rounded-xl hover:bg-accent/5 transition-all duration-300 hover:shadow-lg animate-fade-in"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="flex-shrink-0 w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
-                    <service.icon className="w-6 h-6 text-accent" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <service.icon className="w-6 h-6 text-primary" />
                   </div>
                   <p className="text-gray-700 font-medium">{service.text}</p>
                 </div>
