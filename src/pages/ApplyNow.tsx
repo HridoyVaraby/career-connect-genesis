@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -77,16 +76,85 @@ const ApplyNow = () => {
       </section>
 
       {/* Overview Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Overview</h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              CCID Bangladesh offers life-changing global programs designed to prepare students and young professionals for the international workforce. Whether you're aiming to study abroad, intern remotely, or gain practical experience overseas—this is your gateway to a world of opportunities.
-            </p>
-            <p className="text-lg text-gray-600 mt-4">
-              Choose a program below to begin the application process.
-            </p>
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-30">
+          <div className="w-full h-full" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f3f4f6' fill-opacity='0.4'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '60px 60px'
+          }}></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-semibold mb-6">
+                Your Gateway to Global Success
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">Overview</h2>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <img src="/icons/global-connection.png" alt="Global" className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">Global Opportunities</h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        CCID Bangladesh offers life-changing global programs designed to prepare students and young professionals for the international workforce.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <img src="/icons/advancement.png" alt="Global" className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">Career Transformation</h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        Whether you're aiming to study abroad, intern remotely, or gain practical experience overseas—this is your gateway to a world of opportunities.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="lg:text-left text-center">
+                <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 relative">
+                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm font-bold">✓</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Ready to Start Your Journey?</h3>
+                  <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                    Choose a program below to begin the application process and take the first step toward your global future.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <div className="flex items-center space-x-3 text-gray-600">
+                      <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                        <span className="text-green-600 text-xs font-bold">✓</span>
+                      </div>
+                      <span className="text-sm">Expert Guidance</span>
+                    </div>
+                    <div className="flex items-center space-x-3 text-gray-600">
+                      <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                        <span className="text-green-600 text-xs font-bold">✓</span>
+                      </div>
+                      <span className="text-sm">Global Network</span>
+                    </div>
+                    <div className="flex items-center space-x-3 text-gray-600">
+                      <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                        <span className="text-green-600 text-xs font-bold">✓</span>
+                      </div>
+                      <span className="text-sm">Proven Success</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
