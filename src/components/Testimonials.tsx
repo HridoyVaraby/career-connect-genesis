@@ -7,7 +7,7 @@ const Testimonials = () => {
       name: "Ariyan Hossain",
       program: "International Internship",
       company: "Marriott",
-      quote: "CCID Bangladesh transformed my career completely. The internship program at Google led to my full-time offer. The support and guidance throughout the process was exceptional.",
+      quote: "CCID played a vital role in shaping my career. Through their internship program, I had the incredible opportunity to intern at Marriott, where I gained real-world experience and industry exposure. The support and guidance throughout the journey were exceptional.",
       image: "/image81.webp",
       rating: 5,
       location: "Dubai, UAE"
@@ -16,7 +16,7 @@ const Testimonials = () => {
       name: "Niyafaa Islam",
       program: "Internship in Thailand",
       company: "The Surin",
-      quote: "Thanks to CCID's comprehensive support, my dream of studying at Oxford became reality. The application guidance and visa support were flawless.",
+      quote: "Thanks to CCID's incredible support, I landed an internship at The Surin—something I once only dreamed of. Their guidance through the application and visa process was smooth and reassuring every step of the way.",
       image: "/image82.webp",
       rating: 5,
       location: "Thailand"
@@ -25,7 +25,7 @@ const Testimonials = () => {
       name: "Mohammad Hassan",
       program: "Professional Immersion - Canada",
       company: "University of Ottawa",
-      quote: "The program opened doors I never thought possible. Working at Microsoft through CCID's program was a life-changing experience that accelerated my career.",
+      quote: "The program opened doors I never thought possible. Studying at the University of Ottawa through CCID's program was a life-changing experience that accelerated my career.",
       image: "/image83.webp",
       rating: 5,
       location: "Ottawa, Canada"
@@ -34,7 +34,7 @@ const Testimonials = () => {
       name: "Mamun Shahed",
       program: "Virtual Internship - Germany",
       company: "SAP",
-      quote: "Even during the pandemic, CCID helped me gain international experience with SAP. The virtual program was incredibly well-structured and valuable.",
+      quote: "Even during the pandemic, CCID helped me gain international experience with SAP. The Virtual Internship - Germany program was incredibly well-structured and truly valuable.",
       image: "/image84.webp",
       rating: 5,
       location: "Berlin, Germany"
@@ -52,7 +52,7 @@ const Testimonials = () => {
       name: "Nishat Zaman",
       program: "Pathway Program - London",
       company: "Middlesex",
-      quote: "CCID's pathway program made my transition to studying in Australia seamless. The pre-departure orientation was incredibly helpful.",
+      quote: "CCID's pathway program made my transition to studying at Middlesex University in London seamless. The pre-departure orientation was incredibly helpful.",
       image: "/image86.webp",
       rating: 5,
       location: "London, UK"
