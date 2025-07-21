@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CheckCircle, Calendar, MapPin, DollarSign, Briefcase, Users, Award, FileText, Shield, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
+import Testimonials from "@/components/Testimonials";
 
 interface Program {
   title: string;
@@ -120,8 +121,16 @@ const DestinationTemplate = ({ data }: DestinationTemplateProps) => {
               <Card key={program.title} className="hover:shadow-lg transition-all duration-300 animate-fade-in" style={{ animationDelay: `${index * 150}ms` }}>
                 <div className="md:flex">
                   <div className="md:w-1/3 p-6">
-                    <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg h-48 flex items-center justify-center">
-                      <Briefcase className="w-16 h-16 text-primary" />
+                    <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg h-48 flex items-center justify-center overflow-hidden">
+                      {program.image ? (
+                        <img 
+                          src={program.image} 
+                          alt={program.title}
+                          className="w-full h-full object-cover rounded-lg"
+                        />
+                      ) : (
+                        <Briefcase className="w-16 h-16 text-primary" />
+                      )}
                     </div>
                   </div>
                   <div className="md:w-2/3 p-6">
@@ -342,36 +351,7 @@ const DestinationTemplate = ({ data }: DestinationTemplateProps) => {
       </section>
 
       {/* Testimonials Section */}
-      {data.testimonials && data.testimonials.length > 0 && (
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                What Our Students Say
-              </h2>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {data.testimonials.map((testimonial, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <CardContent className="pt-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="text-2xl">{data.flag}</div>
-                      <div>
-                        <p className="text-gray-700 italic mb-4">"{testimonial.quote}"</p>
-                        <div className="text-sm">
-                          <p className="font-semibold text-gray-900">— {testimonial.author}</p>
-                          <p className="text-gray-600">{testimonial.program} ({testimonial.year})</p>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+      <Testimonials />
 
       {/* Final CTA Section */}
       <section className="py-24 bg-gradient-to-br from-gray-900 via-primary to-secondary relative overflow-hidden">

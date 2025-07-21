@@ -15,7 +15,8 @@ const China = () => {
         duration: "10 months",
         positions: "32–40 hours/week",
         stipend: "1,800 RMB/month (~30,000 BDT)",
-        location: "Eastern China – top-tier hotel chains"
+        location: "Eastern China – top-tier hotel chains",
+        image: "/hotel.webp"
       },
       {
         title: "Food & Beverage",
@@ -23,7 +24,8 @@ const China = () => {
         duration: "10 months", 
         positions: "32–40 hours/week",
         stipend: "1,800 RMB/month (~30,000 BDT)",
-        location: "Eastern China – top-tier hotel chains"
+        location: "Eastern China – top-tier hotel chains",
+        image: "/hotel.webp"
       },
       {
         title: "Housekeeping",
@@ -31,7 +33,8 @@ const China = () => {
         duration: "10 months",
         positions: "32–40 hours/week", 
         stipend: "1,800 RMB/month (~30,000 BDT)",
-        location: "Eastern China – top-tier hotel chains"
+        location: "Eastern China – top-tier hotel chains",
+        image: "/hotel.webp"
       },
       {
         title: "Customer Service",
@@ -39,7 +42,8 @@ const China = () => {
         duration: "10 months",
         positions: "32–40 hours/week",
         stipend: "1,800 RMB/month (~30,000 BDT)", 
-        location: "Eastern China – top-tier hotel chains"
+        location: "Eastern China – top-tier hotel chains",
+        image: "/hotel.webp"
       }
     ],
     eligibility: [
@@ -63,8 +67,19 @@ const China = () => {
         "Proof of Funds (as needed)",
         "Statement of Purpose"
       ],
-      programSpecific: [],
-      visa: []
+      programSpecific: [
+        "Hospitality or Hotel Management Certificate/Diploma",
+        "English Proficiency Test (if required)",
+        "Reference Letter from Institution",
+        "Accommodation Preference Form"
+      ],
+      visa: [
+        "X1/X2 Visa Application Form",
+        "JW202 Form (provided by host organization)",
+        "Invitation Letter from Chinese Partner Institution",
+        "Medical Examination Report",
+        "Financial Guarantee Statement"
+      ]
     },
     benefits: [
       "Paid Internship (monthly stipend)",
