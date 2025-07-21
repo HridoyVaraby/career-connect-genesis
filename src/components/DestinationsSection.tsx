@@ -64,6 +64,7 @@ const DestinationsSection = () => {
         { name: "Indonesia", countryCode: "id" },
         { name: "Malaysia", countryCode: "my" },
         { name: "Hong Kong", countryCode: "hk" },
+        { name: "China", countryCode: "cn" },
         { name: "United Arab Emirates (UAE)", countryCode: "ae" },
         { name: "Bahrain", countryCode: "bh" }
       ]

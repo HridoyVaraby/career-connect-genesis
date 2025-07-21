@@ -50,6 +50,7 @@ import Vietnam from "./pages/destinations/Vietnam";
 import Indonesia from "./pages/destinations/Indonesia";
 import Malaysia from "./pages/destinations/Malaysia";
 import HongKong from "./pages/destinations/HongKong";
+import China from "./pages/destinations/China";
 import UAE from "./pages/destinations/UAE";
 import Bahrain from "./pages/destinations/Bahrain";
 
@@ -119,9 +120,10 @@ const App = () => (
             <Route path="/destinations/thailand" element={<Thailand />} />
             <Route path="/destinations/vietnam" element={<Vietnam />} />
             <Route path="/destinations/indonesia" element={<Indonesia />} />
-            <Route path="/destinations/malaysia" element={<Malaysia />} />
-            <Route path="/destinations/hong-kong" element={<HongKong />} />
-            <Route path="/destinations/uae" element={<UAE />} />
+              <Route path="/destinations/malaysia" element={<Malaysia />} />
+              <Route path="/destinations/hong-kong" element={<HongKong />} />
+              <Route path="/destinations/china" element={<China />} />
+              <Route path="/destinations/uae" element={<UAE />} />
             <Route path="/destinations/bahrain" element={<Bahrain />} />
             
             <Route path="/national-programs" element={<NationalPrograms />} />

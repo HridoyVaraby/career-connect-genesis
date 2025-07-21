@@ -56,6 +56,7 @@ const Header = () => {
     { name: "Indonesia", path: "/destinations/indonesia", countryCode: "id" },
     { name: "Malaysia", path: "/destinations/malaysia", countryCode: "my" },
     { name: "Hong Kong", path: "/destinations/hong-kong", countryCode: "hk" },
+    { name: "China", path: "/destinations/china", countryCode: "cn" },
     { name: "UAE", path: "/destinations/uae", countryCode: "ae" },
     { name: "Bahrain", path: "/destinations/bahrain", countryCode: "bh" },
   ];
