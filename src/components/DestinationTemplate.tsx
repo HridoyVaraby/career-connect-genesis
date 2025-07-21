@@ -23,7 +23,8 @@ interface EligibilityGroup {
 
 interface DestinationData {
   country: string;
-  flag: string;
+  flag: string; // This contains the emoji flag or country code
+  countryCode?: string; // Optional country code if not using the flag emoji
   subheadline: string;
   overview: string[];
   heroImage?: string;
@@ -50,6 +51,59 @@ interface DestinationTemplateProps {
 }
 
 const DestinationTemplate = ({ data }: DestinationTemplateProps) => {
+  // Helper function to get flag image URL from country code or emoji
+  const getFlagImageUrl = (flag: string) => {
+    // Map of flag emojis to country codes
+    const emojiToCode: {[key: string]: string} = {
+      "🇨🇳": "cn", // China
+      "🇺🇸": "us", // USA
+      "🇩🇪": "de", // Germany
+      "🇫🇷": "fr", // France
+      "🇬🇧": "gb", // UK
+      "🇪🇸": "es", // Spain
+      "🇮🇹": "it", // Italy
+      "🇯🇵": "jp", // Japan
+      "🇦🇺": "au", // Australia
+      "🇨🇦": "ca", // Canada
+      "🇮🇳": "in", // India
+      "🇧🇷": "br", // Brazil
+      "🇷🇺": "ru", // Russia
+      "🇰🇷": "kr", // South Korea
+      "🇿🇦": "za", // South Africa
+      "🇲🇽": "mx", // Mexico
+      "🇦🇷": "ar", // Argentina
+      "🇮🇩": "id", // Indonesia
+      "🇹🇷": "tr", // Turkey
+      "🇸🇦": "sa", // Saudi Arabia
+      "🇦🇪": "ae", // UAE
+      "🇪🇬": "eg", // Egypt
+      "🇹🇭": "th", // Thailand
+      "🇵🇭": "ph", // Philippines
+      "🇲🇾": "my", // Malaysia
+      "🇸🇬": "sg", // Singapore
+      "🇳🇿": "nz", // New Zealand
+      "🇵🇹": "pt", // Portugal
+      "🇩🇰": "dk", // Denmark
+      "🇳🇱": "nl", // Netherlands
+      "🇨🇿": "cz", // Czech Republic
+      "🇭🇷": "hr", // Croatia
+      "🇲🇪": "me", // Montenegro
+      "🇲🇹": "mt", // Malta
+      "🇬🇷": "gr", // Greece
+      "🇧🇭": "bh", // Bahrain
+      "🇭🇰": "hk", // Hong Kong
+      "🇻🇳": "vn"  // Vietnam
+    };
+    
+    // Check if the input is an emoji flag
+    const code = emojiToCode[flag] || flag.toLowerCase();
+    
+    // Using flagcdn.com for flag images
+    return `https://flagcdn.com/w80/${code}.png`;
+  };
+  
+  // Get the country code (either from data.countryCode or from the emoji flag)
+  const countryCode = data.countryCode || data.flag.toLowerCase();
   return (
     <div className="pt-16">
       {/* Hero Section */}
@@ -60,7 +114,17 @@ const DestinationTemplate = ({ data }: DestinationTemplateProps) => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block bg-primary/10 text-primary px-6 py-2 rounded-full text-sm font-semibold mb-6 animate-fade-in">
-              {data.flag} Destination
+              <div className="flex items-center">
+                <div className="w-8 h-6 overflow-hidden rounded mr-2">
+                  <img 
+                    src={getFlagImageUrl(data.flag)} 
+                    alt={`${data.country} flag`} 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <span>Destination</span>
+              </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in">
               {data.country}
