@@ -16,7 +16,7 @@ const China = () => {
         positions: "32–40 hours/week",
         stipend: "1,800 RMB/month (~30,000 BDT)",
         location: "Eastern China – top-tier hotel chains",
-        image: "/hotel.webp"
+        image: "/image 1.webp"
       },
       {
         title: "Food & Beverage",
@@ -25,7 +25,7 @@ const China = () => {
         positions: "32–40 hours/week",
         stipend: "1,800 RMB/month (~30,000 BDT)",
         location: "Eastern China – top-tier hotel chains",
-        image: "/hotel.webp"
+        image: "/image 13.webp"
       },
       {
         title: "Housekeeping",
@@ -34,7 +34,7 @@ const China = () => {
         positions: "32–40 hours/week", 
         stipend: "1,800 RMB/month (~30,000 BDT)",
         location: "Eastern China – top-tier hotel chains",
-        image: "/hotel.webp"
+        image: "/housekeeping.webp"
       },
       {
         title: "Customer Service",
