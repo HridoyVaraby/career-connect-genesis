@@ -25,7 +25,7 @@ const Footer = () => {
               <a href="mailto:ccid@ccidbd.com" className="text-gray-400 hover:text-primary transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
-              <a href="https://www.instagram.com/ccidbangladesh/" className="text-gray-400 hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/ccid_bangladesh_ltd/" className="text-gray-400 hover:text-primary transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
               <a href="https://www.facebook.com/CCIDBangladesh" className="text-gray-400 hover:text-primary transition-colors">
