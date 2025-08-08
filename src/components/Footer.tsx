@@ -22,17 +22,17 @@ const Footer = () => {
             </p>
             <h3 className="text-lg font-semibold mb-4">Follow Us On</h3>
             <div className="flex space-x-4">
-              <a href="mailto:ccid@ccidbd.com" className="text-gray-400 hover:text-primary transition-colors">
-                <Mail className="w-5 h-5" />
+              <a href="https://www.facebook.com/CCIDBangladesh" className="text-gray-400 hover:text-primary transition-colors">
+                <Facebook className="w-5 h-5" />
               </a>
               <a href="https://www.instagram.com/ccid_bangladesh_ltd/" className="text-gray-400 hover:text-primary transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://www.facebook.com/CCIDBangladesh" className="text-gray-400 hover:text-primary transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
               <a href="https://www.linkedin.com/company/ccid-bangladesh/" className="text-gray-400 hover:text-primary transition-colors">
                 <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="mailto:ccid@ccidbd.com" className="text-gray-400 hover:text-primary transition-colors">
+                <Mail className="w-5 h-5" />
               </a>
             </div>
           </div>
