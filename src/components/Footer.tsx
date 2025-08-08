@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Mail, Users, Facebook, Twitter } from "lucide-react";
+import { Mail, Instagram, Facebook, Linkedin } from "lucide-react";
 
 
 const Footer = () => {
@@ -11,9 +11,9 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1">
             <div className="flex items-center mb-4">
-              <img 
-                src="/logo.webp" 
-                alt="CCID Bangladesh" 
+              <img
+                src="/logo.webp"
+                alt="CCID Bangladesh"
                 className="h-10 w-auto"
               />
             </div>
@@ -22,17 +22,17 @@ const Footer = () => {
             </p>
             <h3 className="text-lg font-semibold mb-4">Follow Us On</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+              <a href="mailto:ccid@ccidbd.com" className="text-gray-400 hover:text-primary transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Users className="w-5 h-5" />
+              <a href="https://www.instagram.com/ccidbangladesh/" className="text-gray-400 hover:text-primary transition-colors">
+                <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+              <a href="https://www.facebook.com/CCIDBangladesh" className="text-gray-400 hover:text-primary transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a href="https://www.linkedin.com/company/ccid-bangladesh/" className="text-gray-400 hover:text-primary transition-colors">
+                <Linkedin className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -100,7 +100,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 - {new Date().getFullYear()} CCID Bangladesh. All rights reserved. Developed by <a href="https://varabit.com" >Varabit Web Design & Development.</a></p>
+          <p>&copy; 2024 - {new Date().getFullYear()} CCID Bangladesh. All rights reserved.</p>
         </div>
       </div>
     </footer>

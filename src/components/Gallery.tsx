@@ -3,10 +3,10 @@ const Gallery = () => {
   const images = [
     { src: "/image 5.webp", alt: "Students studying abroad" },
     { src: "/image 6.webp", alt: "International internship" },
-    { src: "/image 1.webp", alt: "University campus" },
-    { src: "/image 2.webp", alt: "Students collaborating" },
-    { src: "/image 3.webp", alt: "Global networking" },
-    { src: "/image 13.webp", alt: "Success celebration" }
+    { src: "/image 1.webp", alt: "Hospitality Interns" },
+    { src: "/image 2.webp", alt: "Student on campus" },
+    { src: "/image 3.webp", alt: "Students collaborating" },
+    { src: "/image 13.webp", alt: "Culinary Interns" }
   ];
 
   return (
